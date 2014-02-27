@@ -12,9 +12,11 @@ public class Server {
 						clientSocket.getOutputStream(), true);
 				BufferedReader in = new BufferedReader(new InputStreamReader(
 						clientSocket.getInputStream()));) {
-			String inputLine;
+			String inputLine, outputLine;
 			while ((inputLine = in.readLine()) != null) {
-				out.println(inputLine + "check");
+				outputLine = "I received your message, filthy peasant";
+				System.out.println("client:" + inputLine);
+				out.println(outputLine);
 			}
 		} catch (IOException e) {
 			System.out
