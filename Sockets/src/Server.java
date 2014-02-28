@@ -4,7 +4,7 @@ import java.net.*;
 public class Server {
 	public static void main(String[] args) throws IOException {
 
-		int portNumber = Integer.parseInt(args[0]);
+		final int portNumber = 1234;
 
 		try (ServerSocket serverSocket = new ServerSocket(portNumber);
 				Socket clientSocket = serverSocket.accept();
@@ -18,6 +18,9 @@ public class Server {
 				System.out.println("client:" + inputLine);
 				out.println(outputLine);
 			}
+			clientSocket.close();
+			in.close();
+			out.close();
 		} catch (IOException e) {
 			System.out
 					.println("Exception caught when trying to listen on port "
