@@ -4,14 +4,8 @@ import java.io.*;
 public class Client {
 
 	public static void main(String[] args) {
-//		String hostName = "www.google.com";
-//		int portNumber = 80;
-		
-		
-
 		try {
-			BufferedReader stdIn = new BufferedReader( // wa ge typt
-					new InputStreamReader(System.in));
+			BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in)); //reads the user input from the command line. 
 			String userInput;
 			while ((userInput = stdIn.readLine()) != null) {
 				String[] input = userInput.split(" ");
@@ -21,22 +15,10 @@ public class Client {
 				int port = Integer.parseInt(input[4]);
 				Socket echoSocket = new Socket(host, port);
 				
-				PrintWriter out = new PrintWriter(echoSocket.getOutputStream(),
-						true);
-				BufferedReader in = new BufferedReader(new InputStreamReader(
-						echoSocket.getInputStream())); // wa ge krijgt van de server
-				// if(command.equals("get")) {
-				// //DO CRAP
-				// } else if(command.equals("head")) {
-				// //DO OTHER CRAP
-				// } else if(command.equals("put")) {
-				// //GUESS WHAT DO MORE CRAP
-				// } else if(command.equals("post")) {
-				// //POST SOMETHING
-				// } else {
-				// System.out.println("Invalid command try again");
-				// }
-//				out.println(userInput);
+				//create streams to read from and write to the socket
+				PrintWriter out = new PrintWriter(echoSocket.getOutputStream(),true);
+				BufferedReader in = new BufferedReader(new InputStreamReader(echoSocket.getInputStream())); 
+				
 				out.println(command + " " + version + "\r" + "\n");
 				String output;
 				while ((output = in.readLine()) != null) {
