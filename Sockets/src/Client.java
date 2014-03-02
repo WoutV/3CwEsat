@@ -24,7 +24,7 @@ public class Client {
 				while ((output = in.readLine()) != null) {
 					System.out.println(output);
 				}
-				echoSocket.close();
+				echoSocket.close(); //moet de server de connection ni sluiten?
 			}
 		} catch (UnknownHostException e) {
 			System.out.println("Host unknown. Cannot create connection.");
