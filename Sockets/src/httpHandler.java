@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.Socket;
 import java.util.StringTokenizer;
+import java.util.*;
 
 
 public class httpHandler implements Runnable {
@@ -35,13 +36,15 @@ public class httpHandler implements Runnable {
 	      if (headerLine.equals(CRLF) || headerLine.equals("")) // as die CRLF is dan stopt ge gewoon? 
 	        break;
 
-	      // Dit kan ook met de split methode maar de code stond zo op de website. Ik zou als we hier tokenizer gebruiken da in de client ook doen. of andersom. 
+	      // Dit kan ook met de split methode maar de code stond zo op de website. Ik zou als we hier tokenizer gebruiken da in de client ook doen. of andersom.
+	      String[] request = headerLine.split(" ");
 	      StringTokenizer s = new StringTokenizer(headerLine);
-	      String temp = s.nextToken(); //case sensitive? .lowerCase(); toevoegen dan
+	      String temp = request[0].toUpperCase();
+	      //String temp = s.nextToken(); //case sensitive? .lowerCase(); toevoegen dan
 
 	      if (temp.equals("GET")) {
-
-	        String fileName = s.nextToken();
+	    	String fileName = request[1]; 
+	        //String fileName = s.nextToken();
 	        fileName = "." + fileName;
 
 	        FileInputStream fis = null;
