@@ -31,13 +31,13 @@ public class httpHandler implements Runnable {
 	    while (true) {
 
 	      String headerLine = br.readLine();
-	      System.out.println(headerLine);
-	      if (headerLine.equals(CRLF) || headerLine.equals(""))
+	      System.out.println(headerLine); // wa is diene headerline? de eerste lijn die ge ingeeft? of? 
+	      if (headerLine.equals(CRLF) || headerLine.equals("")) // as die CRLF is dan stopt ge gewoon? 
 	        break;
 
-	      // Dit kan ook met de split methode maar de code stond zo op de website
+	      // Dit kan ook met de split methode maar de code stond zo op de website. Ik zou als we hier tokenizer gebruiken da in de client ook doen. of andersom. 
 	      StringTokenizer s = new StringTokenizer(headerLine);
-	      String temp = s.nextToken();
+	      String temp = s.nextToken(); //case sensitive? .lowerCase(); toevoegen dan
 
 	      if (temp.equals("GET")) {
 
