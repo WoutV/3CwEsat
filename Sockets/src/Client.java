@@ -29,7 +29,8 @@ public class Client {
 				
 				String command = input[0] + " " + input[1];
 				version = input[2];
-				out.println(command + " " + version + "\r" + "\n");
+				//out.println(command + " " + version + "\r" + "\n");
+				out.println(command+ "\r" + "\n");
 				out.flush();
 				
 				String output;
