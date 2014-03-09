@@ -10,12 +10,18 @@ public class Client {
 			System.out.println("Create a connection: <host> <port>");
 			String[] connectionInput = stdIn.readLine().split(" ");
 			String host = connectionInput[0];
-			int port = Integer.parseInt(connectionInput[1]);
+			int port = 80;
+			try{
+				port = Integer.parseInt(connectionInput[1]);
+			} catch (Exception E){
+				
+			}
+			
 			Socket echoSocket = new Socket(host, port);
 			
 			//create streams to read from and write to the socket
 			PrintWriter out = new PrintWriter(echoSocket.getOutputStream(),true);
-			BufferedReader in = new BufferedReader(new InputStreamReader(echoSocket.getInputStream())); 
+			 
 			
 			System.out.println("Connection created: "+host+" on port "+port);
 			System.out.println("<command> <file> <version>");
@@ -24,16 +30,19 @@ public class Client {
 			String userInput;
 			
 			while (version.equals("HTTP/1.1")) {
+				BufferedReader in = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
 				userInput = stdIn.readLine();
 				String[] input = userInput.split(" ");
 				
 				String command = input[0] + " " + input[1];
 				version = input[2];
+	
 				//out.println(command + " " + version + "\r" + "\n");
 				out.println(command+ "\r" + "\n");
-				out.flush();
+				//out.flush();
 				
 				String output;
+								
 				while ((output = in.readLine()) != null) {
 					System.out.println(output);
 				}
