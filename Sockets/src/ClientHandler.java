@@ -1,5 +1,8 @@
-import java.net.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
 public class ClientHandler {
 	boolean connectionOpen;
@@ -53,16 +56,52 @@ public class ClientHandler {
 	 */
 	public void processCommand(String command_input) throws IOException{
 		String[] commandline = command_input.split(" ");
+		String command_word = commandline[0];
+		if(command_word.equals("QUIT")){
+			closeConnection();
+		}
 		String command = commandline[0] + " " + commandline[1];
 		String version = commandline[2];
 		changeConnectionStatus(version, command);	
 		PrintWriter out = new PrintWriter(clientSocket.getOutputStream(),true);
 		BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-		out.println(command + "\r" + "\n");
+		out.println(command + "\r\n");
 		String output;
 		while((output = in.readLine()) != null){
 			System.out.println(output);
 		}		
+	}
+	
+	public void processCommand_better(String command_input) throws IOException{
+		//quit command heeft maar 1 woord split zal dus een array van 1 terug geven.
+		String[] commandline = command_input.split(" ");
+		String command = commandline[0] + " " + commandline[1];
+		String version = commandline[2];
+		changeConnectionStatus(version, command);	
+		PrintWriter out = new PrintWriter(clientSocket.getOutputStream(),true);
+		BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+		if(version.equals("HTTP/1.0")){
+			out.println(command + "\r\n");
+		}
+		//content length om te bepalen hoeveel ge moet lezen om uit de while te geraken
+		else if(version.equals("HTTP/1.1")){
+			System.out.println("we zitte aan verise 1.1");
+			String new_command = command + " " + version;
+			out.println(new_command + "\r\n");
+		}
+		else{
+			System.out.println("This HTTP version is not supported. Please chose HTTP/1.1 or HTTP/1.0");
+			String new_request = (new BufferedReader(new InputStreamReader(System.in))).readLine();
+			processCommand(new_request);
+		}
+		String output;
+		while((output = in.readLine()) != null){
+			System.out.println(output);
+		}		
+	}
+	
+	private void closeConnection(){
+		
 	}
 	
 	
