@@ -1,4 +1,4 @@
-import java.net.*;
+//import java.net.*;
 import java.io.*;
 
 public class Second_Client {
@@ -18,24 +18,19 @@ public class Second_Client {
 		try{
 			port = Integer.parseInt(connectionInput[1]);
 		} catch (Exception E){
-			
+			//do something maybe? :D
 		}
 		try {
 			clientHandler = new ClientHandler(host, port);
 			System.out.println("Connection created: "+host+" on port "+port);
 		} catch (IOException e) {
 			e.printStackTrace();
+			//stacktrace printen is ni ideaal om in uwe commandline te krijgen e :D
 		}
 		while(clientHandler.getConnectionStatus() == true){
 			System.out.println("<command> <file> <version>");
 			String command = stdIn.readLine();
 			clientHandler.processCommand(command);
-		
-			
 		}
-		
-		
-		
 	}
-	
 }

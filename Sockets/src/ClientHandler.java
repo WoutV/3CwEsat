@@ -7,6 +7,12 @@ public class ClientHandler {
 	String host;
 	int port;
 	
+	/**
+	 * Creates a new client handler with given host and port.
+	 * @param host
+	 * @param port
+	 * @throws IOException
+	 */
 	public ClientHandler(String host, int port) throws IOException{
 		connectionOpen = true;
 		this.host = host;
@@ -14,6 +20,12 @@ public class ClientHandler {
 		establishConnection(host, port);
 	}
 	
+	/**
+	 * Creates a socket with given host on given port.
+	 * @param host
+	 * @param port
+	 * @throws IOException
+	 */
 	private void establishConnection(String host, int port) throws IOException{
 		clientSocket = new Socket(host,port);
 	}
@@ -27,10 +39,18 @@ public class ClientHandler {
 		}
 	}
 	
+	/**
+	 * Returns whether the connection to the host is open or closed. 
+	 */
 	public boolean getConnectionStatus(){
 		return connectionOpen;
 	}
 	
+	/**
+	 * Processes a textual command given by the client.
+	 * @param command_input
+	 * @throws IOException
+	 */
 	public void processCommand(String command_input) throws IOException{
 		String[] commandline = command_input.split(" ");
 		String command = commandline[0] + " " + commandline[1];

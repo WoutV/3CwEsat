@@ -10,6 +10,11 @@ public class httpHandler implements Runnable {
 	BufferedReader br;
 	PrintWriter outputPrinter;
 
+	/**
+	 * Initializes a new httpHandler with a given socket. Initializes its input and output streams.
+	 * @param socket
+	 * @throws Exception
+	 */
 	public httpHandler(Socket socket) throws Exception {
 		this.socket = socket;
 		this.input = socket.getInputStream();
