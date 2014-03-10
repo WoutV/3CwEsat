@@ -83,7 +83,7 @@ public class ClientHandler {
 		if(version.equals("HTTP/1.0")){
 			out.println(command + "\r\n");
 		}
-		//content length om te bepalen hoeveel ge moet lezen om uit de while te geraken
+		
 		else if(version.equals("HTTP/1.1")){
 			System.out.println("we zitte aan verise 1.1");
 			String new_command = command + " " + version;
@@ -95,13 +95,13 @@ public class ClientHandler {
 			processCommand(new_request);
 		}
 		String output;
-		while((output = in.readLine()) != null){
+		while((output = in.readLine()) != null && in.ready()){
 			System.out.println(output);
 		}		
 	}
 	
 	private void closeConnection(){
-		
+		System.out.println("Closing connection... \r\n");
 	}
 	
 	
