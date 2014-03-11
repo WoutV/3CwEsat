@@ -77,11 +77,14 @@ public class ClientHandler {
 		String[] commandline = command_input.split(" ");
 		String command = commandline[0] + " " + commandline[1];
 		String version = commandline[2];
+		System.out.println(version);
 		changeConnectionStatus(version, command);	
 		PrintWriter out = new PrintWriter(clientSocket.getOutputStream(),true);
 		BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 		if(version.equals("HTTP/1.0")){
+			System.out.println(connectionOpen);
 			out.println(command + "\r\n");
+			closeConnection();
 		}
 		
 		else if(version.equals("HTTP/1.1")){
