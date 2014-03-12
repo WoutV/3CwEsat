@@ -38,12 +38,12 @@ public class httpHandler implements Runnable {
 
 	private void processRequest() throws Exception {
 			String userInputLine = br.readLine();
-			System.out.println(userInputLine);
+			// System.out.println(userInputLine);
 			if (userInputLine.equals(CRLF) || userInputLine.equals(""))
 				closeConnection();
 			String[] request = userInputLine.split(" ");
 			String temp = request[0].toUpperCase();
-			String version = request[3];
+			String version = request[2];
 			String fileName = request[1];
 
 			if (temp.equals("GET")) {
@@ -56,12 +56,13 @@ public class httpHandler implements Runnable {
 				postCommand();
 			}
 			else if(temp.equals("HEAD")){
-				headCommand();
+				headCommand(fileName);
 			}
 			System.out.println("kijken naar versie: " + version);
 			if(version.equals("HTTP/1.0") || temp.equals("QUIT")) {
 				closeConnection();
 			} else {
+				userInputLine = br.readLine();
 				processRequest();
 			}
 
@@ -132,8 +133,52 @@ public class httpHandler implements Runnable {
 	private void postCommand(){
 		
 	}
-	private void headCommand(){
-		
+	private void headCommand(String fileName) throws Exception{
+		System.out.println("HEAD REACHED MOFOS");
+		FileInputStream fis = null;
+		boolean fileExists = true;
+		try {
+			fis = new FileInputStream(new File(fileName));
+		} catch (FileNotFoundException e) {
+			fileExists = false;
+		}
+		String statusLine = null;
+		String contentTypeLine = null;
+		String contentLengthLine = "error";
+		if (fileExists) {
+			statusLine = "HTTP/1.0 200 OK" + CRLF;
+			contentTypeLine = "Content-type: " + contentType(fileName)
+					+ CRLF;
+			contentLengthLine = "Content-Length: "+ (new Integer(fis.available())).toString() + CRLF;
+		} else {
+			System.out.println("file not found");
+			statusLine = "HTTP/1.0 404 Not Found" + CRLF;
+			contentTypeLine = "text/html";
+		}
+
+		// Send the status line.
+		output.write(statusLine.getBytes());
+		System.out.println(statusLine);
+
+		// Send the content type line.
+		output.write(contentTypeLine.getBytes());
+		System.out.println(contentTypeLine);
+
+		// Send the Content-Length
+		output.write(contentLengthLine.getBytes());
+		System.out.println(contentLengthLine);
+
+		// Send a blank line to indicate the end of the header lines.
+		output.write(CRLF.getBytes());
+		System.out.println(CRLF);
+
+//		// Send the entity body.
+//		if (fileExists) {
+//			sendBytes(fis, output);
+//			fis.close();
+//		} else {
+//			output.write(entityBody.getBytes());
+//		}
 	}
 
 	private static void sendBytes(FileInputStream fis, OutputStream os)
