@@ -35,11 +35,13 @@ public class ClientInterface {
 		while (clientHandler.getConnectionStatus() == true) {
 			System.out.println("<command> <file> <version>");
 			try {
-				command = stdIn.readLine();
-				String commandToProcess = command + " " + host + " " + version;
+				String newCommand = stdIn.readLine();
+				//String commandToProcess = command + " " + host + " " + version;
+				String commandToProcess = newCommand;
+				System.out.println(commandToProcess);
 				clientHandler.processCommand(commandToProcess);
 			} catch (IOException e) {
-				
+				e.printStackTrace();
 			}
 		}
 	}

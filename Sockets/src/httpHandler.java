@@ -11,7 +11,9 @@ public class httpHandler implements Runnable {
 	PrintWriter outputPrinter;
 
 	/**
-	 * Initializes a new httpHandler with a given socket. Initializes its input and output streams.
+	 * Initializes a new httpHandler with a given socket. Initializes its input
+	 * and output streams.
+	 * 
 	 * @param socket
 	 * @throws Exception
 	 */
@@ -21,7 +23,7 @@ public class httpHandler implements Runnable {
 		this.output = socket.getOutputStream();
 		this.br = new BufferedReader(new InputStreamReader(
 				socket.getInputStream()));
-		this.outputPrinter = new PrintWriter(output,true);
+		this.outputPrinter = new PrintWriter(output, true);
 	}
 
 	public void run() {
@@ -36,44 +38,43 @@ public class httpHandler implements Runnable {
 		}
 	}
 
-	private void processRequest() throws Exception {
-			String userInputLine = br.readLine();
-			// System.out.println(userInputLine);
-			if (userInputLine.equals(CRLF) || userInputLine.equals(""))
-				closeConnection();
-			String[] request = userInputLine.split(" ");
-			String temp = request[0].toUpperCase();
-			String version = request[2];
-			String fileName = request[1];
+	private void processRequest() throws Exception{
+		String userInputLine = br.readLine();
+		// System.out.println(userInputLine);
+		if (userInputLine.equals(CRLF) || userInputLine.equals(""))
+			closeConnection();
+		String[] request = userInputLine.split(" ");
+		String temp = request[0].toUpperCase();
+		String version = request[2];
+		String fileName = request[1];
 
-			if (temp.equals("GET")) {
-				getCommand(fileName);
-			}		
-			else if(temp.equals("PUT")){
-				putCommand();
-			}
-			else if(temp.equals("POST")){
-				postCommand();
-			}
-			else if(temp.equals("HEAD")){
-				headCommand(fileName);
-			}
-			System.out.println("kijken naar versie: " + version);
-			if(version.equals("HTTP/1.0") || temp.equals("QUIT")) {
-				closeConnection();
-			} else {
-				userInputLine = br.readLine();
-				processRequest();
-			}
+		if (temp.equals("GET")) {
+			
+			System.out.println("GET ENTERED MOFOS");
+			System.out.println(fileName);
+			getCommand(fileName);
+		} else if (temp.equals("PUT")) {
+			putCommand();
+		} else if (temp.equals("POST")) {
+			postCommand();
+		} else if (temp.equals("HEAD")) {
+			headCommand(fileName);
+		}
+		System.out.println("kijken naar versie: " + version);
+		if (version.equals("HTTP/1.0") || temp.equals("QUIT")) {
+			closeConnection();
+		} else {
+			userInputLine = br.readLine();
+			processRequest();
+		}
 
 		try {
 			closeConnection();
 		} catch (Exception e) {
 		}
 	}
-	
-	
-	private void getCommand(String fileName) throws Exception{
+
+	private void getCommand(String fileName) throws Exception {
 		FileInputStream fis = null;
 		boolean fileExists = true;
 		try {
@@ -85,17 +86,16 @@ public class httpHandler implements Runnable {
 		String contentTypeLine = null;
 		String entityBody = null;
 		String contentLengthLine = "error";
+		System.out.println(fileExists);
 		if (fileExists) {
 			statusLine = "HTTP/1.0 200 OK" + CRLF;
-			contentTypeLine = "Content-type: " + contentType(fileName)
-					+ CRLF;
+			contentTypeLine = "Content-type: " + contentType(fileName) + CRLF;
 			contentLengthLine = "Content-Length: "
 					+ (new Integer(fis.available())).toString() + CRLF;
 		} else {
 			statusLine = "HTTP/1.0 404 Not Found" + CRLF;
 			contentTypeLine = "text/html";
-			entityBody = "<HTML>"
-					+ "<HEAD><TITLE>404 Not Found</TITLE></HEAD>"
+			entityBody = "<HTML>" + "<HEAD><TITLE>404 Not Found</TITLE></HEAD>"
 					+ "<BODY>404 Not Found"
 					+ "<br>usage:http://yourHostName:port/"
 					+ "fileName.html</BODY></HTML>";
@@ -125,15 +125,16 @@ public class httpHandler implements Runnable {
 			output.write(entityBody.getBytes());
 		}
 	}
-	
-	private void putCommand(){
-			
+
+	private void putCommand() {
+
 	}
-	
-	private void postCommand(){
-		
+
+	private void postCommand() {
+
 	}
-	private void headCommand(String fileName) throws Exception{
+
+	private void headCommand(String fileName) throws IOException {
 		System.out.println("HEAD REACHED MOFOS");
 		FileInputStream fis = null;
 		boolean fileExists = true;
@@ -147,9 +148,9 @@ public class httpHandler implements Runnable {
 		String contentLengthLine = "error";
 		if (fileExists) {
 			statusLine = "HTTP/1.0 200 OK" + CRLF;
-			contentTypeLine = "Content-type: " + contentType(fileName)
-					+ CRLF;
-			contentLengthLine = "Content-Length: "+ (new Integer(fis.available())).toString() + CRLF;
+			contentTypeLine = "Content-type: " + contentType(fileName) + CRLF;
+			contentLengthLine = "Content-Length: "
+					+ (new Integer(fis.available())).toString() + CRLF;
 		} else {
 			System.out.println("file not found");
 			statusLine = "HTTP/1.0 404 Not Found" + CRLF;
@@ -172,13 +173,13 @@ public class httpHandler implements Runnable {
 		output.write(CRLF.getBytes());
 		System.out.println(CRLF);
 
-//		// Send the entity body.
-//		if (fileExists) {
-//			sendBytes(fis, output);
-//			fis.close();
-//		} else {
-//			output.write(entityBody.getBytes());
-//		}
+		// // Send the entity body.
+		// if (fileExists) {
+		// sendBytes(fis, output);
+		// fis.close();
+		// } else {
+		// output.write(entityBody.getBytes());
+		// }
 	}
 
 	private static void sendBytes(FileInputStream fis, OutputStream os)
@@ -191,8 +192,8 @@ public class httpHandler implements Runnable {
 			os.write(buffer, 0, bytes);
 		}
 	}
-	
-	private void closeConnection() throws Exception{
+
+	private void closeConnection() throws Exception {
 		outputPrinter.write("Connection closing. Goodbye");
 		output.close();
 		br.close();
@@ -211,6 +212,5 @@ public class httpHandler implements Runnable {
 			return "application/octet-stream";
 		}
 	}
-	
-	
+
 }

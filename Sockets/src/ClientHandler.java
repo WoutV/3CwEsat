@@ -76,35 +76,12 @@ public class ClientHandler {
 			processCommand(new_request);
 		}
 		String output;
-		while((output = in.readLine()) != null && in.ready()){
-			if(output.contains("<img")){
-				String[] splittedOutput = output.split("src=\"");
-				String imgPath = splittedOutput[1].split("\"")[0];
-				//writeToDisk(imgPath);
-				processCommand("GET "+ imgPath + "HTTP/1.1");
-			}
+		System.out.println("REACHED THE SPOT MOFO");
+		System.out.println(in.readLine());
+		while(((output = in.readLine()) != null) && in.ready()){
 			System.out.println(output);
 		}		
 	}
-	
-//	private void writeToDisk(String imgPath) throws IOException {
-//		System.out.println(imgPath);
-//		DataOutputStream dos = new DataOutputStream(clientSocket.getOutputStream());
-//		dos.writeBytes("GET " + host + imgPath + "HTTP/1.1\r\n");
-//		dos.writeBytes("Host: "+ this.host + ":80\r\n\r\n");
-//		dos.flush();
-//		DataInputStream in = new DataInputStream(clientSocket.getInputStream());
-//		OutputStream os = new FileOutputStream("C:\\Users\\Wout\\Desktop\\test.jpg");
-//		int count;
-//		byte[] buffer = new byte[2048];
-//		while((count = in.read(buffer)) != -1){
-//			os.write(buffer, 0, count);
-//			os.flush();
-//		}
-//		os.close();
-//		System.out.println("image transfer done");		
-//	}
-
 	private void closeConnection(){
 		System.out.println("Closing connection... \r\n");
 	}
