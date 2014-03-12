@@ -1,4 +1,3 @@
-//import java.net.*;
 import java.io.*;
 
 public class ClientInterface {
@@ -10,11 +9,19 @@ public class ClientInterface {
 	public static void main(String[] args) {
 		ClientHandler clientHandler = null;
 		BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
+		
 		String command;
 		String host;
-		int port;
 		String version;
+		int port;
 		
+		while(args.length!=4){
+			try {
+				args = stdIn.readLine().split(" ");
+			} catch (IOException e) {
+				//wrong input, restart loop and wait for new arguments
+			}
+		}
 		command = args[0];
 		host = args[1];
 		try {
@@ -23,11 +30,12 @@ public class ClientInterface {
 			port = 80;
 		}
 		version = args[3];
+		
 		try {
-			String[] splittedhost = host.split("/");
-			clientHandler = new ClientHandler(splittedhost[0], port);
-			System.out.println("Connection created: " + splittedhost[0] + " on port "+ port);
-			String commandToProcess = command + " " + host + " " + version;
+			String[] splittedHost = host.split("/",2);
+			clientHandler = new ClientHandler(splittedHost[0], port);
+			System.out.println("Connection created: " + splittedHost[0] + " on port "+ port);
+			String commandToProcess = command + " " + splittedHost[1] + " " + version;
 			clientHandler.processCommand(commandToProcess);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -36,9 +44,7 @@ public class ClientInterface {
 			System.out.println("<command> <file> <version>");
 			try {
 				String newCommand = stdIn.readLine();
-				//String commandToProcess = command + " " + host + " " + version;
 				String commandToProcess = newCommand;
-				System.out.println(commandToProcess);
 				clientHandler.processCommand(commandToProcess);
 			} catch (IOException e) {
 				e.printStackTrace();
