@@ -9,7 +9,8 @@ public class ClientHandler {
 	int port;
 	PrintWriter out;
 	BufferedReader in;
-	ArrayList<String> valid_http_versions = new ArrayList<String>();
+	BufferedReader stdIn;
+	String[] valid_http_versions = {"HTTP/1.1", "HTTP/1.0"};
 
 	/**
 	 * Creates a new client handler with given host and port.
@@ -19,8 +20,7 @@ public class ClientHandler {
 	 * @throws IOException
 	 */
 	public ClientHandler(String host, int port) throws IOException {
-		valid_http_versions.add("HTTP/1.1");
-		valid_http_versions.add("HTTP/1.0");
+		stdIn = new BufferedReader(new InputStreamReader(System.in));
 		connectionOpen = true;
 		this.host = host;
 		this.port = port;
@@ -68,23 +68,19 @@ public class ClientHandler {
 		String[] commandline = command_input.split(" ");
 		String command = "";
 		String version = "";
+		String commandword= "";
 		try {
 			command = commandline[0] + " " + commandline[1];
 			version = commandline[2];
+			commandword = commandline[0];
 		} catch (ArrayIndexOutOfBoundsException e) {
-
+			procesInvalidRequest();
 		}
-		if(!valid_http_versions.contains(version)){
-			System.out.println("This HTTP version is not supported. Please choose HTTP/1.1 or HTTP/1.0");
-			String new_request = (new BufferedReader(new InputStreamReader(
-					System.in))).readLine();
-			processCommand(new_request);
+		if(! (Arrays.asList(valid_http_versions).contains(version))){
+			procesInvalidRequest();
 
 		}
 		changeConnectionStatus(version);
-
-		String commandword = commandline[0];
-
 		if(commandword.toUpperCase().equals("POST")){
 			postMethod(command, version);
 		}
@@ -97,12 +93,11 @@ public class ClientHandler {
 		else if(commandword.toUpperCase().equals("HEAD")){
 			headMethod(command, version);
 		}
-
-		if(version.equals("HTTP/1.1")){
-			establishConnection(host, port);
-		} else{
-			closeConnection();
-		}
+//		if(version.equals("HTTP/1.1")){
+//			establishConnection(host, port);
+//		} else{
+//			closeConnection();
+//		}
 		//		if (version.equals("HTTP/1.0")) {
 		//			if (commandline[0].equals("POST")) {
 		//				postMethod(commandline[1]);
@@ -124,10 +119,6 @@ public class ClientHandler {
 		//					System.in))).readLine();
 		//			processCommand(new_request);
 		//		}
-		String output;
-		while (((output = in.readLine()) != null) && in.ready()) {
-			System.out.println(output);
-		}
 	}
 
 	private void postMethod(String filepath, String version) throws IOException{
@@ -142,13 +133,19 @@ public class ClientHandler {
 
 	}
 
-	private void headMethod(String source, String version){
-
+	private void headMethod(String command, String version) throws IOException{
+		String newCommand = command + " " + version;
+		out.println(newCommand + "\r\n");
+		String output;
+		while (((output = in.readLine()) != null) && in.ready()) {
+			System.out.println(output);
+		}
+		
 	}
 
-	private void getMethod(String source, String version) throws IOException{
-		String command = "GET " + source;
-		out.println(command + "\r\n");
+	private void getMethod(String command, String version) throws IOException{
+		String newCommand = command + " " + version;
+		out.println(newCommand + "\r\n");
 		String output;
 		while (((output = in.readLine()) != null) && in.ready()) {
 			System.out.println(output);
@@ -156,9 +153,9 @@ public class ClientHandler {
 
 	}
 
-	private void closeConnection() {
-		System.out.println("Closing connection... \r\n");
-	}
+//	private void closeConnection() {
+//		System.out.println("Closing connection... \r\n");
+//	}
 
 	private ArrayList<String> getContents(File file) throws IOException {
 		ArrayList<String> contents = new ArrayList<String>();
@@ -171,5 +168,12 @@ public class ClientHandler {
 		input.close();
 
 		return contents;
+	}
+	
+	private void procesInvalidRequest() throws IOException{
+		System.out.println("This request was not valid. Please check your HTTP version and your request format.");
+		String new_request = stdIn.readLine();
+		processCommand(new_request);
+		
 	}
 }
