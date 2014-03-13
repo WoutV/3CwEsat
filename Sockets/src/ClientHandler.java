@@ -82,7 +82,7 @@ public class ClientHandler {
 		}
 		changeConnectionStatus(version);
 		if(commandword.toUpperCase().equals("POST")){
-			postMethod(command, version);
+			postMethod(commandline[1], version);
 		}
 		else if(commandword.toUpperCase().equals("GET")){
 			getMethod(command, version);
@@ -93,40 +93,17 @@ public class ClientHandler {
 		else if(commandword.toUpperCase().equals("HEAD")){
 			headMethod(command, version);
 		}
-//		if(version.equals("HTTP/1.1")){
-//			establishConnection(host, port);
-//		} else{
-//			closeConnection();
-//		}
-		//		if (version.equals("HTTP/1.0")) {
-		//			if (commandline[0].equals("POST")) {
-		//				postMethod(commandline[1]);
-		//
-		//			}
-		//			else {
-		//				out.println(command + "\r\n");
-		//			}
-		//			closeConnection();
-		//		}
-		//
-		//		else if (version.equals("HTTP/1.1")) {
-		//			String new_command = command + " " + version;
-		//			out.println(new_command + "\r\n");
-		//		} else {
-		//			System.out
-		//			.println("This HTTP version is not supported. Please choose HTTP/1.1 or HTTP/1.0");
-		//			String new_request = (new BufferedReader(new InputStreamReader(
-		//					System.in))).readLine();
-		//			processCommand(new_request);
-		//		}
 	}
 
 	private void postMethod(String filepath, String version) throws IOException{
-		File file = new File(filepath);
-		for (String line : getContents(file)) {
-			System.out.println(line);
-			out.write(line + "\r\n");
+		out.write(filepath);
+		System.out.println("Enter the text you want to add to the file. End with a single . (dot).");
+		String userInput;
+		while((userInput=stdIn.readLine())!=".\r\n" && userInput!=null) {
+			System.out.println("sending line");
+			out.write(userInput);
 		}
+		out.flush();
 	}
 
 	private void putMethod(String filepath, String version){
@@ -140,7 +117,6 @@ public class ClientHandler {
 		while (((output = in.readLine()) != null) && in.ready()) {
 			System.out.println(output);
 		}
-		
 	}
 
 	private void getMethod(String command, String version) throws IOException{
@@ -149,13 +125,9 @@ public class ClientHandler {
 		String output;
 		while (((output = in.readLine()) != null) && in.ready()) {
 			System.out.println(output);
+			//TODO insert image code here . 
 		}
-
 	}
-
-//	private void closeConnection() {
-//		System.out.println("Closing connection... \r\n");
-//	}
 
 	private ArrayList<String> getContents(File file) throws IOException {
 		ArrayList<String> contents = new ArrayList<String>();

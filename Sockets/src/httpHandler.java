@@ -49,19 +49,18 @@ public class httpHandler implements Runnable {
 		String fileName = request[1];
 
 		if (temp.equals("GET")) {
-			
 			System.out.println("GET ENTERED MOFOS");
 			System.out.println(fileName);
 			getCommand(fileName);
 		} else if (temp.equals("PUT")) {
 			putCommand();
 		} else if (temp.equals("POST")) {
-			postCommand();
+			System.out.println("enterd POST");
+			postCommand(fileName);
 		} else if (temp.equals("HEAD")) {
 			headCommand(fileName);
 		}
-		System.out.println("kijken naar versie: " + version);
-		if (version.equals("HTTP/1.0") || temp.equals("QUIT")) {
+		if (version.equals("HTTP/1.0")) {
 			closeConnection();
 		} else {
 			userInputLine = br.readLine();
@@ -119,19 +118,30 @@ public class httpHandler implements Runnable {
 
 		// Send the entity body.
 		if (fileExists) {
+			System.out.println("entered fileexists");
 			sendBytes(fis, output);
 			fis.close();
 		} else {
-			output.write(entityBody.getBytes());
+			System.out.println(entityBody);
 		}
 	}
 
 	private void putCommand() {
-
+		
 	}
 
-	private void postCommand() {
-
+	private void postCommand(String filename) {
+		System.out.println("enterd post duuude");
+		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(filename, true)))) {
+		    String userInput;
+		    while((userInput=br.readLine())!= null) {
+		    	System.out.println(userInput);
+		    	out.println(userInput);
+		    }
+			
+		}catch (IOException e) {
+		    //exception handling left as an exercise for the reader
+		}
 	}
 
 	private void headCommand(String fileName) throws IOException {
