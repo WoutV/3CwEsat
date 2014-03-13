@@ -52,9 +52,6 @@ public class ClientHandler {
 		if (version.equals("HTTP/1.0")) {
 			connectionOpen = false;
 		}
-		if (version.equals("HTTP/1.1")) {
-			establishConnection(this.host, this.port);
-		}
 	}
 
 	/**
@@ -83,7 +80,7 @@ public class ClientHandler {
 		}
 		changeConnectionStatus(version);
 		if(commandword.toUpperCase().equals("POST")){
-			postMethod(commandline[1], version);
+			postMethod(command, version);
 		}
 		else if(commandword.toUpperCase().equals("GET")){
 			getMethod(command, version);
@@ -96,13 +93,13 @@ public class ClientHandler {
 		}
 	}
 
-	private void postMethod(String filepath, String version) throws IOException{
-		out.write(filepath);
+	private void postMethod(String command, String version) throws IOException{
+		out.write(command + " " +version+ "\r\n");
 		System.out.println("Enter the text you want to add to the file. End with a single . (dot).");
 		String userInput;
 		while(!(userInput=stdIn.readLine()).equals(".") && userInput!=null) {
-			System.out.println("sending lin");
-			out.write(userInput);
+			System.out.println("sending line");
+			out.write(userInput + "\r\n");
 		}
 		out.flush();
 	}
@@ -123,6 +120,7 @@ public class ClientHandler {
 	private void getMethod(String command, String version) throws IOException{
 		String newCommand = command + " " + version;
 		out.println(newCommand + "\r\n");
+		out.flush();
 		String output;
 		while (((output = in.readLine()) != null) && in.ready()) {
 			System.out.println(output);

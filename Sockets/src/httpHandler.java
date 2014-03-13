@@ -134,7 +134,7 @@ public class httpHandler implements Runnable {
 		System.out.println("enterd post duuude");
 		try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(filename, true)))) {
 		    String userInput;
-		    while((userInput=br.readLine())!= null) {
+		    while((userInput=br.readLine())!= null && br.ready()) {
 		    	System.out.println(userInput);
 		    	out.println(userInput);
 		    }
