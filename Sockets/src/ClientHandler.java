@@ -7,6 +7,9 @@ public class ClientHandler {
 	Socket clientSocket;
 	String host;
 	int port;
+	PrintWriter out;
+	BufferedReader in;
+	ArrayList<String> valid_http_versions = new ArrayList<String>();
 
 	/**
 	 * Creates a new client handler with given host and port.
@@ -16,6 +19,8 @@ public class ClientHandler {
 	 * @throws IOException
 	 */
 	public ClientHandler(String host, int port) throws IOException {
+		valid_http_versions.add("HTTP/1.1");
+		valid_http_versions.add("HTTP/1.0");
 		connectionOpen = true;
 		this.host = host;
 		this.port = port;
@@ -31,12 +36,20 @@ public class ClientHandler {
 	 */
 	private void establishConnection(String host, int port) throws IOException {
 		clientSocket = new Socket(host, port);
+		out = new PrintWriter(clientSocket.getOutputStream(), true);
+		in = new BufferedReader(new InputStreamReader(
+				clientSocket.getInputStream()));
 	}
 
-	private void changeConnectionStatus(String version, String commandWord)
+	/**
+	 * 
+	 * @param version The HTTP version that was used in the command
+	 * @param commandWord
+	 * @throws IOException
+	 */
+	private void changeConnectionStatus(String version)
 			throws IOException {
-		if (version.equals("HTTP/1.0")
-				|| commandWord.toUpperCase().equals("QUIT")) {
+		if (version.equals("HTTP/1.0")) {
 			connectionOpen = false;
 		}
 		if (version.equals("HTTP/1.1")) {
@@ -61,37 +74,86 @@ public class ClientHandler {
 		} catch (ArrayIndexOutOfBoundsException e) {
 
 		}
-		changeConnectionStatus(version, command);
-		PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-		BufferedReader in = new BufferedReader(new InputStreamReader(
-				clientSocket.getInputStream()));
-		if (version.equals("HTTP/1.0")) {
-			if (commandline[0].equals("POST")) {
-				File file = new File(commandline[1]);
-				for (String line : getContents(file)) {
-					System.out.println(line);
-					out.write(line + "\r\n");
-				}
-			} else {
-				out.println(command + "\r\n");
-			}
-			closeConnection();
-		}
-
-		else if (version.equals("HTTP/1.1")) {
-			String new_command = command + " " + version;
-			out.println(new_command + "\r\n");
-		} else {
-			System.out
-					.println("This HTTP version is not supported. Please choose HTTP/1.1 or HTTP/1.0");
+		if(!valid_http_versions.contains(version)){
+			System.out.println("This HTTP version is not supported. Please choose HTTP/1.1 or HTTP/1.0");
 			String new_request = (new BufferedReader(new InputStreamReader(
 					System.in))).readLine();
 			processCommand(new_request);
+
 		}
+		changeConnectionStatus(version);
+
+		String commandword = commandline[0];
+
+		if(commandword.toUpperCase().equals("POST")){
+			postMethod(command, version);
+		}
+		else if(commandword.toUpperCase().equals("GET")){
+			getMethod(command, version);
+		}
+		else if(commandword.toUpperCase().equals("PUT")){
+			putMethod(command, version);
+		}
+		else if(commandword.toUpperCase().equals("HEAD")){
+			headMethod(command, version);
+		}
+
+		if(version.equals("HTTP/1.1")){
+			establishConnection(host, port);
+		} else{
+			closeConnection();
+		}
+		//		if (version.equals("HTTP/1.0")) {
+		//			if (commandline[0].equals("POST")) {
+		//				postMethod(commandline[1]);
+		//
+		//			}
+		//			else {
+		//				out.println(command + "\r\n");
+		//			}
+		//			closeConnection();
+		//		}
+		//
+		//		else if (version.equals("HTTP/1.1")) {
+		//			String new_command = command + " " + version;
+		//			out.println(new_command + "\r\n");
+		//		} else {
+		//			System.out
+		//			.println("This HTTP version is not supported. Please choose HTTP/1.1 or HTTP/1.0");
+		//			String new_request = (new BufferedReader(new InputStreamReader(
+		//					System.in))).readLine();
+		//			processCommand(new_request);
+		//		}
 		String output;
 		while (((output = in.readLine()) != null) && in.ready()) {
 			System.out.println(output);
 		}
+	}
+
+	private void postMethod(String filepath, String version) throws IOException{
+		File file = new File(filepath);
+		for (String line : getContents(file)) {
+			System.out.println(line);
+			out.write(line + "\r\n");
+		}
+	}
+
+	private void putMethod(String filepath, String version){
+
+	}
+
+	private void headMethod(String source, String version){
+
+	}
+
+	private void getMethod(String source, String version) throws IOException{
+		String command = "GET " + source;
+		out.println(command + "\r\n");
+		String output;
+		while (((output = in.readLine()) != null) && in.ready()) {
+			System.out.println(output);
+		}
+
 	}
 
 	private void closeConnection() {

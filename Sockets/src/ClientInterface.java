@@ -7,6 +7,7 @@ public class ClientInterface {
 	}
 
 	public static void main(String[] args) {
+		//command host port httpversion
 		ClientHandler clientHandler = null;
 		BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -33,9 +34,13 @@ public class ClientInterface {
 		
 		try {
 			String[] splittedHost = host.split("/",2);
+//			System.out.println(splittedHost[0]);
+//			System.out.println(splittedHost[1]);
 			clientHandler = new ClientHandler(splittedHost[0], port);
 			System.out.println("Connection created: " + splittedHost[0] + " on port "+ port);
-			String commandToProcess = command + " " + splittedHost[1] + " " + version;
+			//ontbreekt hier geen / voor de splittedhost1? we splitten daar op en die / wordt dan ook
+			//uit de string verwijdert.
+			String commandToProcess = command + " /" + splittedHost[1] + " " + version;
 			clientHandler.processCommand(commandToProcess);
 		} catch (IOException e) {
 			e.printStackTrace();
