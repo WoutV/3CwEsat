@@ -40,24 +40,24 @@ public class httpHandler implements Runnable {
 
 	private void processRequest() throws Exception{
 		String userInputLine = br.readLine();
-		// System.out.println(userInputLine);
+		System.out.println(userInputLine);
 		if (userInputLine.equals(CRLF) || userInputLine.equals(""))
 			closeConnection();
 		String[] request = userInputLine.split(" ");
-		String temp = request[0].toUpperCase();
+		String commandWord = request[0].toUpperCase();
 		String version = request[2];
 		String fileName = request[1];
-
-		if (temp.equals("GET")) {
+		System.out.println(commandWord);
+		if (commandWord.equals("GET")) {
 			System.out.println("GET ENTERED MOFOS");
 			System.out.println(fileName);
 			getCommand(fileName);
-		} else if (temp.equals("PUT")) {
+		} else if (commandWord.equals("PUT")) {
 			putCommand();
-		} else if (temp.equals("POST")) {
+		} else if (commandWord.equals("POST")) {
 			System.out.println("enterd POST");
 			postCommand(fileName);
-		} else if (temp.equals("HEAD")) {
+		} else if (commandWord.equals("HEAD")) {
 			headCommand(fileName);
 		}
 		if (version.equals("HTTP/1.0")) {
@@ -101,15 +101,15 @@ public class httpHandler implements Runnable {
 		}
 
 		// Send the status line.
-		output.write(statusLine.getBytes());
+		outputPrinter.write(statusLine);
 		System.out.println(statusLine);
 
 		// Send the content type line.
-		output.write(contentTypeLine.getBytes());
+		outputPrinter.write(contentTypeLine);
 		System.out.println(contentTypeLine);
 
 		// Send the Content-Length
-		output.write(contentLengthLine.getBytes());
+		outputPrinter.write(contentLengthLine);
 		System.out.println(contentLengthLine);
 
 		// Send a blank line to indicate the end of the header lines.
@@ -168,28 +168,28 @@ public class httpHandler implements Runnable {
 		}
 
 		// Send the status line.
-		output.write(statusLine.getBytes());
+		outputPrinter.write(statusLine);
 		System.out.println(statusLine);
 
 		// Send the content type line.
-		output.write(contentTypeLine.getBytes());
+		outputPrinter.write(contentTypeLine);
 		System.out.println(contentTypeLine);
 
 		// Send the Content-Length
-		output.write(contentLengthLine.getBytes());
+		outputPrinter.write(contentLengthLine);
 		System.out.println(contentLengthLine);
 
 		// Send a blank line to indicate the end of the header lines.
-		output.write(CRLF.getBytes());
+		outputPrinter.write(CRLF);
 		System.out.println(CRLF);
 
-		// // Send the entity body.
-		// if (fileExists) {
-		// sendBytes(fis, output);
-		// fis.close();
-		// } else {
-		// output.write(entityBody.getBytes());
-		// }
+//		 // Send the entity body.
+//		 if (fileExists) {
+//			 sendBytes(fis, output);
+//			 fis.close();
+//		 } else {
+//			 output.write(entityBody.getBytes());
+//		 }
 	}
 
 	private static void sendBytes(FileInputStream fis, OutputStream os)

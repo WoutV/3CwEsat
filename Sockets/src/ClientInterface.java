@@ -36,7 +36,8 @@ public class ClientInterface {
 			String[] splittedHost = host.split("/",2);
 			clientHandler = new ClientHandler(splittedHost[0], port);
 			System.out.println("Connection created: " + splittedHost[0] + " on port "+ port);
-			String commandToProcess = command + " /" + splittedHost[1] + " " + version;
+//			String commandToProcess = command + " /" + splittedHost[1] + " " + version;
+			String commandToProcess = command + " " + splittedHost[1] + " " + version;
 			clientHandler.processCommand(commandToProcess);
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -70,6 +70,7 @@ public class ClientHandler {
 		String version = "";
 		String commandword= "";
 		try {
+			System.out.println(commandline[1]);
 			command = commandline[0] + " " + commandline[1];
 			version = commandline[2];
 			commandword = commandline[0];
@@ -99,8 +100,8 @@ public class ClientHandler {
 		out.write(filepath);
 		System.out.println("Enter the text you want to add to the file. End with a single . (dot).");
 		String userInput;
-		while((userInput=stdIn.readLine())!=".\r\n" && userInput!=null) {
-			System.out.println("sending line");
+		while(!(userInput=stdIn.readLine()).equals(".") && userInput!=null) {
+			System.out.println("sending lin");
 			out.write(userInput);
 		}
 		out.flush();
@@ -125,22 +126,63 @@ public class ClientHandler {
 		String output;
 		while (((output = in.readLine()) != null) && in.ready()) {
 			System.out.println(output);
-			//TODO insert image code here . 
+//			if(output.contains("<img")){
+// 				String[] splittedOutput = output.split("src=\"");
+//// 				String imgPath = splittedOutput[1].split("\"")[0];
+// 				//writeToDisk(imgPath);
+// 				processCommand("GET "+ imgPath + "HTTP/1.1");
+//	 		}
 		}
 	}
 
-	private ArrayList<String> getContents(File file) throws IOException {
-		ArrayList<String> contents = new ArrayList<String>();
+//	private void writeToDisk(String imgPath) throws IOException {
+//		System.out.println(imgPath);
+//		URL url = new URL(imgPath);
+//		URLConnection conn = url.openConnection();
+//	
+//		// open the stream and put it into BufferedReader
+//		BufferedReader br = new BufferedReader(
+//	                       new InputStreamReader(conn.getInputStream()));
+//	
+//		String inputLine;
+//	
+//		//save to this filename
+//		String fileName = "C:/Users/Wout/Desktop/test";
+//		File file = new File(fileName);
+//	
+//		if (!file.exists()) {
+//			file.createNewFile();
+//		}
+//	
+//		//use FileWriter to write file
+//		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+//		BufferedWriter bw = new BufferedWriter(fw);
+//	
+//		while ((inputLine = br.readLine()) != null) {
+//			bw.write(inputLine);
+//		}
+//	
+//		bw.close();
+//		br.close();
+//	}
+	
+//	private void writeToDisk(String imgPath) throws IOException {
+//		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("src\\"+file), "utf-8"));
+//		writer.write(file);
+//	}
 
-		BufferedReader input = new BufferedReader(new FileReader(file));
-		String line;
-		while ((line = input.readLine()) != null) {
-			contents.add(line);
-		}
-		input.close();
-
-		return contents;
-	}
+//	private ArrayList<String> getContents(File file) throws IOException {
+//		ArrayList<String> contents = new ArrayList<String>();
+//
+//		BufferedReader input = new BufferedReader(new FileReader(file));
+//		String line;
+//		while ((line = input.readLine()) != null) {
+//			contents.add(line);
+//		}
+//		input.close();
+//
+//		return contents;
+//	}
 	
 	private void procesInvalidRequest() throws IOException{
 		System.out.println("This request was not valid. Please check your HTTP version and your request format.");
