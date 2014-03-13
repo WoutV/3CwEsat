@@ -16,9 +16,6 @@ public class Server {
 
 		portNumber = temp_portNumber;
 
-		// serversocket wordt zogezegd nooit gesloten maar hier nog kijken voor
-		// http/1.0 en http/1.1 hoe dit gedaan wordt
-		// waar en waneer de verbinding sluiten
 		try {
 			ServerSocket serverSocket = new ServerSocket(portNumber);
 			System.out.println("httpServer running on port "+ serverSocket.getLocalPort());
