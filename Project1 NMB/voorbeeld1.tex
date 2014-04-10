@@ -1,0 +1,269 @@
+\documentclass[10pt,a4paper]{article}
+%Type document
+%\documentclass[a4paper, 12pt, titlepage]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[dutch]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[numbered,framed]{mcode}
+%Bijschriften kleiner lettertype geven (dit moet voor \usepackage{subfig} staan)
+\usepackage[footnotesize]{caption}
+%Meerdere figuren naast elkaar (met apart bijschrift)
+\usepackage{subfig}
+\usepackage{subfloat}
+
+%Arbritary font-sizes
+%\usepackage{lmodern}
+
+\usepackage{listings}
+\lstset{
+language=Matlab, % choose the language of the code
+%basicstyle=10pt, % the size of the fonts that are used for the code
+numbers=left, % where to put the line-numbers
+numberstyle=\footnotesize, % the size of the fonts that are used for the line-numbers
+stepnumber=1, % the step between two line-numbers. If it's 1 each line will be numbered
+numbersep=5pt, % how far the line-numbers are from the code
+%backgroundcolor=\color{grey}, % choose the background color. You must add \usepackage{color}
+showspaces=false, % show spaces adding particular underscores
+showstringspaces=false, % underline spaces within strings
+showtabs=false, % show tabs within strings adding particular underscores
+frame=single, % adds a frame around the code
+%tabsize=2, % sets default tabsize to 2 spaces
+%captionpos=b, % sets the caption-position to bottom
+breaklines=true, % sets automatic line breaking
+breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)} % if you want to add a comment within your code
+}
+
+
+\usepackage{chngcntr}
+\counterwithin{subfigure}{figure}
+
+\begin{document}
+
+\title{Numerieke Modellering en Benadering\\Practicum 2\\Incalza Dario $\&$ Bouss\'e Martijn}
+
+\date{\today}
+
+\maketitle
+
+\newpage
+
+\listoffigures
+
+
+
+
+\newpage
+\section{Benaderen met trigonometrische veeltermen}
+Voor het benaderen van continue periodieke functies of gesloten krommen zijn klassieke veeltermen niet aangewezen. In het eerste deel van het practicum onderzoeken we daarom trigonometrische veeltermen.
+
+\subsection{Matlab-functie voor het evalueren van periodieke interpolerende en benaderende trigonometrische
+veeltermen}
+\begin{lstlisting}
+function y = periotrig(x, K, M)
+    N = size(x,1); %aantal rijen v/d matrix
+    d = size(x,2); %aantal kolommen v/d matrix
+
+    %de fft berekenen van X
+    X = fft(x);
+    %de nodige coefficienten op nul zetten voor 
+    X(K+2:N,:)= 0;
+
+    %allocatie van de matrix
+    Y = zeros([N d]);
+    %alle coefficienten zijn omwille 
+    %van periodiciteit gelijk aan : Y_k ==
+    %Y_(M-k)
+    for k = (M/2)+1:M-1
+        Y(k+1,:) = conj(Y(M-k+1,:));
+    end
+    
+	%de juiste waarde voor Y_k kiezen volgens de
+    %voorwaarden in de opgave, toepassen op de hele matrix
+    %voor een efficientere berekening.
+    Y(1:N/2,:) = M*X(1:N/2,:)/N;
+    Y((N/2)+1,:) = M*X((N/2)+1,:)/(2*N);
+    Y((N/2)+2:(M/2)+1,:) = 0;
+    
+    % y berekenen als de ifft van Y
+    y = ifft(Y);
+    
+    % we plotten nu de oplossing
+    x_waarden = y(:,1);
+    y_waarden = y(:,2);
+    str = sprintf('Grafiek met K = %f , en M = %f',K,M);
+    plot(x_waarden,y_waarden,'b-');
+    title(str);
+
+end
+
+\end{lstlisting}
+
+
+We gaan eerst de FFT berekenen van de ingevoerde matrix x, daarop volgend zetten we de nodige co\"effici\"enten op 0. De volgende stap bestaat eruit om de $Y_k$ co\"effici\"enten te berekenen. Deze moeten voldoen aan :\\
+\begin{eqnarray}
+\begin{cases}
+Y_k = \frac{M}{N}*X_k, & k = 0,\cdots ,N/2-1 \\
+Y_k =\frac{M}{N}*\frac{X_k}{2}, & k = N/2\\
+Y_k = 0, & k = N/2+1,\cdots ,M/2
+\end{cases}
+\end{eqnarray}
+
+\newpage
+
+Nu dient er echter nog een voorwaarde opgesteld te worden voor de co\"effici\"enten $Y_k$ waarvoor geldt dat $k = M/2+1,\cdots  ,M-1$. Als gevolg van de periodiciteit en symmetrie geldt er voor deze co\"effici\"enten : $Y_k=\overline{Y}_{M-k}$. Al deze voorwaarden zijn ge\"implementeerd van lijn 15 tot 24. Eens deze co\"effici\"enten bekend zijn gebruiken we de \emph{inverse Fourier-transformatie} en bekomen zo de resultaat matrix y. 
+
+
+\subsection{Illustreer en bespreek de invloed van de parameter K op de benadering van een periodieke veelterm.}
+We doen dit ineens door gebruik te maken van de opgegeven functie click(). Wanneer we hier het oneindig teken mee genereren krijgen we als uitkomst tabel \ref{tab:coordinaten} van 28 punten.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{r||c|c|}
+\textit{Co\"ordinaten} & \textbf{x} & \textbf{y}\\ \hline
+1& 0.167050691244240 & 0.483918128654971\\
+2& 0.190092165898618 & 0,425438596491228\\
+3& 0.226958525345622 & 0.419590643274854\\
+4& 0.282258064516129 & 0.422514619883041\\ 
+5& 0.314516129032258 & 0.460526315789473\\ 
+6& 0,337557603686636 & 0.483918128654971\\ 
+7& 0.362903225806452 & 0.521929824561403\\
+8& 0.381336405529954 & 0.542397660818713\\
+9& 0,413594470046083 & 0.562865497076023\\
+10& 0.457373271889401 & 0.568713450292398\\
+11& 0,480414746543779 & 0.568713450292398\\
+12& 0.528801843317972 & 0.568713450292398\\
+13& 0.549539170506913 & 0,559941520467836\\ 
+14& 0.577188940092166 & 0.510233918128655\\ 
+15& 0.586405529953917 & 0.469298245614035\\ 
+16& 0.579493087557604 & 0.437134502923976\\ 
+17& 0.535714285714286 & 0.404970760233918\\ 
+18& 0,496543778801843 & 0.404970760233918\\
+19& 0.411290322580645 & 0.413742690058479\\ 
+20& 0.392857142857143 & 0.437134502923976\\ 
+21& 0,360599078341014 & 0,478070175438596\\ 
+22& 0.332949308755760 & 0.516081871345029\\ 
+23& 0,286866359447005 & 0.565789473684210\\ 
+24& 0.263824884792627 & 0.574561403508772\\
+25& 0.243087557603687 & 0.574561403508772\\ 
+26& 0,185483870967742 & 0.565789473684210\\
+27& 0.171658986175115 & 0.530701754385965\\  
+28& 0.167050691244240 & 0.483918128654971\\ \hline
+\end{tabular}
+\end{center}
+\caption{x- en y-co\"ordinaten voor 28 punten van het oneindig teken}
+\label{tab:coordinaten}
+\end{table}
+
+\newpage
+
+We zetten tabel \ref{tab:coordinaten} om naar een matrix $x$ en geven deze aan de zelfgeschreven functie \emph{periotrig}. We plotten eveneens figuren voor de verschillende $K$ waarden om zo de invloed van deze parameter,voor het benaderen door trigonometrische veeltermen, te bespreken.\\
+\\
+$K$ stelt de index waarden voor en wordt gebruikt om de $X_k$ co\"effici\"enten op nul te zetten voor alle co\"effici\"enten groter als $K$. We kunnen dus theoretisch vermoeden dat er een betere benadering bekomen wordt indien $K$ hoog is. Praktisch illustreren we dit door het oneindig teken te benaderen, we gebruiken hiervoor tabel \ref{tab:coordinaten} als meetpunten waarop we gaan interpoleren, met verschillende waarden voor $K$, en bekomen zo figuur \ref{fig:benaderingen}. We zien op figuur \ref{subfig:fig1} duidelijk dat de benadering niet goed is. Er is een duidelijke onderbreking te zien. In figuren~\ref{subfig:fig2} en \ref{subfig:fig3} zien we duidelijk de benadering beter worden aangezien meerdere $X_k$ co\"effici\"enten gebruikt worden. \\
+
+\begin{figure}[h]
+\centering
+\subfloat[K = 5, M = 28]{\label{subfig:fig1}\includegraphics[width=0.45\textwidth]{figuren/fig1.png}}\hspace{0.5cm}
+\subfloat[K = 10, M = 28]{\label{subfig:fig2}\includegraphics[width=0.45\textwidth]{figuren/fig2.png}}\\
+\subfloat[K = 28, M = 28]{\label{subfig:fig3}\includegraphics[width=0.45\textwidth]{figuren/fig3.png}}\\
+\caption{Benaderingen voor verschillende waarden van K.}
+\label{fig:benaderingen}
+\end{figure}
+
+
+\newpage
+
+\section{Kleinste-kwadratenbenadering met splinefuncties}
+
+In dit het tweede deel van het practicum trachten we een kleinste-kwadratenbenadering op te stellen met behulp van splinefuncties. Hiertoe worden twee MATLAB functies geschreven: 
+
+\begin{itemize}
+	\item{\emph{function c = kkb\_spline(t,x,f,k)}: Deze MATLAB functie berekent de kleinste-kwadratenbendaring van meerdere functies tegelijk. De output \emph{c} is een matrix waarvan elke kolom de co\"effici\"enten bevat de kleinste-kwadraten-benadering voor de overeenkomstige kolom in \emph{f}.}
+	\item{\emph{function z = de\_boor(c,x,f,t,k)}: De co\"effici\"entenmatrix \emph{c}, bekomen uit de voorgaande functie, wordt nu gebruikt om de functiewaarden \emph{z} te berekenen via het algoritme van de Boor.}
+\end{itemize}
+
+
+\subsection{Matlab-functie voor het opstellen en evalueren van een kleinste-kwadratenbenadering met kubische splinefuncties.}
+
+\lstinputlisting[language=Matlab]{kkbsplineVERSLAG.m}
+
+
+\subsection{Evaluatie van de kleinste-kwadratenbenadering met behulp van het algoritme van de Boor.}
+
+\lstinputlisting[language=Matlab]{deboorVERSLAG.m}
+
+
+\subsection{Illustratie van de B-splines}
+
+Figuur~\ref{fig:bsplines} toont een aantal B-splines ter illustratie van de correctheid van het algoritme van de Boor. Noteer dat elke B-spline verschilt van de nulfunctie in slechts $k+1$ intervallen, en wordt bepaald door $k+2$ knooppunten. In een willekeurig punt van het knooppunten interval $[t_{0},t_{n}]$ zijn hoogstens $k+1$ B-splines verschillend van nul.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figuren/bsplines.png}
+	\caption{Enkele B-splines ter illustratie van de correctheid van het algoritme van de Boor.}
+	\label{fig:bsplines}
+\end{figure}
+
+
+\subsection{Belang van de ligging van de knooppunten}
+
+Figuur~\ref{fig:ligging} toont het belang van de ligging van de knooppunten bij het construeren van een spline kleinste-kwadratenbenadering voor het klassieke regressie probleem van een $\textrm{sinc}(x)$ functie. In Figuur~\ref{subfig:ligging1} wordt veel meer knooppunten gekozen op het begin en einde van het interval dan in het midden van het interval, vice versa voor Figuur~\ref{subfig:ligging2}. Figuren~\ref{subfig:ligging_splines1} en \ref{subfig:ligging_splines2} illustreren het effect op de B-splines voor de verschillende keuzes van de knooppunten.
+
+\begin{figure}[h]
+\centering
+\subfloat[Benadering met meer knooppunten op het begin en einde van het interval.]{\label{subfig:ligging1}\includegraphics[width=0.45\textwidth]{figuren/ligging1.png}}\hspace{0.5cm}
+\subfloat[Fout tussen de benadering en de echte functie voor meer knooppunten op het begin en einde van het interval.]{\label{subfig:error1}\includegraphics[width=0.45\textwidth]{figuren/error1.png}}\\
+\subfloat[Benadering met meer knooppunten in het midden van het interval.]{\label{subfig:ligging2}\includegraphics[width=0.45\textwidth]{figuren/ligging2.png}}\hspace{0.5cm}
+\subfloat[Fout tussen de benadering en de echte functie voor meer knooppunten in het midden van het interval.]{\label{subfig:error2}\includegraphics[width=0.45\textwidth]{figuren/error2.png}}\\
+\subfloat[B-splines van een benadering met meer knooppunten op het begin en einde van het interval.]{\label{subfig:ligging_splines1}\includegraphics[width=0.45\textwidth]{figuren/ligging_splines1.png}}\hspace{0.5cm}
+\subfloat[B-splines van een benadering met meer knooppunten in het midden van het interval.]{\label{subfig:ligging_splines2}\includegraphics[width=0.45\textwidth]{figuren/ligging_splines2.png}}\\
+\caption{Illustratie van het belang van de ligging van de knooppunten bij het construeren van een spline kleinste-kwadratenbenadering voor een $\textrm{sinc}(x)$ functie.}
+\label{fig:ligging}
+\end{figure}
+
+%\begin{figure}[h]
+%\centering
+%\subfloat[B-splines van een benadering met meer knooppunten op het begin en einde van het interval.]{\label{subfig:ligging_splines1}\includegraphics[width=0.45\textwidth]{figuren/ligging_splines1.png}}\hspace{0.5cm}
+%\subfloat[B-splines van een benadering met meer knooppunten in het midden van het interval.]{\label{subfig:ligging_splines2}\includegraphics[width=0.45\textwidth]{figuren/ligging_splines2.png}}\\
+%\caption{Invloed op de B-splines van de ligging van de knooppunten bij het construeren van een spline kleinste-kwadratenbenadering voor een $\textrm{sinc}(x)$ functie.}
+%\label{fig:ligging_splines}
+%\end{figure}
+
+
+\subsection{Kleinste-kwadratenbenadering van een $\textrm{sinc}(x)$ met Gaussiaanse ruis}
+
+Figuur~\ref{subfig:sincruis1} toont de kleinste-kwadratenbenadering van een $\textrm{sinc}(x)$ met Gaussiaanse ruis. Belangrijk hierbij is de keuze van het aantal knooppunten; legt men bijvoorbeeld te weinig knooppunten in sommige deelgebieden, dan zal de benadering daar onvoldoende aansluiten bij de data. Legt men daarentegen teveel knooppunten, dan zal de benadering de ruis beginnen te volgen, zoals getoond in Figuur~\ref{subfig:sincruis2}
+
+\begin{figure}[h]
+\centering
+\subfloat[Weinig knooppunten]{\label{subfig:sincruis1}\includegraphics[width=0.45\textwidth]{figuren/sincruis1.png}}\hspace{0.5cm}
+\subfloat[Veel knooppunten]{\label{subfig:sincruis2}\includegraphics[width=0.45\textwidth]{figuren/sincruis2.png}}\\
+\caption{Invloed van de knooppunten op de kleinste-kwadratenbenadering van een $\textrm{sinc}(x)$ functie met Gaussiaanse ruis.}
+\label{fig:sincruis}
+\end{figure}
+
+
+\subsection{Kleinste-kwadratenbenadering van de solsleutel}
+
+Figuur~\ref{fig:solsleutel} toont de kleinste-kwadratenbenadering van de solsleutel uit de muziekleer. De meetpunten werden gekozen met behulp van de routine \emph{click.m}. Dit levert twee sequenties van meetpunten die gebruikt worden als invoer voor de functie \emph{kkb\_spline}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuren/solsleutel.png}
+	\caption{Kleinste-kwadratenbenadering van de solsleutel uit de muziekleer.}
+	\label{fig:solsleutel}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\end{document}

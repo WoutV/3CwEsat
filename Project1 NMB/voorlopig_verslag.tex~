@@ -1,0 +1,21 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[dutch]{babel}
+\begin{document}
+
+\title{\textbf{Numerieke Modellering en Benadering}\\\textit{Practicum 1}\\
+De Wolf Peter\\ Vekemans Wout}
+
+\date{\today}
+\begin{titlepage}
+	\maketitle
+	\thispagestyle{empty}
+\end{titlepage}
+
+\newpage
+
+\listoffigures
+
+\newpage
+
+\end{document}
