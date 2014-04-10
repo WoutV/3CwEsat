@@ -1,21 +1,20 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  27 MAR 2014 13:15
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.4.5)  10 APR 2014 10:31
 entering extended mode
+ %&-line parsing enabled.
 **voorlopig_verslag.tex
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project1 NMB\voorlopig_verslag.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(F:\MiKTeX\tex\latex\base\article.cls
+(./voorlopig_verslag.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(F:\MiKTeX\tex\latex\base\size10.clo
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -29,25 +28,23 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (F:\MiKTeX\tex\generic\babel\babel.sty
-Package: babel 2008/07/08 v3.8m The Babel package
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(F:\MiKTeX\tex\latex\00miktex\bblopts.cfg
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-(F:\MiKTeX\tex\generic\babel\dutch.ldf
+(/var/lib/texmf/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/share/texmf-texlive/tex/generic/babel/dutch.ldf
 Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
- (F:\MiKTeX\tex\generic\babel\babel.def
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 132.
-)) ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project1 NMB\voorlopig_verslag.au
-x")
+))
+(./voorlopig_verslag.aux)
+\openout1 = `voorlopig_verslag.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
@@ -66,33 +63,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 11.
+ [1
 
-
-LaTeX Warning: No \author given.
-
-[1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project1 NMB\voorlopig_verslag.lof")
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./voorlopig_verslag.lof)
 \tf@lof=\write3
-[1]
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project1 NMB\voorlopig_verslag.aux")
- ) 
+\openout3 = `voorlopig_verslag.lof'.
+
+ [1] (./voorlopig_verslag.aux) ) 
 Here is how much of TeX's memory you used:
- 580 strings out of 493921
- 7023 string characters out of 3154503
- 59256 words of memory out of 3000000
- 3932 multiletter control sequences out of 15000+200000
+ 575 strings out of 493848
+ 6637 string characters out of 1152824
+ 57905 words of memory out of 3000000
+ 3911 multiletter control sequences out of 15000+50000
  7934 words of font info for 28 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 24i,6n,24p,189b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
-<F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><F:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><F:/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmti12.pfb>
-Output written on voorlopig_verslag.pdf (2 pages, 50386 bytes).
+ 714 hyphenation exceptions out of 8191
+ 24i,6n,24p,189b,203s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on voorlopig_verslag.pdf (2 pages, 42297 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 25 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
