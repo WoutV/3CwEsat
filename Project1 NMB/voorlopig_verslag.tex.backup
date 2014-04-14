@@ -2,7 +2,6 @@
 
 %Taal: Nederlands ("Inhoudsopgave", "Hoofdstuk",...)
 \usepackage[dutch]{babel}
-\usepackage{graphicx}
 
 %Geen nummering bij secties en hoofdstukkden
 \setcounter{secnumdepth}{-1} 
@@ -36,8 +35,7 @@ In dit practicum onderzoeken we methoden voor het bepalen van eigenwaarden van v
 \section{Convergentie-experimenten}
 
 \subsection{Opgave 4}
-Het uitvoeren van het $spy$-commando laat zien dat er geen enkel $non-zero$ element in de matrix zit. De uitvoering van het QR-algoritme op een matrix met die afmetingen (nog steeds relatief klein) zou zeer veel werk vragen. Na het reduceren tot Hessenberg vorm zien we dat alle elementen onder de eerste benedendiagonaal nul zijn geworden. Verdere analyse leert ons dat ook de elementen op $\epsilon_{mach}$ na gelijk zijn aan nul. Dit komt doordat de originele matrix symmetrisch was. Het uitvoeren van het QR-algoritme voor het vinden van eigenwaarden van een matrix vraagt veel minder werk voor matrix van tridiagonale vorm.
-
+Het uitvoeren van het $spy$-commando laat zien dat er geen enkel $non-zero$ element in de matrix zit. De uitvoering van het QR-algoritme op een matrix met die afmetingen (nog steeds relatief klein) zou zeer veel werk vragen. Na het reduceren tot Hessenberg vorm zien we dat alle elementen onder de eerste benedendiagonaal nul zijn geworden. Verdere analyse leert ons dat ook de elementen op $\epsilon$ na gelijk zijn aan nul. Dit komt doordat de originele matrix symmetrisch was. 
 
 \subsection{Opgave 5}
 
