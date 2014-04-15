@@ -3,6 +3,7 @@
 %Taal: Nederlands ("Inhoudsopgave", "Hoofdstuk",...)
 \usepackage[dutch]{babel}
 \usepackage{graphicx}
+\usepackage{subcaption}
 
 %Geen nummering bij secties en hoofdstukkden
 \setcounter{secnumdepth}{-1} 
@@ -34,10 +35,26 @@ In dit practicum onderzoeken we methoden voor het bepalen van eigenwaarden van v
 \subsection{Opgave 2}
 
 \section{Convergentie-experimenten}
+Voor al deze experimenten wordt gebruik gemaakt van een volle, re\"ele symmetrische matrix A. We laden hiervoor de gegeven matrix $mat1.txt$ in in MATLAB.
 
 \subsection{Opgave 4}
-Het uitvoeren van het $spy$-commando laat zien dat er geen enkel $non-zero$ element in de matrix zit. De uitvoering van het QR-algoritme op een matrix met die afmetingen (nog steeds relatief klein) zou zeer veel werk vragen. Na het reduceren tot Hessenberg vorm zien we dat alle elementen onder de eerste benedendiagonaal nul zijn geworden. Verdere analyse leert ons dat ook de elementen op $\epsilon_{mach}$ na gelijk zijn aan nul. Dit komt doordat de originele matrix symmetrisch was. Het uitvoeren van het QR-algoritme voor het vinden van eigenwaarden van een matrix vraagt veel minder werk voor matrix van tridiagonale vorm.
+Het uitvoeren van het $spy$-commando laat zien dat er geen enkel $non-zero$ element in de matrix zit. De uitvoering van het QR-algoritme op een matrix met die afmetingen (nog steeds relatief klein) zou zeer veel werk vragen. \\
+Na het reduceren tot Hessenberg vorm zien we dat alle elementen onder de eerste benedendiagonaal nul zijn geworden. Verdere analyse leert ons dat ook de elementen boven de eerste bovendiagonaal allemaal van grootteorde $\epsilon_{mach}$ zijn. Als we de Hessenberg vorm van de matrix afronden tot op 15 decimalen verkijgen we een tridiagonale matrix.(zie figuur \ref{hessenberg}) Dit komt doordat de originele matrix symmetrisch was. De reductie naar Hessenberg vorm zorgt ervoor dat het algoritme niet op een volledige matrix moet inwerken. Het uitvoeren van het QR-algoritme vraagt nu slechts $\mathcal{O}(n^2)$ flops. 
+\begin{figure}[!h]
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{structuur_hessenberg.eps}
+\subcaption{zonder afronden}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{afgerond.eps}
+\subcaption{met afronden}
+\end{subfigure}
 
+\caption{Structuur van de Hessenberg matrix}
+\label{hessenberg}
+\end{figure}
 
 \subsection{Opgave 5}
 
