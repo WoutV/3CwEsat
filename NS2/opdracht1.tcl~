@@ -6,11 +6,11 @@ $ns color 1 Red
 $ns color 2 Green
 
 #trace file
-set tf [open out.tr w]
+set tf [open out1.tr w]
 $ns trace-all $tf
 
 #nam tracefile
-set nf [open out.nam w]
+set nf [open out2.nam w]
 $ns namtrace-all $nf
 
 proc finish {} {
@@ -20,7 +20,7 @@ proc finish {} {
 	close $tf
 	close $nf
 	
-	exec nam out.nam &
+	exec nam out1.nam &
 	exit 0
 }
 
@@ -42,7 +42,7 @@ $ns simplex-link $n3 $n4 256kb 0.2ms DropTail
 $ns duplex-link $n4 $n3 4Mb 0.2ms DropTail
 $ns duplex-link $n4 $n5 100Mb 0.3ms DropTail
 $ns duplex-link $n5 $n6 100Mb 0.3ms DropTail
-$ns duplex-link $n5 $n6 100Mb 0.3ms DropTail
+$ns duplex-link $n5 $n7 100Mb 0.3ms DropTail
 
 #ftp connectie download 6 naar 1
 set tcp [new Agent/TCP]
