@@ -1,9 +1,10 @@
 \documentclass[a4paper, 12pt, titlepage]{report}
 
 %Taal: Nederlands ("Inhoudsopgave", "Hoofdstuk",...)
-\usepackage[dutch]{babel}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{algorithmic}
+\usepackage{amsmath, amssymb, textcomp, mathtools}
 
 %Geen nummering bij secties en hoofdstukkden
 \setcounter{secnumdepth}{-1} 
@@ -101,6 +102,35 @@ Iteratie & 23 & 22& 21&20&19 \\
 
 
 \subsection{Opgave 6}
+De Rayleigh quoti\"ent iteratie en de Rayleigh shift methode zouden allebei kubisch moeten convergeren. In figuur \ref{vglRayleigh} zijn onze numerieke bevindingen weergegeven. We zien duidelijk dat er een gelijkaardige convergentiesnelheid is. Dit komt doordat de Rayleigh shift methode gebruik maakt van het Rayleigh quoti\"ent. Het QR algoritme met Rayleigh shifts is namelijk een methode waarbij er snelle convergentie is in de laatste kolom van $Q^{(k)}$. Het Rayleigh quoti\"ent $\mu^{(k)}$ van de laatste kolom van de matrix is dan een goede schatting voor de eigenwaarde horende bij de laatste kolom. 
+\begin{equation}
+	\mu^{(k)} = \frac{(q^{(k)}_m)^TAq^{(k)}_m}{(q^{(k)}_m)^Tq^{(k)}_m} = (q^{(k)}_m)^TAq^{(k)}_m
+	\label{eqn:rayleighquotient}
+\end{equation}
+Nu is dit getal gelijk aan $A^{(k)}_{mm}$ en kan dit getal zo als shift gebruikt worden voor de volgende iteratiestap.\\
+
+De convergentie van gelijktijdige iteratie en QR zonder shifts wordt ge\"illustreerd in figuur \ref{vglSimQR}. Als residu gebruiken we hier de relatieve fout op de diagonaal van A. Dit kan een licht vertekend beeld geven als er enkele eigenwaarden niet zo snel convergeren, maar voor een globaal beeld is het voldoende. Het is duidelijk dat deze methodes ongeveer even snel convergeren. Dit kan eenvoudig worden aangetoond. Het algoritme voor gelijktijdige iteratie is als volgt:
+
+\begin{algorithmic}
+ \STATE Kies $\hat{Q}^{(0)}\in \mathbb{R}^{m\times n}$ met orthonormale kolommen
+ \FOR{$k=1,2,...$} 
+ 	\STATE $Z = A\hat{Q}^{(k-1)}$
+ 	\STATE $\hat{Q}^{(k)}\hat{R}^{(k)} = Z$
+ \ENDFOR
+\end{algorithmic}
+
+Theorema 28.3 (p. 216) in het handboek toont aan dat gelijktijdige iteratie en unshifted QR dezelfde matrices $\underline{R}^{(k)},\underline{Q}^{(k)} en \underline{A}^{(k)}$ genereren. Het is ook eenvoudig in te zien dat dit de matrices zijn die gedefinieerd worden door de $k^{de}$ macht van de QR factorisatie van $A$.\\
+
+Volgens theorema 28.4 (p. 218) convergeert het QR algoritme zonder shifts lineair naar een diagonaalmatrix. Aangezien gelijktijdige iteratie dezelfde matrices produceert moet deze methode een gelijkaardige convergentiesnelheid hebben. Uit figuur \ref{vglSimQR} wordt duidelijk dat dit ook zo is. 
+
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{vergelijkingLineair.eps}
+	\caption{Vergelijking convergentie van unshifted QR en gelijktijdig iteratie}
+	\label{vglSimQR}
+\end{figure}
+
 
 \subsection{Opgave 7}
 
