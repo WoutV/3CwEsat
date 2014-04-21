@@ -12,6 +12,12 @@
 %geen indents
 \setlength\parindent{0pt}
 
+
+%"Figuur" in vet
+\makeatletter
+\renewcommand{\fnum@figure}{\small\textbf{\figurename~\thefigure}}
+\makeatother
+
 \usepackage[dutch]{babel}
 \begin{document}
 
@@ -61,11 +67,11 @@ Na het reduceren tot Hessenberg vorm zien we dat alle elementen onder de eerste 
 \end{figure}
 
 \subsection{Opgave 5}
-Na uitvoeren van de drie methoden verkrijgen we ...... TODO we zien duidelijk dat het QR-algoritme zonder shifts een lineaire convergentie heeft. \\
-
-Als maat voor de convergentie gebruiken we de relatieve fout op de berekende eigenwaarden. 
+Het toepassen van de drie verschillende versies van het QR algoritme geeft ons figuur \ref{3QRs}. We zien duidelijk dat er 1 methode trager is dan de rest. Als maat voor de convergentie gebruiken we de relatieve fout op de berekende eigenwaarden. 
 
 Voor het algoritme zonder shifts stemt dit volledig overeen met de theorie. Theorem 28.4 (p. 218 in het handboek) geeft duidelijk aan dat bij het gebruik van QR zonder shifts $A^{(k)}$ lineair convergeert naar een diagonaalmatrix met de eigenwaarden van $A$ als elementen.In Tabel \ref{errorNoShift} staan de relatieve fouten op de vijf dominante eigenwaarden van de matrix, bij gebruik van het algoritme zonder shifts. Zie ook figuur \ref{graphNoShift} voor een grafische illustratie van de convergentie.\\
+
+Voor Wilkinson shift zien we in tabel \ref{errorWilkinson} dat er over het algemeen snellere convergentie is dan bij het algoritme zonder shifts. De verwachte kubische convergentie blijkt niet echt duidelijk uit de resultaten. 
 \begin{center}
 \begin{table}
 
@@ -99,6 +105,75 @@ Iteratie & 23 & 22& 21&20&19 \\
 \end{table}
 \end{center}
 
+\begin{center}
+ \begin{table}
+  \begin{tabular}{r||r|r|r|r|r}
+  Iteratie & 23&22&21&20&19\\
+  \hline
+5	&	2.7954E-02	&	1.1750E-01	&	1.0582E-01	&	2.4273E-01	&	2.3798E-01	\\
+10	&	1.4943E-02	&	2.0071E-02	&	8.4508E-02	&	8.2623E-02	&	1.0694E-01	\\
+15	&	9.6654E-03	&	3.1292E-03	&	9.0310E-02	&	4.8149E-02	&	2.6853E-02	\\
+20	&	6.1540E-03	&	3.7826E-03	&	3.4726E-02	&	4.6832E-02	&	2.3820E-02	\\
+25	&	3.8228E-03	&	2.6950E-03	&	1.3951E-02	&	4.8232E-02	&	1.2391E-02	\\
+30	&	2.3320E-03	&	1.7462E-03	&	7.0906E-03	&	1.6654E-02	&	3.8615E-02	\\
+35	&	1.4057E-03	&	1.0889E-03	&	3.9605E-03	&	3.2062E-03	&	4.6617E-02	\\
+40	&	8.4102E-04	&	6.6583E-04	&	2.2457E-03	&	1.7235E-04	&	3.9414E-02	\\
+45	&	5.0085E-04	&	4.0271E-04	&	1.2673E-03	&	6.4671E-04	&	2.6736E-02	\\
+50	&	2.9744E-04	&	2.4205E-04	&	7.1057E-04	&	5.1331E-04	&	2.6268E-02	\\
+55	&	1.7635E-04	&	1.4495E-04	&	3.9652E-04	&	3.2931E-04	&	2.3048E-02	\\
+60	&	1.0445E-04	&	8.6613E-05	&	2.2060E-04	&	1.9614E-04	&	1.4949E-02	\\
+65	&	6.1824E-05	&	5.1682E-05	&	1.2251E-04	&	1.1316E-04	&	8.8874E-03	\\
+70	&	3.6582E-05	&	3.0811E-05	&	6.7957E-05	&	6.4321E-05	&	4.9702E-03	\\
+75	&	2.1642E-05	&	1.8357E-05	&	3.7671E-05	&	3.6294E-05	&	2.6765E-03	\\
+80	&	1.2801E-05	&	1.0932E-05	&	2.0873E-05	&	2.0403E-05	&	1.4106E-03	\\
+85	&	7.5716E-06	&	6.5079E-06	&	1.1561E-05	&	1.1446E-05	&	7.3479E-04	\\
+90	&	4.4782E-06	&	3.8731E-06	&	6.4022E-06	&	6.4144E-06	&	3.8037E-04	\\
+95	&	2.6485E-06	&	2.3044E-06	&	3.5445E-06	&	3.5920E-06	&	1.9627E-04	\\
+
+
+
+  \end{tabular}
+\caption{Relatieve fout op vijf grootste berekende eigenwaarden (Rayleigh shift)}
+\label{errorRayleigh}
+ \end{table}
+
+\end{center}
+
+
+\begin{center}
+ \begin{table}
+  \begin{tabular}{r||r|r|r|r|r}
+  Iteratie & 23&22&21&20&19\\
+  \hline
+  5	&	3.5241E-02	&	1.7599E-01	&	1.5860E-01	&	2.9753E-01	&	2.7171E-01	\\
+10	&	1.6399E-02	&	3.5473E-02	&	1.0074E-01	&	7.4094E-02	&	1.4469E-01	\\
+15	&	1.0546E-02	&	1.9560E-03	&	8.6089E-02	&	5.8539E-02	&	3.5689E-02	\\
+20	&	6.7499E-03	&	3.9381E-03	&	4.2712E-02	&	4.9227E-02	&	2.3114E-02	\\
+25	&	4.2117E-03	&	2.9159E-03	&	1.6377E-02	&	5.5393E-02	&	6.6471E-03	\\
+30	&	2.5772E-03	&	1.9121E-03	&	8.0228E-03	&	2.1555E-02	&	3.4651E-02	\\
+35	&	1.5566E-03	&	1.1991E-03	&	4.4386E-03	&	4.7371E-03	&	4.2576E-02	\\
+40	&	9.3243E-04	&	7.3546E-04	&	2.5159E-03	&	1.3738E-04	&	4.3532E-02	\\
+45	&	5.5571E-04	&	4.4559E-04	&	1.4217E-03	&	6.3519E-04	&	2.8144E-02	\\
+50	&	3.3017E-04	&	2.6809E-04	&	7.9809E-04	&	5.5136E-04	&	2.5672E-02	\\
+55	&	1.9580E-04	&	1.6064E-04	&	4.4572E-04	&	3.6282E-04	&	2.4825E-02	\\
+60	&	1.1599E-04	&	9.6021E-05	&	2.4810E-04	&	2.1829E-04	&	1.6428E-02	\\
+65	&	6.8662E-05	&	5.7309E-05	&	1.3782E-04	&	1.2651E-04	&	9.9183E-03	\\
+70	&	4.0631E-05	&	3.4171E-05	&	7.6463E-05	&	7.2069E-05	&	5.6034E-03	\\
+75	&	2.4038E-05	&	2.0361E-05	&	4.2390E-05	&	4.0710E-05	&	3.0357E-03	\\
+80	&	1.4219E-05	&	1.2126E-05	&	2.3489E-05	&	2.2898E-05	&	1.6053E-03	\\
+85	&	8.4102E-06	&	7.2194E-06	&	1.3012E-05	&	1.2851E-05	&	8.3769E-04	\\
+90	&	4.9742E-06	&	4.2968E-06	&	7.2056E-06	&	7.2026E-06	&	4.3405E-04	\\
+95	&	2.9419E-06	&	2.5566E-06	&	3.9895E-06	&	4.0338E-06	&	2.2408E-04	\\
+
+
+  \end{tabular}
+\caption{Relatieve fout op vijf grootste berekende eigenwaarden (Wilkinson)}
+\label{errorWilkinson}
+ \end{table}
+
+\end{center}
+
+
 
 
 \subsection{Opgave 6}
@@ -121,7 +196,7 @@ De convergentie van gelijktijdige iteratie en QR zonder shifts wordt ge\"illustr
 
 Theorema 28.3 (p. 216) in het handboek toont aan dat gelijktijdige iteratie en unshifted QR dezelfde matrices $\underline{R}^{(k)},\underline{Q}^{(k)} en \underline{A}^{(k)}$ genereren. Het is ook eenvoudig in te zien dat dit de matrices zijn die gedefinieerd worden door de $k^{de}$ macht van de QR factorisatie van $A$.\\
 
-Volgens theorema 28.4 (p. 218) convergeert het QR algoritme zonder shifts lineair naar een diagonaalmatrix. Aangezien gelijktijdige iteratie dezelfde matrices produceert moet deze methode een gelijkaardige convergentiesnelheid hebben. Uit figuur \ref{vglSimQR} wordt duidelijk dat matrix A inderdaar lineair convergeert naar een diagonaalmatrix.
+Volgens theorema 28.4 (p. 218) convergeert het QR algoritme zonder shifts lineair naar een diagonaalmatrix. Aangezien gelijktijdige iteratie dezelfde matrices produceert moet deze methode een gelijkaardige convergentiesnelheid hebben. Uit figuur \ref{vglSimQR} wordt duidelijk dat matrix $A$ inderdaar lineair convergeert naar een diagonaalmatrix.
 
 
 \begin{figure}[htb]
