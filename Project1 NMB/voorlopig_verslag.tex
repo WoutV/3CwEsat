@@ -40,9 +40,53 @@
 In dit practicum onderzoeken we methoden voor het bepalen van eigenwaarden van vole matrices. In een eerste sectie beschouwen we enkele theoretische eigenschappen van de methoden. In een tweede sectie worden de convergentie-eigenschappen van da methoden onderzocht aan de hand van MATLAB-experimenten. In de derde en laatste sectie gaan we dieper in op \'e\'en van de methoden, namelijk de Jacobi-methode.
 \section{Theoretische eigenschappen}
 
+
 \subsection{Opgave 1}
+Gelijktijdige iteratie is een andere naam voor het toepassen van de methode van de machten op meerdere kolommen van $A$ tegelijk. Zo kunnen de grootste $n$ eigenwaarden van de matrix $A$ gevonden worden.  Om met gelijktijdige iteratie de kleinste $n$ eigenwaarden van A te berekenen is het voldoende om het algoritme toe te passen op $A^{-1}$ in plaats van op $A$. Dit is makkelijk in te zien. De eigenwaarden van de inverse van een singuliere matrix $A$ zijn gelijk aan het omgekeerde van de eigenwaarden van $A$.\\
+\begin{subequations} \label{eq:simIt}
+\begin{align}
+ Ax  = \lambda x \\
+A\frac{1}{\lambda}x =  x\\
+A^{-1}A\frac{1}{\lambda}x  =  A^{-1}x\\
+A^{-1}x  =  \frac{1}{\lambda}x
+\end{align}
+\end{subequations}
+
+Als we dit algoritme uitschrijven krijgen we volgende pseudocode:\\
+\begin{algorithmic}
+ \STATE Initialiseer $\hat{Q}^{(0)} \in \mathbb{R}^{m \times n}$ met $n$ orthonormale kolommen.
+\FOR	 {$k = 1,2,...$}
+\STATE $Z = A^{-1}\hat{Q}^{k-1}$
+\STATE $\hat{Q}^{k}\hat{R}^{k} = Z$
+\ENDFOR
+\end{algorithmic}
+Dit zal convergeren naar de $n$ grootste eigenwaarden van $A^{-1}$, die zoals eerder aangetoond in \eqref{eq:simIt} overeenkomen met de $n$ kleinste eigenwaarden van $A$.
 
 \subsection{Opgave 2}
+\paragraph{a)} 
+De Rayleigh quoti\"ent iteratie convergeert zeer snel naar de juiste waarde van de eigenwaarden van $A$. Elke iteratiestap verdrievoudigt het aantal juiste cijfers. Elke stap dient er wel een stelsel te worden opgelost dat meer en meer singulier wordt naarmate de benadering voor de eigenwaarde juister wordt. Het betreft het stelsel
+\begin{equation}\label{eq:rayleighstelsel}
+ (A=\lambda^{(k-1)}I)w = v^{(k-1)}
+\end{equation}
+Als $\lambda$ dichter en dichter bij een eigenwaarde van $A$ komt wordt $A-\lambda^{(k-1)}I$ meer en meer singulier, en zal de inverse van deze matrix, die nodig is om \eqref{eq:rayleighstelsel} op te lossen, ervoor zorgen dat de vector $w$ enorm wordt opgeblazen. De vector zal echter wel in de juiste richting blijven wijzen, waardoor dit geen problemen oplevert.\\
+\paragraph{b)}
+Gegeven een matrix $A \in \mathbb{R}^{m \times m}$ en een vector $x \in \mathbb{R}^{m \times 1}$, waarbij $x$ een benadering is voor een eigenvector van $A$. Toon aan dat de oplossing $\rho \in \mathbb{R}$ van het minimalisatieprobleem 
+\begin{equation}
+ \underset{\rho \in \mathbb{R}}{\text{min}}|| Ax-\rho x||_{2}
+\end{equation}
+overeenkomt met het Rayleighquoti\"ent van $x$.\\
+Dit probleem lijkt op het standaard kleinste kwadraten probleem $Ax \approx b$. We proberen nu een $\rho$ te vinden zodat $||Ax-\rho x||_{2}$ geminimaliseerd wordt. De overeenkomstige normaalvergelijkingen (cf $A^TAx = A^Tb)$ worden gegeven door 
+\begin{subequations}
+\begin{align}
+  x^Tx\rho = x^TAx\\
+ \rho = \frac{x^TAx}{x^Tx}=r(x)
+\end{align}
+\end{subequations}
+waarbij $r(x)$ het Rayleigh quoti\"ent van $x$ voorstelt.
+
+
+
+\subsection{Opgave 3}
 
 \section{Convergentie-experimenten}
 Voor al deze experimenten wordt gebruik gemaakt van een volle, re\"ele symmetrische matrix A. We laden hiervoor de gegeven matrix $mat1.txt$ in in MATLAB.

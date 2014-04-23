@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  21 APR 2014 17:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  23 APR 2014 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -388,6 +388,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
+
+ []
+
 Package epstopdf Info: Source file: <structuur_hessenberg.eps>
 (epstopdf)                    date: 2014-04-15 13:34:36
 (epstopdf)                    size: 19472 bytes
@@ -397,15 +406,14 @@ Package epstopdf Info: Source file: <structuur_hessenberg.eps>
 (epstopdf)                    size: 32297 bytes
 (epstopdf)             Command: <repstopdf --outfile=structuur_hessenberg-eps-c
 onverted-to.pdf structuur_hessenberg.eps>
-(epstopdf)             \includegraphics on input line 56.
+(epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
-
-<structuur_hessenberg-eps-converted-to.pdf, id=12, 961.5925pt x 318.18875pt>
+<structuur_hessenberg-eps-converted-to.pdf, id=21, 961.5925pt x 318.18875pt>
 File: structuur_hessenberg-eps-converted-to.pdf Graphic file (type pdf)
 
 <use structuur_hessenberg-eps-converted-to.pdf>
 Package pdftex.def Info: structuur_hessenberg-eps-converted-to.pdf used on inpu
-t line 56.
+t line 100.
 (pdftex.def)             Requested size: 195.0pt x 64.5251pt.
 Package epstopdf Info: Source file: <afgerond.eps>
 (epstopdf)                    date: 2014-04-15 13:36:03
@@ -415,69 +423,64 @@ Package epstopdf Info: Source file: <afgerond.eps>
 (epstopdf)                    size: 9320 bytes
 (epstopdf)             Command: <repstopdf --outfile=afgerond-eps-converted-to.
 pdf afgerond.eps>
-(epstopdf)             \includegraphics on input line 61.
+(epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
 
-<afgerond-eps-converted-to.pdf, id=13, 961.5925pt x 321.2pt>
+<afgerond-eps-converted-to.pdf, id=22, 961.5925pt x 321.2pt>
 File: afgerond-eps-converted-to.pdf Graphic file (type pdf)
 
 <use afgerond-eps-converted-to.pdf>
-Package pdftex.def Info: afgerond-eps-converted-to.pdf used on input line 61.
+Package pdftex.def Info: afgerond-eps-converted-to.pdf used on input line 105.
 (pdftex.def)             Requested size: 195.0pt x 65.13576pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 54--64
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 98--108
 []$[]$ $[]$ 
  []
 
+[3]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-[2]
-
-LaTeX Warning: Reference `graphNoShift' on page 3 undefined on input line 74.
+LaTeX Warning: Reference `3QRs' on page 4 undefined on input line 114.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+LaTeX Warning: Reference `graphNoShift' on page 4 undefined on input line 116.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Overfull \hbox (3.02737pt too wide) in paragraph at lines 80--105
+Overfull \hbox (3.02737pt too wide) in paragraph at lines 122--147
 [][] 
  []
 
 
-Overfull \hbox (3.02737pt too wide) in paragraph at lines 112--138
+Overfull \hbox (3.02737pt too wide) in paragraph at lines 154--180
+[][] 
+ []
+
+[4 <./structuur_hessenberg-eps-converted-to.pdf> <./afgerond-eps-converted-to.p
+df>] [5] [6]
+Overfull \hbox (3.02737pt too wide) in paragraph at lines 189--214
 [][] 
  []
 
 
-Overfull \hbox (3.02737pt too wide) in paragraph at lines 147--172
-[][] 
- []
+LaTeX Warning: Reference `vglRayleigh' on page 7 undefined on input line 224.
 
 
-LaTeX Warning: Reference `vglRayleigh' on page 3 undefined on input line 182.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
-[3 <./structuur_hessenberg-eps-converted-to.pdf> <./afgerond-eps-converted-to.p
-df>] [4] [5] [6]
-Overfull \hbox (10.99178pt too wide) in paragraph at lines 189--190
+[7]
+Overfull \hbox (10.99178pt too wide) in paragraph at lines 231--232
 []\OT1/cmr/m/n/12 De con-ver-gen-tie van ge-lijk-tij-dige ite-ra-tie en QR zon-
 der shifts wordt ge[]^^Pllustreerd
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
@@ -489,26 +492,26 @@ Package epstopdf Info: Source file: <vergelijkingLineair.eps>
 (epstopdf)                    size: 11976 bytes
 (epstopdf)             Command: <repstopdf --outfile=vergelijkingLineair-eps-co
 nverted-to.pdf vergelijkingLineair.eps>
-(epstopdf)             \includegraphics on input line 206.
+(epstopdf)             \includegraphics on input line 248.
 Package epstopdf Info: Output file is already uptodate.
-<vergelijkingLineair-eps-converted-to.pdf, id=46, 1082.0425pt x 588.1975pt>
+<vergelijkingLineair-eps-converted-to.pdf, id=51, 1082.0425pt x 588.1975pt>
 File: vergelijkingLineair-eps-converted-to.pdf Graphic file (type pdf)
 
 <use vergelijkingLineair-eps-converted-to.pdf>
 Package pdftex.def Info: vergelijkingLineair-eps-converted-to.pdf used on input
- line 206.
+ line 248.
 (pdftex.def)             Requested size: 312.00119pt x 169.60358pt.
- [7 <./vergelijkingLineair-eps-converted-to.pdf>] [8] (./voorlopig_verslag.aux)
+ [8 <./vergelijkingLineair-eps-converted-to.pdf>] [9] (./voorlopig_verslag.aux)
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5115 strings out of 493307
- 75640 string characters out of 6139905
- 164394 words of memory out of 5000000
- 8490 multiletter control sequences out of 15000+600000
+ 5118 strings out of 493307
+ 75676 string characters out of 6139905
+ 155410 words of memory out of 5000000
+ 8493 multiletter control sequences out of 15000+600000
  14271 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,8n,40p,656b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -523,10 +526,10 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on voorlopig_verslag.pdf (9 pages, 173202 bytes).
+Output written on voorlopig_verslag.pdf (10 pages, 179571 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
