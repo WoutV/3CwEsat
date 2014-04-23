@@ -1,3 +1,5 @@
 \select@language {dutch}
-\contentsline {figure}{\numberline {1}{\ignorespaces Structuur van de Hessenberg matrix\relax }}{4}
-\contentsline {figure}{\numberline {2}{\ignorespaces Vergelijking convergentie van unshifted QR en gelijktijdig iteratie\relax }}{8}
+\contentsline {figure}{\numberline {1}{\ignorespaces Structuur van de Hessenberg matrix\relax }}{6}{figure.caption.14}
+\contentsline {figure}{\numberline {2}{\ignorespaces convergentie van verschillende QR algoritmes\relax }}{6}{figure.caption.16}
+\contentsline {figure}{\numberline {3}{\ignorespaces Vergelijking convergentie van unshifted QR en gelijktijdig iteratie\relax }}{8}{figure.caption.19}
+\contentsline {figure}{\numberline {4}{\ignorespaces Convergentie van Arnoldi-Ritz waarden\relax }}{9}{figure.caption.21}
