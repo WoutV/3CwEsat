@@ -220,13 +220,40 @@ We hebben een random ijle matrix $A \in \mathbb{R}^{1000\times1000}$ gegenereerd
 
 \subsection{Opgave 8}
 De Jacobi methode voor het vinden van eigenwaarden van een symmetrische matrix $A$ steunt op de vermenigvuldiging
-\begin{equation}
+\begin{equation} \label{jacobi}
  J^T\begin{bmatrix}a & d \\ d & b\end{bmatrix}J
 \end{equation}
 waarin geldt
 \begin{equation}
  J=\begin{bmatrix}c & s\\ $-s$ & c\end{bmatrix}
-\end{equation}.	
+\end{equation}
+Hieronder zullen we de waarde van $s$ en $c$ berekenen zodat de niet-diagonaalelementen na de vermenigvuldiging \eqref{jacobi} gelijk zijn aan 0. \\
+Aangezien het gaat om een rotatiematrix, moet de determinant van $J$ gelijk zijn aan 1.
+\begin{equation}
+ c^2+s^2=1
+\end{equation}
+Daarom kozen we voor volgende waarden voor $s$ en $c$
+\begin{equation}
+\begin{align}
+ \begin{cases}
+  c=\cos(\theta)\\
+  s=\sin(\theta)
+ \end{cases}
+ \end{align}
+\end{equation}
+Dit geeft ons volgende uitdrukking voor de waarde van de niet-diagonaalelementen
+\begin{equation}
+ \frac{1}{2}\sin(2\theta)(a-b) + d\cos(2\theta) = 0
+\end{equation}
+Verder uitwerken geeft ons
+\begin{equation}
+ \theta = \frac{1}{2}\arctan(\frac{2d}{b-a})
+\end{equation}
+Als $a=b$ stellen we $\theta$ gelijk aan $\frac{\pi}{4}$, omdat bij die hoek de boogtangens oneindig is. 
+
+
+
+
 
 \subsection{Opgave 9}
 
