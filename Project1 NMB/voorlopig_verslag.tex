@@ -111,7 +111,7 @@ Voor al deze experimenten wordt gebruik gemaakt van een volle, re\"ele symmetris
 \subsection{Opgave 4}
 Het uitvoeren van het $spy$-commando laat zien dat er geen enkel $non-zero$ element in de matrix zit. De uitvoering van het QR-algoritme op een matrix met die afmetingen (nog steeds relatief klein) zou zeer veel werk vragen. \\
 Na het reduceren tot Hessenberg vorm zien we dat alle elementen onder de eerste benedendiagonaal nul zijn geworden. Verdere analyse leert ons dat ook de elementen boven de eerste bovendiagonaal allemaal van grootteorde $\epsilon_{mach}$ zijn. Als we de Hessenberg vorm van de matrix afronden tot op 15 decimalen verkijgen we een tridiagonale matrix.(zie figuur \ref{hessenberg}) Dit komt doordat de originele matrix symmetrisch was. De reductie naar Hessenberg vorm zorgt ervoor dat het algoritme niet op een volledige matrix moet inwerken. Het uitvoeren van het QR-algoritme vraagt nu slechts $\mathcal{O}(n^2)$ flops. 
-\begin{figure}[!h]x
+\begin{figure}[!h]
 \begin{subfigure}{.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{structuur_hessenberg.eps}
@@ -128,17 +128,24 @@ Na het reduceren tot Hessenberg vorm zien we dat alle elementen onder de eerste 
 \end{figure}
 
 \subsection{Opgave 5}
-Het toepassen van de drie verschillende versies van het QR algoritme geeft ons figuur \ref{3QRs}. Als maat voor de convergentie gebruiken we de waarde van een subdiagonaal elementje van $A$. Dit doen we omdat de matrix convergeert naar een diagonaalmatrix. Hoe dichter die waarde bij nul ligt, hoe dichter de matrix een diagonaalmatrix benadert. We zien duidelijk dat er 1 methode trager is dan de rest. We zien op de grafiek duidelijk dat het residu bij het algoritme zonder shifts lineair convergeert naar 0. De algoritmes met shifts (Rayleigh en Wilkinson) convergeren kubisch en zijn dus veel sneller dan het algoritme zonder shifts.
+Het toepassen van de drie verschillende versies van het QR algoritme geeft ons figuur \ref{3QRs}. Het is duidelijjk dat er twee kubisch convergerende methodes zijn, en 1 lineaire. \\
+Als maat voor de convergentie gebruiken we de waarde van een subdiagonaal elementje van $A$. Dit doen we omdat de matrix convergeert naar een diagonaalmatrix. Hoe dichter die waarde bij nul ligt, hoe dichter de matrix een diagonaalmatrix benadert. We zien op de grafiek duidelijk dat het residu bij het algoritme zonder shifts lineair convergeert naar 0. De algoritmes met shifts (Rayleigh en Wilkinson) convergeren kubisch en zijn dus veel sneller dan het algoritme zonder shifts. Het is zelfs zo dat de methoden met shift al een absolute fout kleiner dan $10^{-16}$ hebben na een tweetal stappen.\\
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{3QRS.eps}
-	\caption{convergentie van verschillende QR algoritmes}
+	\caption{Convergentie van verschillende QR algoritmes}
 	\label{3QRs}
 \end{figure}
 
 
-Voor het algoritme zonder shifts stemt dit volledig overeen met de theorie. Theorem 28.4 (p. 218 in het handboek) geeft duidelijk aan dat bij het gebruik van QR zonder shifts $A^{(k)}$ lineair convergeert naar een diagonaalmatrix met de eigenwaarden van $A$ als elementen.In Tabel \ref{errorQR} zijn de waarden van de residu's voor de eerste vijf stappen weergegeven voor de drie methoden.\\
+Voor het algoritme zonder shifts stemt dit volledig overeen met de theorie. Theorem 28.4 (p. 218 in het handboek) geeft duidelijk aan dat bij het gebruik van QR zonder shifts $A^{(k)}$ lineair convergeert naar een diagonaalmatrix met de eigenwaarden van $A$ als elementen. Deze lineaire convergentie kan sterk verbeterd worden door het gebruik van shifts. \\
+Als we bijvoorbeeld het Rayleigh quoti\"ent gebruiken als shift in elke iteratiestap krijgen we kubische convergetntie naar de eigenwaarde die hoort bij de eigenvector die benaderd wordt door de laatste kolom van $A$. Dan zijn de berekenden benaderingen $\mu$ en $q_m$ in elke stap gelijk aan diegenen die berekend worden door de Rayleigh quoti\"ent iteratie die gestart wordt met de $m^{de}$ eenheidsvector. Door dit verband is het duidelijk dat het QR algoritme met Rayleigh shift in het beste geval kubisch convergeert. De Rayleigh iteratie doet dit immers ook. Dit is duidelijk te zien op de figuur. \\
+Om een resultaat te vinden dat minder afhankelijk is van beginvoorwaarden kunnen we ook Wilkinson shift gebruiken. Hiervoor nemen we een submatrix $B$ uit $A$ en gebruiken we de eigenwaarde van B die het dichtste bij $a_m$ ligt als shift. Dit algoritme garandeert zelfs in het slechtste geval nog kwadratische convergentie, in tegenstelling tot het algoritme met Rayleigh shifts, dat soms helemaal niet convergeert.
+\begin{equation}
+ B=\begin{bmatrix} a_{m-1} & b_{m-1} \\ b_{m-1} & a_m\end{bmatrix}
+\end{equation}
+
 
 \begin{table}[h]
 \begin{center}
@@ -149,8 +156,8 @@ Iteratie	&	\textbf{unshifted}	&	\textbf{Wilkinson}	&	\textbf{Rayleigh}	\\
 1	&	7.6359E-01	&	1.8360E-02	&	1.8347E-02	\\
 2	&	2.1011E-01	&	9.8332E-07	&	1.2342E-05	\\
 3	&	8.0838E-02	&	1.1383E-18	&	9.5580E-15	\\
-4	&	3.3388E-02	&	1.1131E-50	&	8.9132E-42	\\
-5	&	1.4090E-02	&	1.1243E-114	&	7.2306E-97	\\
+4	&	3.3388E-02	&	0		&		0	\\
+5	&	1.4090E-02	&	0		&		0	\\
 
 \end{tabular}
 \caption{Residu van de 3 verschillende methoden, voor de eerste vijf stappen}
@@ -158,8 +165,6 @@ Iteratie	&	\textbf{unshifted}	&	\textbf{Wilkinson}	&	\textbf{Rayleigh}	\\
 
 \end{center}
 \end{table}
-
-
 
 
 \subsection{Opgave 6}
@@ -170,7 +175,14 @@ De Rayleigh quoti\"ent iteratie en de Rayleigh shift methode zouden allebei kubi
 	\label{eqn:rayleighquotient}
 \end{equation}
 
-Nu is dit getal gelijk aan $A^{(k)}_{mm}$ en kan dit getal zo als shift gebruikt worden voor de volgende iteratiestap.\\
+Nu is dit getal gelijk aan $A^{(k)}_{mm}$ en kan dit getal zo als shift gebruikt worden voor de volgende iteratiestap. Zoals eerder gezegd toont figuur \ref{vglRayleigh} duidelijk dat beide methodes ongeveer even snel convergeren naar een exacte waarde voor de eigenwaarde. \\
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{shiftvsquot.eps}
+	\caption{Vergelijking convergentie Rayleigh shift en Rayleigh quoti\"ent}
+	\label{vglRayleigh}
+\end{figure}
 
 De convergentie van gelijktijdige iteratie en QR zonder shifts wordt ge\"illustreerd in figuur \ref{vglSimQR}. Als residu gebruiken we een elementje net onder de diagonaal van $A$. Aangezien de matrix moet convergeren naar een diagonaalmatrix geeft dit een duidelijk beeld van de convergentie. Hoe snelle het elementje naar 0 nadert, hoe sneller de convergentie. Het is duidelijk dat deze methodes ongeveer even snel convergeren. Dit kan eenvoudig worden aangetoond. Het algoritme voor gelijktijdige iteratie is als volgt:
 
@@ -184,8 +196,7 @@ De convergentie van gelijktijdige iteratie en QR zonder shifts wordt ge\"illustr
 
 Theorema 28.3 (p. 216) in het handboek toont aan dat gelijktijdige iteratie en unshifted QR dezelfde matrices $\underline{R}^{(k)},\underline{Q}^{(k)} en \underline{A}^{(k)}$ genereren. Het is ook eenvoudig in te zien dat dit de matrices zijn die gedefinieerd worden door de $k^{de}$ macht van de QR factorisatie van $A$.\\
 
-Volgens theorema 28.4 (p. 218) convergeert het QR algoritme zonder shifts lineair naar een diagonaalmatrix. Aangezien gelijktijdige iteratie dezelfde matrices produceert moet deze methode een gelijkaardige convergentiesnelheid hebben. Uit figuur \ref{vglSimQR} wordt duidelijk dat matrix $A$ inderdaar lineair convergeert naar een diagonaalmatrix.
-
+Volgens theorema 28.4 (p. 218) convergeert het QR algoritme zonder shifts lineair naar een diagonaalmatrix. Aangezien gelijktijdige iteratie dezelfde matrices produceert moet deze methode een gelijkaardige convergentiesnelheid hebben. Uit figuur \ref{vglSimQR} wordt duidelijk dat matrix $A$ inderdaar voor allebei de methodes lineair convergeert naar het resultaat.\\
 
 \begin{figure}[htb]
 	\centering
@@ -193,7 +204,6 @@ Volgens theorema 28.4 (p. 218) convergeert het QR algoritme zonder shifts lineai
 	\caption{Vergelijking convergentie van unshifted QR en gelijktijdig iteratie}
 	\label{vglSimQR}
 \end{figure}
-
 
 \subsection{Opgave 7}
 We hebben een random ijle matrix $A \in \mathbb{R}^{1000\times1000}$ gegenereerd. Als we hierop de Arnoldi iteratie toepassen en de Ritz waarden berekenen voor elke iteratiestap krijgen we figuur \ref{arnoldiGraph}. We zien duidelijk dat er zeer snelle, geometrische convergentie is naar de extreme eigenwaarde 24.3868 die we berekend hebben met het commando $eigs(A)$. De andere eigenwaarden convergeren niet zo snel. 
@@ -209,6 +219,41 @@ We hebben een random ijle matrix $A \in \mathbb{R}^{1000\times1000}$ gegenereerd
 \section{Alternatieve eigenwaardenalgoritmen}
 
 \subsection{Opgave 8}
+De Jacobi methode voor het vinden van eigenwaarden van een symmetrische matrix $A$ steunt op de vermenigvuldiging
+\begin{equation} \label{jacobi}
+ J^T\begin{bmatrix}a & d \\ d & b\end{bmatrix}J
+\end{equation}
+waarin geldt
+\begin{equation}
+ J=\begin{bmatrix}c & s\\ $-s$ & c\end{bmatrix}
+\end{equation}
+Hieronder zullen we de waarde van $s$ en $c$ berekenen zodat de niet-diagonaalelementen na de vermenigvuldiging \eqref{jacobi} gelijk zijn aan 0. \\
+Aangezien het gaat om een rotatiematrix, moet de determinant van $J$ gelijk zijn aan 1.
+\begin{equation}
+ c^2+s^2=1
+\end{equation}
+Daarom kozen we voor volgende waarden voor $s$ en $c$
+\begin{equation}
+\begin{align}
+ \begin{cases}
+  c=\cos(\theta)\\
+  s=\sin(\theta)
+ \end{cases}
+ \end{align}
+\end{equation}
+Dit geeft ons volgende uitdrukking voor de waarde van de niet-diagonaalelementen
+\begin{equation}
+ \frac{1}{2}\sin(2\theta)(a-b) + d\cos(2\theta) = 0
+\end{equation}
+Verder uitwerken geeft ons
+\begin{equation}
+ \theta = \frac{1}{2}\arctan(\frac{2d}{b-a})
+\end{equation}
+Als $a=b$ stellen we $\theta$ gelijk aan $\frac{\pi}{4}$, omdat bij die hoek de boogtangens oneindig is. 
+
+
+
+
 
 \subsection{Opgave 9}
 

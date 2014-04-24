@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  23 APR 2014 23:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  24 APR 2014 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,7 +530,7 @@ onverted-to.pdf structuur_hessenberg.eps>
 (epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
-<structuur_hessenberg-eps-converted-to.pdf, id=136, 961.5925pt x 318.18875pt>
+<structuur_hessenberg-eps-converted-to.pdf, id=138, 961.5925pt x 318.18875pt>
 File: structuur_hessenberg-eps-converted-to.pdf Graphic file (type pdf)
 
 <use structuur_hessenberg-eps-converted-to.pdf>
@@ -548,18 +548,22 @@ pdf afgerond.eps>
 (epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 
-<afgerond-eps-converted-to.pdf, id=137, 961.5925pt x 321.2pt>
+<afgerond-eps-converted-to.pdf, id=139, 961.5925pt x 321.2pt>
 File: afgerond-eps-converted-to.pdf Graphic file (type pdf)
 
 <use afgerond-eps-converted-to.pdf>
 Package pdftex.def Info: afgerond-eps-converted-to.pdf used on input line 122.
 (pdftex.def)             Requested size: 195.0pt x 65.13576pt.
 
-Overfull \hbox (11.4235pt too wide) in paragraph at lines 114--125
-[]\OT1/cmr/m/n/12 x $[]$ $[]$ 
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 115--125
+[]$[]$ $[]$ 
  []
 
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+
+ []
+
 Package epstopdf Info: Source file: <3QRS.eps>
 (epstopdf)                    date: 2014-04-23 22:52:37
 (epstopdf)                    size: 68998 bytes
@@ -568,37 +572,50 @@ Package epstopdf Info: Source file: <3QRS.eps>
 (epstopdf)                    size: 10665 bytes
 (epstopdf)             Command: <repstopdf --outfile=3QRS-eps-converted-to.pdf 
 3QRS.eps>
-(epstopdf)             \includegraphics on input line 135.
+(epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
- <3QRS-eps-converted-to.pdf, id=145, 1540.75626pt x 580.1675pt>
+<3QRS-eps-converted-to.pdf, id=147, 1540.75626pt x 580.1675pt>
 File: 3QRS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use 3QRS-eps-converted-to.pdf>
-Package pdftex.def Info: 3QRS-eps-converted-to.pdf used on input line 135.
+Package pdftex.def Info: 3QRS-eps-converted-to.pdf used on input line 136.
 (pdftex.def)             Requested size: 390.0pt x 146.84744pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-
- []
-
-[6 <./structuur_hessenberg-eps-converted-to.pdf> <./afgerond-eps-converted-to.p
-df> <./3QRS-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `vglRayleigh' on page 7 undefined on input line 166.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+ [6 <./structuur_hessenberg-eps-converted-to.pdf> <./afgerond-eps-converted-to.
+pdf>] [7 <./3QRS-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
+Package epstopdf Info: Source file: <shiftvsquot.eps>
+(epstopdf)                    date: 2014-04-24 15:07:58
+(epstopdf)                    size: 98790 bytes
+(epstopdf)             Output file: <shiftvsquot-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-04-24 15:08:05
+(epstopdf)                    size: 10414 bytes
+(epstopdf)             Command: <repstopdf --outfile=shiftvsquot-eps-converted-
+to.pdf shiftvsquot.eps>
+(epstopdf)             \includegraphics on input line 182.
+Package epstopdf Info: Output file is already uptodate.
+<shiftvsquot-eps-converted-to.pdf, id=185, 1540.75626pt x 586.19pt>
+File: shiftvsquot-eps-converted-to.pdf Graphic file (type pdf)
 
-Overfull \hbox (10.99178pt too wide) in paragraph at lines 175--176
+<use shiftvsquot-eps-converted-to.pdf>
+Package pdftex.def Info: shiftvsquot-eps-converted-to.pdf used on input line 18
+2.
+(pdftex.def)             Requested size: 390.0pt x 148.37181pt.
+
+Overfull \hbox (10.99178pt too wide) in paragraph at lines 187--188
 []\OT1/cmr/m/n/12 De con-ver-gen-tie van ge-lijk-tij-dige ite-ra-tie en QR zon-
 der shifts wordt ge[]^^Pllustreerd
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+[8 <./shiftvsquot-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
@@ -610,14 +627,14 @@ Package epstopdf Info: Source file: <vergelijkingLineair.eps>
 (epstopdf)                    size: 11976 bytes
 (epstopdf)             Command: <repstopdf --outfile=vergelijkingLineair-eps-co
 nverted-to.pdf vergelijkingLineair.eps>
-(epstopdf)             \includegraphics on input line 192.
+(epstopdf)             \includegraphics on input line 203.
 Package epstopdf Info: Output file is already uptodate.
-<vergelijkingLineair-eps-converted-to.pdf, id=184, 1082.0425pt x 588.1975pt>
+<vergelijkingLineair-eps-converted-to.pdf, id=211, 1082.0425pt x 588.1975pt>
 File: vergelijkingLineair-eps-converted-to.pdf Graphic file (type pdf)
 
 <use vergelijkingLineair-eps-converted-to.pdf>
 Package pdftex.def Info: vergelijkingLineair-eps-converted-to.pdf used on input
- line 192.
+ line 203.
 (pdftex.def)             Requested size: 312.00119pt x 169.60358pt.
 Package epstopdf Info: Source file: <arnoldi.eps>
 (epstopdf)                    date: 2014-04-23 23:41:59
@@ -627,61 +644,85 @@ Package epstopdf Info: Source file: <arnoldi.eps>
 (epstopdf)                    size: 40469 bytes
 (epstopdf)             Command: <repstopdf --outfile=arnoldi-eps-converted-to.p
 df arnoldi.eps>
-(epstopdf)             \includegraphics on input line 202.
+(epstopdf)             \includegraphics on input line 212.
 Package epstopdf Info: Output file is already uptodate.
 
-<arnoldi-eps-converted-to.pdf, id=186, 1540.75626pt x 583.17876pt>
+<arnoldi-eps-converted-to.pdf, id=213, 1540.75626pt x 583.17876pt>
 File: arnoldi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use arnoldi-eps-converted-to.pdf>
-Package pdftex.def Info: arnoldi-eps-converted-to.pdf used on input line 202.
+Package pdftex.def Info: arnoldi-eps-converted-to.pdf used on input line 212.
 (pdftex.def)             Requested size: 467.99881pt x 177.13513pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 202--203
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 212--213
  [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
-[8 <./vergelijkingLineair-eps-converted-to.pdf>] [9 <./arnoldi-eps-converted-to
-.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
+[9 <./vergelijkingLineair-eps-converted-to.pdf>]
+Overfull \hbox (38.68721pt too wide) in paragraph at lines 229--232
+\OT1/cmr/m/n/12 Hieronder zul-len we de waarde van $\OML/cmm/m/it/12 s$ \OT1/cm
+r/m/n/12 en $\OML/cmm/m/it/12 c$ \OT1/cmr/m/n/12 be-re-ke-nen zo-dat de niet-di
+agonaalelementen
+ []
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242  \end{align}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (22.77766pt too wide) in paragraph at lines 243--245
+\OT1/cmr/m/n/12 Dit geeft ons vol-gende uit-druk-king voor de waarde van de nie
+t-diagonaalelementen 
+ []
+
+[10 <./arnoldi-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 262.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
  (./voorlopig_verslag.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
 Package rerunfilecheck Info: File `voorlopig_verslag.out' has not changed.
-(rerunfilecheck)             Checksum: 8207DC101475E513D19F02E47D2A6B80;801.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: 5C0ABF07D10E90AE00E36C26A6408143;801.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 262.
  ) 
 Here is how much of TeX's memory you used:
- 8662 strings out of 493307
- 129701 string characters out of 6139905
- 219486 words of memory out of 5000000
- 11952 multiletter control sequences out of 15000+600000
+ 8678 strings out of 493307
+ 130004 string characters out of 6139905
+ 219618 words of memory out of 5000000
+ 11957 multiletter control sequences out of 15000+600000
  14271 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,40p,680b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,40p,669b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msbm10.pfb>
-Output written on voorlopig_verslag.pdf (10 pages, 229969 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb>
+Output written on voorlopig_verslag.pdf (12 pages, 249248 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 228 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 
