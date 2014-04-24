@@ -16,4 +16,5 @@
 \contentsline {section}{Alternatieve eigenwaardenalgoritmen}{10}{section*.23}
 \contentsline {subsection}{Opgave 8}{10}{section*.24}
 \contentsline {subsection}{Opgave 9}{11}{section*.25}
-\contentsline {subsection}{Opgave 10}{11}{section*.26}
+\contentsline {subsection}{Opgave 10}{12}{section*.26}
+\contentsline {section}{Implementatie van de Jacobimethode}{12}{section*.28}

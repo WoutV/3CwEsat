@@ -18,6 +18,26 @@
 %geen indents
 \setlength\parindent{0pt}
 
+\usepackage{listings}
+\lstset{
+language=Matlab, % choose the language of the code
+%basicstyle=10pt, % the size of the fonts that are used for the code
+numbers=left, % where to put the line-numbers
+numberstyle=\footnotesize, % the size of the fonts that are used for the line-numbers
+stepnumber=1, % the step between two line-numbers. If it's 1 each line will be numbered
+numbersep=5pt, % how far the line-numbers are from the code
+%backgroundcolor=\color{grey}, % choose the background color. You must add \usepackage{color}
+showspaces=false, % show spaces adding particular underscores
+showstringspaces=false, % underline spaces within strings
+showtabs=false, % show tabs within strings adding particular underscores
+frame=single, % adds a frame around the code
+%tabsize=2, % sets default tabsize to 2 spaces
+%captionpos=b, % sets the caption-position to bottom
+breaklines=true, % sets automatic line breaking
+breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)} % if you want to add a comment within your code
+}
+
 
 %"Figuur" in vet
 \makeatletter
@@ -209,7 +229,7 @@ Volgens theorema 28.4 (p. 218) convergeert het QR algoritme zonder shifts lineai
 We hebben een random ijle matrix $A \in \mathbb{R}^{1000\times1000}$ gegenereerd. Als we hierop de Arnoldi iteratie toepassen en de Ritz waarden berekenen voor elke iteratiestap krijgen we figuur \ref{arnoldiGraph}. We zien duidelijk dat er zeer snelle, geometrische convergentie is naar de extreme eigenwaarde 24.3868 die we berekend hebben met het commando $eigs(A)$. De andere eigenwaarden convergeren niet zo snel. 
 \begin{figure}[htb]
 	\begin{center}
-	 \includegraphics[width=1.2\textwidth]{arnoldi.eps}
+	 \includegraphics[width=\textwidth]{arnoldi.eps}
 	\caption{Convergentie van Arnoldi-Ritz waarden}
 	\label{arnoldiGraph}
 	\end{center}
@@ -224,7 +244,7 @@ De Jacobi methode voor het vinden van eigenwaarden van een symmetrische matrix $
  J^T\begin{bmatrix}a & d \\ d & b\end{bmatrix}J
 \end{equation}
 waarin geldt
-\begin{equation}
+\begin{equation} \label{Jacobimatrix}
  J=\begin{bmatrix}c & s\\ $-s$ & c\end{bmatrix}
 \end{equation}
 Hieronder zullen we de waarde van $s$ en $c$ berekenen zodat de niet-diagonaalelementen na de vermenigvuldiging \eqref{jacobi} gelijk zijn aan 0. \\
@@ -242,11 +262,11 @@ Daarom kozen we voor volgende waarden voor $s$ en $c$
  \end{align}
 \end{equation}
 Dit geeft ons volgende uitdrukking voor de waarde van de niet-diagonaalelementen
-\begin{equation}
+\begin{equation} 
  \frac{1}{2}\sin(2\theta)(a-b) + d\cos(2\theta) = 0
 \end{equation}
 Verder uitwerken geeft ons
-\begin{equation}
+\begin{equation} \label{berekeningtheta}
  \theta = \frac{1}{2}\arctan(\frac{2d}{b-a})
 \end{equation}
 Als $a=b$ stellen we $\theta$ gelijk aan $\frac{\pi}{4}$, omdat bij die hoek de boogtangens oneindig is. 
@@ -256,7 +276,40 @@ Als $a=b$ stellen we $\theta$ gelijk aan $\frac{\pi}{4}$, omdat bij die hoek de 
 
 
 \subsection{Opgave 9}
+Tijdens een Jacobiiteratie zal de diagonaal van de matrix A overlopen worden, tot aan het voorlaatste diagonaalelement. Per diagonaalelement zal er in de rij gezocht worden naar het in absolute waarde grootste element verschillend van het diagonaalelement. Dit element zal geselecteerd worden omdat het de grootste impact heeft op het niet diagonaal zijn van de matrix. Daarom gaan we dit element verkleinen. Om dit te doen kiezen we als tweede diagonaalelement het element in dezelfde kolom als het grootste element. Met behulp van deze drie waarden bepalen we $\theta$. De J-matrix verkrijgen we door op een eenheidsmatrix met dezelfde dimensies als A  de overeenstemmende diagonaalelementen te vervangen door $\cos(\theta)$ en het element op de plaats van het grootste element en het spiegelbeeld van dit element te vervangen door respectievelijk $\sin(\theta)$ en $\sin(\theta)$. Vervolgens vermenigvuldigt men matrix A langs links met $J^T$ om de rijen aan te passen en langs rechts met $J$ om de kolommen aan te passen.
+Om een matrix met de bijhorende eigenvectoren te verkrijgen begint men met matrix V te initialiseren als een eenheidsmatrix. Bij elke vermenigvuldiging van $A$ met $J$ moet men V langs rechts vermenigvuldigen met J.
+%vanuit de eenheidsmatrix door $I_{n,n}$ en $I_{m,m}$ te vervangen door $\cos(\theta)$ en $I_{m,n}$ door $-sin(\theta)$ en $I_{n,m}$ door $\sin(\theta)$
+De pseudocode van het jacobi algoritme voor het vinden van eigenwaarden en eigenvectoren van een symmetrische matrix:
+\begin{algorithmic}
+ \STATE input(A,tol)  A = symmetrische matrix, tol = bovengrens voor de fout op een eigenwaarde 
+ \STATE n = size(A)
+ \STATE V = identitymatrix(n)
+ \WHILE{maximum error \textgreater tol}
+ 	\FOR{ elk diagonaalelement behalve het laatste}
+ \STATE 		max = kies het in grootste niet diagonaalelement van deze rij
+ \STATE rij van diagonaalelement = n, m = kolom van max
+ \STATE definieer a, b en d met $a=A_{n,n} b = A_{m,m}$ en $d = A_{n,m}$
+ \STATE bepaal $\theta$ m.b.v \eqref{berekeningtheta}
+ \STATE construeer Jacobimatrix J 
+ \STATE $A = J^TAJ$
+ \STATE $V = VJ $
+	\ENDFOR
+\ENDWHILE
+\end{algorithmic}
+
 
 \subsection{Opgave 10}
+Als we onze implementatie van de Jacobi methode uitvoeren met matrix $A$ als input en machineprecisie als tolerantie, krijgen we figuur \ref{jacobigraph}. We zien duidelijk dat de convergentie sneller dan lineair is, en eerder kwadratisch lijkt. Dit komt overeen met de theorie, . \\
+\begin{figure}[htb]
+	\begin{center}
+	 \includegraphics[width=\textwidth]{jacobi.eps}
+	\caption{Convergentie van Jacobi methode}
+	\label{jacobigraph}
+	\end{center}
+\end{figure}
+
+Elke volledige iteratie van de methode vraagt $\mathcal{O}(m^3)$ flops, 
+\section{Implementatie van de Jacobimethode}
+\lstinputlisting[language=Matlab]{jacobitol.m}
 
 \end{document}
