@@ -6,11 +6,11 @@ $ns color 1 Red
 $ns color 2 Green
 
 #trace file
-set tf [open out1.tr w]
+set tf [open opdracht1.tr w]
 $ns trace-all $tf
 
 #nam tracefile
-set nf [open out2.nam w]
+set nf [open opdracht1.nam w]
 $ns namtrace-all $nf
 
 proc finish {} {

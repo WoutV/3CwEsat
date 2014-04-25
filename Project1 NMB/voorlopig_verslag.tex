@@ -64,7 +64,7 @@ escapeinside={\%*}{*)} % if you want to add a comment within your code
 \newpage
 
 \section{Inleiding}
-In dit practicum onderzoeken we methoden voor het bepalen van eigenwaarden van vole matrices. In een eerste sectie beschouwen we enkele theoretische eigenschappen van de methoden. In een tweede sectie worden de convergentie-eigenschappen van da methoden onderzocht aan de hand van MATLAB-experimenten. In de derde en laatste sectie gaan we dieper in op \'e\'en van de methoden, namelijk de Jacobi-methode.
+In dit practicum onderzoeken we methoden voor het bepalen van eigenwaarden van volle matrices. In een eerste sectie beschouwen we enkele theoretische eigenschappen van de methoden. In een tweede sectie worden de convergentie-eigenschappen van de methoden onderzocht aan de hand van MATLAB-experimenten. In de derde en laatste sectie gaan we dieper in op \'e\'en van de methoden, namelijk de Jacobi-methode.
 \section{Theoretische eigenschappen}
 
 
@@ -95,7 +95,7 @@ De Rayleigh quoti\"ent iteratie convergeert zeer snel naar de juiste waarde van 
 \begin{equation}\label{eq:rayleighstelsel}
  (A=\lambda^{(k-1)}I)w = v^{(k-1)}
 \end{equation}
-Als $\lambda$ dichter en dichter bij een eigenwaarde van $A$ komt wordt $A-\lambda^{(k-1)}I$ meer en meer singulier, en zal de inverse van deze matrix, die nodig is om \eqref{eq:rayleighstelsel} op te lossen, ervoor zorgen dat de vector $w$ enorm wordt opgeblazen. De vector zal echter wel in de juiste richting blijven wijzen, waardoor dit geen problemen oplevert.\\
+Als $\lambda$ dichter en dichter bij een eigenwaarde van $A$ komt wordt $A-\lambda^{(k-1)}I$ meer en meer singulier, en zal de inverse van deze matrix, die nodig is om \eqref{eq:rayleighstelsel} op te lossen, ervoor zorgen dat de vector $w$ enorm wordt opgeblazen. De vector zal echter wel in de juiste richting blijven wijzen en wordt genormeerd, waardoor dit geen problemen oplevert.\\
 \paragraph{b)}
 Gegeven een matrix $A \in \mathbb{R}^{m \times m}$ en een vector $x \in \mathbb{R}^{m \times 1}$, waarbij $x$ een benadering is voor een eigenvector van $A$. Toon aan dat de oplossing $\rho \in \mathbb{R}$ van het minimalisatieprobleem 
 \begin{equation}
@@ -119,7 +119,7 @@ Als een benadering $v$ voor een eigenvector gekend is, kan er m.b.v. het Rayleig
 	\mu = \frac{v^TAv}{v^Tv}
 	\label{eqn:rayleighquotient}
 \end{equation}
-Daarna kan er met een inverse iteratiestap een betere benadering voor de eigenvector worden berekend. Als deze stappen $k$ keer herhaald worden spreekt men van Rayleigh quoti\"ent iteratie. Deze methode kent een kubische convergentie voor een symmetrische matrix. Het is wel niet 100 procent gegarandeerd dat er effectief convergentie is richting de eigenwaarde horende bij de vector. \\
+Daarna kan er met een inverse iteratiestap een betere benadering voor de eigenvector worden berekend. Als deze stappen $k$ keer herhaald worden spreekt men van Rayleigh quoti\"ent iteratie. Deze methode kent een kubische convergentie voor een symmetrische matrix. \\
 Om het algoritme effici\"ent te kunnen uitvoeren moet de matrix eerst gereduceerd worden tot Hessenberg vorm, dit vraagt $\mathcal{O}(\frac{10}{3}m^3)$ flops. Na deze reductie heeft Rayleigh quoti\"ent iteratie maar $\mathcal{O}(m)$ flops per iteratiestap nodig, in tegenstelling tot de $\mathcal{O}(m^3)$ flops per stap indien er niet gereduceerd wordt. 
 \paragraph{b)}
 Gegeven een symmetrische matrix $A \in \mathbb{R}^{m \times m}$, bepaal de eigenwaarde het dichts gelegen bij een getal $\alpha$.\\
@@ -159,8 +159,8 @@ Als maat voor de convergentie gebruiken we de waarde van een element net onder d
 \end{figure}
 
 
-Voor het algoritme zonder shifts stemt dit volledig overeen met de theorie. Theorem 28.4 (p. 218 in het handboek) geeft duidelijk aan dat bij het gebruik van QR zonder shifts $A^{(k)}$ lineair convergeert naar een diagonaalmatrix met de eigenwaarden van $A$ als elementen. Deze lineaire convergentie kan sterk verbeterd worden door het gebruik van shifts. \\
-Als we bijvoorbeeld het Rayleigh quoti\"ent gebruiken als shift in elke iteratiestap krijgen we kubische convergetntie naar de eigenwaarde die hoort bij de eigenvector die benaderd wordt door de laatste kolom van $A$. Dan zijn de berekenden benaderingen $\mu$ en $q_m$ in elke stap gelijk aan diegenen die berekend worden door de Rayleigh quoti\"ent iteratie die gestart wordt met de $m^{de}$ eenheidsvector. Door dit verband is het duidelijk dat het QR algoritme met Rayleigh shift in het beste geval kubisch convergeert. De Rayleigh iteratie doet dit immers ook. Dit is duidelijk te zien op de figuur. \\
+Voor het algoritme zonder shifts stemt dit volledig overeen met de theorie. Theorema 28.4 (p. 218 in het handboek) geeft duidelijk aan dat bij het gebruik van QR zonder shifts $A^{(k)}$ lineair convergeert naar een diagonaalmatrix met de eigenwaarden van $A$ als elementen. Deze lineaire convergentie kan sterk verbeterd worden door het gebruik van shifts. \\
+Als we bijvoorbeeld het Rayleigh quoti\"ent gebruiken als shift in elke iteratiestap krijgen we kubische convergentie naar de eigenwaarde die hoort bij de eigenvector die benaderd wordt door de laatste kolom van $A$. Dan zijn de berekenden benaderingen $\mu$ en $q_m$ in elke stap gelijk aan diegenen die berekend worden door de Rayleigh quoti\"ent iteratie die gestart wordt met de $m^{de}$ eenheidsvector. Door dit verband is het duidelijk dat het QR algoritme met Rayleigh shift in het beste geval kubisch convergeert. De Rayleigh iteratie doet dit immers ook. Dit is duidelijk te zien op de figuur. \\
 Om een resultaat te vinden dat minder afhankelijk is van beginvoorwaarden kunnen we ook Wilkinson shift gebruiken. Hiervoor nemen we een submatrix $B$ uit $A$ en gebruiken we de eigenwaarde van B die het dichtste bij $a_m$ ligt als shift. Dit algoritme garandeert zelfs in het slechtste geval nog kwadratische convergentie, in tegenstelling tot het algoritme met Rayleigh shifts, dat soms helemaal niet convergeert.
 \begin{equation}
  B=\begin{bmatrix} a_{m-1} & b_{m-1} \\ b_{m-1} & a_m\end{bmatrix}
@@ -276,10 +276,10 @@ Als $a=b$ stellen we $\theta$ gelijk aan $\frac{\pi}{4}$, omdat bij die hoek de 
 
 
 \subsection{Opgave 9}
-Tijdens een Jacobiiteratie zal de diagonaal van de matrix A overlopen worden, tot aan het voorlaatste diagonaalelement. Per diagonaalelement zal er in de rij gezocht worden naar het in absolute waarde grootste element verschillend van het diagonaalelement. Dit element zal geselecteerd worden omdat het de grootste impact heeft op het niet diagonaal zijn van de matrix. Daarom gaan we dit element verkleinen. Om dit te doen kiezen we als tweede diagonaalelement het element in dezelfde kolom als het grootste element. Met behulp van deze drie waarden bepalen we $\theta$. De J-matrix verkrijgen we door op een eenheidsmatrix met dezelfde dimensies als A  de overeenstemmende diagonaalelementen te vervangen door $\cos(\theta)$ en het element op de plaats van het grootste element en het spiegelbeeld van dit element te vervangen door respectievelijk $\sin(\theta)$ en $\sin(\theta)$. Vervolgens vermenigvuldigt men matrix A langs links met $J^T$ om de rijen aan te passen en langs rechts met $J$ om de kolommen aan te passen.
-Om een matrix met de bijhorende eigenvectoren te verkrijgen begint men met matrix V te initialiseren als een eenheidsmatrix. Bij elke vermenigvuldiging van $A$ met $J$ moet men V langs rechts vermenigvuldigen met J.
+Tijdens een Jacobi iteratie zal de diagonaal van de matrix A overlopen worden, tot aan het voorlaatste diagonaalelement. Per diagonaalelement zal er in de rij gezocht worden naar het in absolute waarde grootste element verschillend van het diagonaalelement. Dit element zal geselecteerd worden omdat het de grootste impact heeft op het niet diagonaal zijn van de matrix. Daarom gaan we dit element verkleinen. Om dit te doen kiezen we als tweede diagonaalelement het element in dezelfde kolom als het grootste element. Met behulp van deze drie waarden en formule \eqref{berekeningtheta} berekenen we $\theta$. De J-matrix verkrijgen we door op een eenheidsmatrix met dezelfde dimensies als A  de overeenstemmende diagonaalelementen te vervangen door $\cos(\theta)$ en het element op de plaats van het grootste element en het spiegelbeeld van dit element te vervangen door respectievelijk $\sin(\theta)$ en $-\sin(\theta)$. Vervolgens vermenigvuldigt men matrix A langs links met $J^T$ om de rijen aan te passen en langs rechts met $J$ om de kolommen aan te passen.\\
+Om een matrix met de bijhorende eigenvectoren te verkrijgen begint men met matrix V te initialiseren als een eenheidsmatrix. Bij elke vermenigvuldiging van $A$ met $J$ moet men V langs rechts vermenigvuldigen met J.\\
 %vanuit de eenheidsmatrix door $I_{n,n}$ en $I_{m,m}$ te vervangen door $\cos(\theta)$ en $I_{m,n}$ door $-sin(\theta)$ en $I_{n,m}$ door $\sin(\theta)$
-De pseudocode van het jacobi algoritme voor het vinden van eigenwaarden en eigenvectoren van een symmetrische matrix:
+
 \begin{algorithmic}
  \STATE input(A,tol)  A = symmetrische matrix, tol = bovengrens voor de fout op een eigenwaarde 
  \STATE n = size(A)
@@ -299,7 +299,7 @@ De pseudocode van het jacobi algoritme voor het vinden van eigenwaarden en eigen
 
 
 \subsection{Opgave 10}
-Als we onze implementatie van de Jacobi methode uitvoeren met matrix $A$ als input en machineprecisie als tolerantie, krijgen we figuur \ref{jacobigraph}. We zien duidelijk dat de convergentie sneller dan lineair is, en eerder kwadratisch lijkt. Dit komt overeen met de theorie. \\
+Als we onze implementatie van de Jacobi methode uitvoeren met matrix $mat1.txt$ als input en machineprecisie als tolerantie, krijgen we figuur \ref{jacobigraph}. We zien duidelijk dat de convergentie sneller dan lineair is, en eerder kwadratisch lijkt. Dit komt overeen met de theorie. \\
 \begin{figure}[htb]
 	\begin{center}
 	 \includegraphics[width=\textwidth]{jacobi.eps}
@@ -308,7 +308,7 @@ Als we onze implementatie van de Jacobi methode uitvoeren met matrix $A$ als inp
 	\end{center}
 \end{figure}
 
-Voor een symmetrische tridiagonale matrix $A \in \mathbb{R}^{m\times m}$ zijn er slechts $\mathcal{O}(m)$ elementen die gelijk moeten worden aan 0. Voor elke van deze elementen moet $\theta$ worden berekend en moeten er 3 matrixvermenigvuldigingen worden uitgevoerd. Na elke vstap daalt de som van de kwadraten van de niet-diagonaalelementen met een constante factor. De convergentie kan dus gegarandeert worden na $\mathcal{O}(m^3\log(\epsilon_{mach}))$ stappen
+Voor een symmetrische tridiagonale matrix $A \in \mathbb{R}^{m\times m}$ zijn er slechts $\mathcal{O}(m)$ elementen die gelijk moeten worden aan 0. Voor elke van deze elementen moet $\theta$ worden berekend en moeten er 3 matrixvermenigvuldigingen worden uitgevoerd. Na elke stap daalt de som van de kwadraten van de niet-diagonaalelementen met een constante factor. De convergentie kan dus gegarandeert worden na $\mathcal{O}(m^2\log(\epsilon_{mach}))$ stappen. Bij een volle matrix zouden er $\mathcal{O}(m^2)$ niet-nul elementen, en zouden er $m$ keer meer bewerkingen nodig zijn.\\
 \section{Implementatie van de Jacobimethode}
 \lstinputlisting[language=Matlab]{jacobitol.m}
 
