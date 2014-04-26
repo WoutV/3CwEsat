@@ -36,6 +36,7 @@
 \label{upAndDown}
 \end{figure}
 \item When a fixed amount of upload bandwidth is allocated to both applications, there wont be a drop in the download throughput. It would be like there were to separate upload connections: one for the ACKs of the FTP connection, and one for the data packets of the CBR connection, so they would both have more or less constant throughput.\\
+\item When the connection bandwidth is more limited, we get sort of the same result as in part 1, but with more packet loss. When the connection between server and user is slower, the buffers get full very fast, and more packets need to be dropped. This causes large fluctuations in download througput. \\
 \end{enumerate}
 
 

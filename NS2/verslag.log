@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  25 APR 2014 12:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  26 APR 2014 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -390,11 +390,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
 [1 <./noUpload.png>] [2 <./withUpload.png>] (./verslag.aux) ) 
 Here is how much of TeX's memory you used:
  2755 strings out of 493307
  42236 string characters out of 6139905
- 100821 words of memory out of 5000000
+ 101821 words of memory out of 5000000
  6204 multiletter control sequences out of 15000+600000
  6364 words of font info for 23 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -405,7 +410,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr17.pfb>
-Output written on verslag.pdf (3 pages, 71466 bytes).
+Output written on verslag.pdf (3 pages, 72306 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream
