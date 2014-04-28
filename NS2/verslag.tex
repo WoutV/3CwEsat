@@ -21,13 +21,14 @@
 
 \section{Exercise 1: Bandwidth restrictions on Kotnet}
 \begin{enumerate}
- \item When we leave out the uploading connection, the throughput of the download connection is relatively constant. See figure \ref{noUpload}. Sometimes a packet gets lost, decreasing the throughput.\\
+ \item When we leave out the uploading connection, the throughput of the FTP connection is relatively constant. See figure \ref{noUpload}. The throughput rate is limited by the bandwidth cap. 
   \begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{noUpload.png}
 \caption{Throughput of the main FTP connection}
 \label{noUpload}
 \end{figure}
+% 2
 \item When re-enabling the uploading connection, we see that the download rate drops when the upload starts. This is caused by the fact that the ACKs of the download need to travel through the same connection as the packets uploaded by the user. This results in a lot of dropped ACKs, which causes the server to restart sending, and therefore decreasing the throughput of the download link. See figure \ref{upAndDown}.\\
   \begin{figure}[htb]
 \centering
@@ -35,8 +36,19 @@
 \caption{Throughput of the FTP and UDP connection}
 \label{upAndDown}
 \end{figure}
-\item When a fixed amount of upload bandwidth is allocated to both applications, there wont be a drop in the download throughput. It would be like there were to separate upload connections: one for the ACKs of the FTP connection, and one for the data packets of the CBR connection, so they would both have more or less constant throughput.\\
+% 3
+\item When a fixed amount of upload bandwidth is allocated to both applications, there wont be a drop in the download throughput. It would be like there were to separate upload connections: one for the ACKs of the FTP connection, and one for the data packets of the CBR connection, so they would both have more or less constant throughput. The ACKs and the uploaded data packets would not 'steal' eachother's bandwidth. 
+% 4
 \item When the connection bandwidth is more limited, we get sort of the same result as in part 1, but with more packet loss. When the connection between server and user is slower, the buffers get full very fast, and more packets need to be dropped. This causes large fluctuations in download througput. \\
+% 5
+\item derp
+% 6
+\item 
+\begin{enumerate}
+  \item When there is 10 times more capacity and there are ten 10 equal users, the bandwidth will be equally divided between users. The only packet loss will be the ones 'accidentaly' getting lost, like in the first section of this question. //
+  When there are five users wi
+\end{enumerate}
+
 \end{enumerate}
 
 

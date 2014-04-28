@@ -39,7 +39,7 @@ $ns duplex-link $n0 $n2 10Mb 0.2ms DropTail
 $ns duplex-link $n1 $n2 10Mb 0.2ms DropTail
 $ns duplex-link $n2 $n3 10Mb 0.2ms DropTail
 $ns simplex-link $n3 $n4 256kb 0.2ms DropTail
-$ns duplex-link $n4 $n3 4Mb 0.2ms DropTail
+$ns simplex-link $n4 $n3 4Mb 0.2ms DropTail
 $ns duplex-link $n4 $n5 100Mb 0.3ms DropTail
 $ns duplex-link $n5 $n6 100Mb 0.3ms DropTail
 $ns duplex-link $n5 $n7 100Mb 0.3ms DropTail
@@ -62,7 +62,8 @@ $ns attach-agent $n0 $udp0
 set cbr0 [new Application/Traffic/CBR]
 $cbr0 attach-agent $udp0
 $cbr0 set fid_ 2
-$udp0 set packetSize_ 1500	
+#$udp0 set packetSize_ 1500
+$udp0 set rate_ 30	
 
 set null0 [new Agent/Null]
 $ns attach-agent $n7 $null0

@@ -62,7 +62,8 @@ $ns attach-agent $n0 $udp0
 set cbr0 [new Application/Traffic/CBR]
 $cbr0 attach-agent $udp0
 $cbr0 set fid_ 2
-$udp0 set packetSize_ 1500	
+$udp0 set packetSize_ 1500
+$udp0 set rate_ 30	
 
 set null0 [new Agent/Null]
 $ns attach-agent $n7 $null0
