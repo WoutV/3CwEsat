@@ -52,4 +52,21 @@
 \end{enumerate}
 
 
+\section{Exercise 2: Tahoe and Reno versus bursty web traffic}
+\begin{enumerate}
+\item
+In the beginning the buffers can compensate for the bursts. This causes for a delayed effect of the bursts. The bursts start to affect the connection once the buffers are completely filled. When this happens, the will be packet loss and the main FTP connection notices this loss. As response to this the main FTP connection will slow down the input rate (fast recovery to threshold followed by additive increase).
+
+\item
+The threshold in our example is 80. TCP uses slow start to converge to an optimal window size. In the beginning there will be an exponential increase of the congestion window until the threshold is reached. Once this occures, the congestion window will increase additive (AIMD). When the connection detects congestion, TCP uses fast recovery to avoid it. After the fast recovery decrease will occur until the size is half the size at which congestion was detected.
+
+\item
+AIMD or additive increase and multiple decrease is an algorithm used for TCP congestion avoidance. Additive increase and multiple decreases causes the size resemble a sawtooth wave.
+This sawtooth converges around the optimum. Once the slow start threshold is reached, only additive increase is used by TCP to increase the congestion window. Fast recovery decreases the window size until it has half the size of the size at which congestion was detected. TCP does this using multiple decreases.
+
+\item
+The difference with the normal TCP is that Reno uses fast recovery. When one packet is lost, the congestion window decreases multiple times until the size is at half of the value of the window size at which congestion was detected. When more than one packet is lost, the window size decreases to zero.
+
+\end{enumerate}
+
 \end{document}          
