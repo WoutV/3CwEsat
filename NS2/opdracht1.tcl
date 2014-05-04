@@ -44,7 +44,7 @@ $ns duplex-link $n4 $n5 100Mb 0.3ms DropTail
 $ns duplex-link $n5 $n6 100Mb 0.3ms DropTail
 $ns duplex-link $n5 $n7 100Mb 0.3ms DropTail
 
-#ftp connectie download 6 naar 1
+#ftp download 6 to 1
 set tcp [new Agent/TCP]
 $ns attach-agent $n6 $tcp
 set sink [new Agent/TCPSink]
@@ -56,27 +56,28 @@ $tcp set window_ 80
 set ftp [new Application/FTP]
 $ftp attach-agent $tcp
 
-#UDP upload van 0 naar 7
+#UDP upload 0 to 7
 set udp0 [new Agent/UDP]
 $ns attach-agent $n0 $udp0
 set cbr0 [new Application/Traffic/CBR]
 $cbr0 attach-agent $udp0
 $cbr0 set fid_ 2
 $udp0 set packetSize_ 1500
-$udp0 set rate_ 30	
+$udp0 set rate_ 30000
 
 set null0 [new Agent/Null]
 $ns attach-agent $n7 $null0
 $ns connect $udp0 $null0
 
 
-#start en stop
+#start and stop
 $ns at 0.1 "$ftp start"
 $ns at 3.0 "$cbr0 start"
 $ns at 6.0 "$cbr0 stop"
 $ns at 9.9 "$ftp stop"
 $ns at 10.0 "finish"
 
+#run
 $ns run
 
 
