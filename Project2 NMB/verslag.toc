@@ -1,0 +1,4 @@
+\select@language {dutch}
+\contentsline {section}{Benaderen met veeltermen}{3}{section*.3}
+\contentsline {subsection}{Berekenen van nulpunten van orthogonale veeltermen}{3}{section*.4}
+\contentsline {subsection}{Evauleren van drietermsrecursiebetrekking}{3}{section*.5}

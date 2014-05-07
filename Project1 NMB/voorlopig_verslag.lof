@@ -1,7 +1,7 @@
 \select@language {dutch}
 \contentsline {figure}{\numberline {1}{\ignorespaces Structuur van de Hessenberg matrix\relax }}{6}{figure.caption.14}
-\contentsline {figure}{\numberline {2}{\ignorespaces Convergentie van verschillende QR algoritmes\relax }}{7}{figure.caption.16}
+\contentsline {figure}{\numberline {2}{\ignorespaces Convergentie van verschillende QR algoritmes\relax }}{6}{figure.caption.16}
 \contentsline {figure}{\numberline {3}{\ignorespaces Vergelijking convergentie Rayleigh shift en Rayleigh quoti\"ent\relax }}{8}{figure.caption.19}
-\contentsline {figure}{\numberline {4}{\ignorespaces Vergelijking convergentie van unshifted QR en gelijktijdig iteratie\relax }}{9}{figure.caption.20}
-\contentsline {figure}{\numberline {5}{\ignorespaces Convergentie van Arnoldi-Ritz waarden\relax }}{10}{figure.caption.22}
-\contentsline {figure}{\numberline {6}{\ignorespaces Convergentie van Jacobi methode\relax }}{12}{figure.caption.27}
+\contentsline {figure}{\numberline {4}{\ignorespaces Vergelijking convergentie van unshifted QR en gelijktijdig iteratie\relax }}{8}{figure.caption.20}
+\contentsline {figure}{\numberline {5}{\ignorespaces Convergentie van Arnoldi-Ritz waarden\relax }}{9}{figure.caption.22}
+\contentsline {figure}{\numberline {6}{\ignorespaces Convergentie van Jacobi methode\relax }}{11}{figure.caption.27}
