@@ -120,4 +120,19 @@ Deze functie evalueert de drietermsrecursiebetrekking in de punten gegeven in de
 	\label{chebychev}
 \end{figure}
 
+\section{Berekenen van interpolerende veelterm}
+\begin{lstlisting}
+function y = interpolate(x, f, alpha, beta, lambda, t)
+
+%maak M matrix
+M=eval_recursion(x,length(alpha),alpha,beta,lambda);
+
+%bereken de coefficienten van de interpolerende veelterm
+c=M\f;
+
+%bereken de waarden van de interpolerende veelterm in t
+values=eval_recursion(t,length(alpha),alpha,beta,lambda);
+res=values*c;
+\end{lstlisting}
+
 \end{document}
