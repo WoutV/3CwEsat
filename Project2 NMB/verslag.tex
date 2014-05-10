@@ -66,29 +66,7 @@ escapeinside={\%*}{*)} % if you want to add a comment within your code
 \section{Benaderen met veeltermen}
 In dit practicum willen we eerst enkele functies benaderen met behulp van veeltermen door interpolatie. We gebruiken hierto nulpunten van orthogonale veeltermen als interpolatiepunten.
 \subsection{Berekenen van nulpunten van orthogonale veeltermen}
-\begin{lstlisting}
-function x = poly_zeros(n, alpha, beta, lambda);
-
-%maak diagonaalmatrix met de elementen van alpha
-alphaMat = diag(alpha);
-
-%maak matrices met mu en nu elementen op respectievelijk eerste boven- en
-%onderdiagonaal
-mu=zeros(n-1,1);
-nu=zeros(n-1,1);
-for i=1:n-1
-    nu(i) = beta(i+1)/lambda(i+1);
-    mu(i) = 1/lambda(i);
-end
-muMat = diag(mu,1);
-nuMat = diag(nu,-1);
-
-%maak matrix A
-A= alphaMat+nuMat+muMat;
-
-%bereken de eigenwaarden van A en dus de nulpunten van de veelterm
-x=eig(A);
-\end{lstlisting}
+\lstinputlisting{poly_zeros.m}
 Deze functie berekent de nulpunten van de orthogonale veeltermen gebaseerd op de waarden $\alpha_k, \beta_k$, en $\lambda_k$ uit de recursiebetrekking voor orthogonale veeltermen \eqref{recursion}. Het doet dit door een tridiagonale matrix op te stellen met elementen afgeleid van de co\"efficienten uit die recursiebetrekking. De nulpunten van de veelterm zijn dan gelijk aan de eigenwaarden van die matrix.\\
 \begin{subequations} \label{recursion}
 \begin{align}
