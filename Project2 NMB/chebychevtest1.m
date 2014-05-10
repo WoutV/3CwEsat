@@ -11,8 +11,5 @@ beta=ones(x);
 
 M=eval_recursion(derp',n,alpha,beta,lambda);
 
-hold on;
-for i=1:n
-    plot(derp,M(:,i));
-end
+plot(derp,M,'LineWidth',2);
 
