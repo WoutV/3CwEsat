@@ -1,7 +1,7 @@
 function test_interpolate()
 
 x=[-1:.2:1];
-f=1/(1+6*x'.^2);
+f=cos(x);
 toplot=[];
 for i=3:50
 alpha = zeros(i);
@@ -15,3 +15,4 @@ error = f'-y;
 toplot=[toplot max(error)]
 end
 plot(toplot);
+plot(y)
