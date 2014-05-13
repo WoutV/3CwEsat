@@ -16,7 +16,7 @@ box(axes1,'on');
 hold(axes1,'all');
 
 % Create multiple lines using matrix input to semilogy
-semilogy1 = semilogy(X1,YMatrix1,'Parent',axes1);
+semilogy1 = plot(X1,YMatrix1,'Parent',axes1);
 set(semilogy1(1),'DisplayName','5');
 set(semilogy1(2),'DisplayName','10');
 set(semilogy1(3),'DisplayName','15');

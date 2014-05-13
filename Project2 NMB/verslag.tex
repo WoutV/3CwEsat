@@ -85,24 +85,9 @@ Deze functie evalueert de drietermsrecursiebetrekking in de punten gegeven in de
 	\label{chebychev}
 \end{figure}
 \section{Berekenen van interpolerende veelterm}
-\begin{lstlisting}
-function y = interpolate(x, f, alpha, beta, lambda, t)
-
-%maak M matrix
-M=eval_recursion(x,length(alpha),alpha,beta,lambda);
-
-%bereken de coefficienten van de interpolerende veelterm
-c=M\f;
-
-%bereken de waarden van de interpolerende veelterm in t
-values=eval_recursion(t,length(alpha),alpha,beta,lambda);
-res=values*c;
-\end{lstlisting}
-
-Dit algoritme berekent een interpolerende veelterm door de waarden $f(x)$ en evalueert die veelterm in de punten gegeven in $t$. Als we dit toepassen op respectievelijk $\cos(x)$ en $\frac{1}{1+6x^2}$ krijgen we grafiek \ref{interpolcos} en \ref{interpolexp}. We zien op het eerste zicht niet duidelijk verschil tussen het gebruik van equidistante interpolatiepunten en de nulpunten van de Chebychev-veelterm $T_n$. Bij een verdere analyse van de interpolatiefout blijkt echter dat de nulpunten van de Chebychev veeltermen een veel beter gespreide fout geven. Voor illustratie, zie figuur \ref{errpolcos}. Bij de equidistante punten is er aan de rand van het interval een veel grotere fout aanwezig. Bij benaderingen van lagere graad is de absolute fout wel kleiner bij de equidistante punten.\\
- Als we de maximale fout in functie van de graad van de benadering uitzetten zien we ook dat bij hogere graad de equidistante punten weer onderdoen. We merken zelfs een stijging in de maximale fout vanaf een bepaald punt. De Chebychev interpolatie daarentegen daalt in het begin ongeveer even snel, maar blijft bij hogere graad constant rond $\epsilon_{mach}$. Dit wordt duidelijk op figuur \ref{maxerrcos}.\\
-
-\begin{figure}[!h]
+\lstinputlisting{interpolate.m}
+Dit algoritme berekent een interpolerende veelterm door de waarden $f(x)$ en evalueert die veelterm in de punten gegeven in $t$. Als we dit toepassen op respectievelijk $\cos(x)$ en $\frac{1}{1+6x^2}$ krijgen we grafiek \ref{interpolcos} en \ref{interpolexp}. We zien op het eerste zicht niet duidelijk verschil tussen het gebruik van equidistante interpolatiepunten en de nulpunten van de Chebychev-veelterm $T_n$.\\
+\begin{figure}[htb]
 \begin{subfigure}{0.5\textwidth}
 \centering
 \includegraphics[width=\textwidth]{cosEqui.png}
@@ -118,26 +103,75 @@ Dit algoritme berekent een interpolerende veelterm door de waarden $f(x)$ en eva
 \label{interpolcos}
 \end{figure}
 
-\begin{figure}[!h]
-\begin{subfigure}{\textwidth}
+\begin{figure}[htb]
+\begin{subfigure}{0.5\textwidth}
 \centering
-\includegraphics[width=\textwidth]{errorCos1.png}
+\includegraphics[width=\textwidth]{expEqui.png}
 \subcaption{Equidistant}
 \end{subfigure}
-\begin{subfigure}{\textwidth}
+\begin{subfigure}{0.5\textwidth}
 \centering
-\includegraphics[width=\textwidth]{errorCos2.png}
+\includegraphics[width=\textwidth]{expCheb.png}
 \subcaption{Nulpunten van $T_n$}
 \end{subfigure}
 
-\caption{Absolute fout bij het interpoleren van $\cos(x)$}
-\label{errpolcos}
+\caption{Enkele interpolerende veeltermen van $\frac{1}{1+6x^2}$}
+\label{interpolexp}
 \end{figure}
+ Bij een verdere analyse van de interpolatiefout blijkt echter dat de nulpunten van de Chebychev veeltermen een veel beter gespreide fout geven. Voor illustratie, zie figuren \ref{errpolcos} en \ref{errpolexp}. Bij de equidistante punten is er aan de rand van het interval een veel grotere fout aanwezig. Bij benaderingen van lagere graad is de absolute fout wel kleiner bij de equidistante punten.\\
+ \begin{figure}[htb]
+ \begin{subfigure}{0.8\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{errorCos1.png}
+ \subcaption{Equidistant}
+ \end{subfigure}
+ \begin{subfigure}{0.8\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{errorCos2.png}
+ \subcaption{Nulpunten van $T_n$}
+ \end{subfigure}
+ 
+ \caption{Absolute fout bij het interpoleren van $\cos(x)$}
+ \label{errpolcos}
+ \end{figure}
+ 
+ \begin{figure}[htb]
+ \begin{subfigure}{0.8\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{errorExp1.png}
+ \subcaption{Equidistant}
+ \end{subfigure}
+ \begin{subfigure}{0.8\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{errorExp2.png}
+ \subcaption{Nulpunten van $T_n$}
+ \end{subfigure}
+ 
+ \caption{Absolute fout bij het interpoleren van $\frac{1}{1+6x^2}$}
+ \label{errpolexp}
+ \end{figure}
+ 
+ Als we de maximale fout in functie van de graad van de benadering uitzetten zien we ook dat bij hogere graad de equidistante punten weer onderdoen. We merken zelfs een stijging in de maximale fout vanaf een bepaald punt. De Chebychev interpolatie daarentegen daalt in het begin ongeveer even snel, maar blijft bij hogere graad constant rond $\epsilon_{mach}$. Dit wordt duidelijk op figuur \ref{maxerr}\\
 
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{maxCos.png}
-	\caption{Maximale interpolatiefout voor beide methoden}
-	\label{maxerrcos}
-\end{figure}
+
+
+
+
+
+
+ \begin{figure}[htb]
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{maxCos.png}
+ \subcaption{$\cos{x}$}
+ \end{subfigure}
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{maxExp.png}
+ \subcaption{$\frac{1}{1+6x^2}$}
+ \end{subfigure}
+ 
+ \caption{Maximale interpolatiefout}
+ \label{maxerr}
+ \end{figure}
 \end{document}

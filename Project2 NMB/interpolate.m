@@ -10,7 +10,7 @@ c=M\f;
 
 %bereken de waarden van de interpolerende veelterm in t
 for j=1:length(t)
- b(n+2,1)=0;
+    b(n+2,1)=0;
     b(n+1,1)=0;
     b(n) = c(n);
     if(n>1)

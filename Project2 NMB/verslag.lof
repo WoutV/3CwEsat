@@ -1,5 +1,7 @@
 \select@language {dutch}
 \contentsline {figure}{\numberline {1}{\ignorespaces Evaluatie van eerste tien Cheybchev veeltermen op 200 punten in [-1,1]\relax }}{4}{figure.caption.6}
 \contentsline {figure}{\numberline {2}{\ignorespaces Enkele interpolerende veeltermen van $\qopname \relax o{cos}(x)$\relax }}{5}{figure.caption.8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Absolute fout bij het interpoleren van $\qopname \relax o{cos}(x)$\relax }}{6}{figure.caption.9}
-\contentsline {figure}{\numberline {4}{\ignorespaces Maximale interpolatiefout voor beide methoden\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {3}{\ignorespaces Enkele interpolerende veeltermen van $\frac {1}{1+6x^2}$\relax }}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {4}{\ignorespaces Absolute fout bij het interpoleren van $\qopname \relax o{cos}(x)$\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {5}{\ignorespaces Absolute fout bij het interpoleren van $\frac {1}{1+6x^2}$\relax }}{8}{figure.caption.11}
+\contentsline {figure}{\numberline {6}{\ignorespaces Maximale interpolatiefout\relax }}{8}{figure.caption.12}
