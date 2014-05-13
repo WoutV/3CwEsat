@@ -2,8 +2,6 @@ function x = poly_zeros(n, alpha, beta, lambda)
 
 %maak diagonaalmatrix met de elementen van alpha
 alphaMat = diag(alpha);
-size(alpha)
-size(alphaMat)
 
 %maak matrices met mu en nu elementen op respectievelijk eerste boven- en
 %onderdiagonaal
@@ -15,9 +13,6 @@ for i=1:n-1
 end
 muMat = diag(mu,1);
 nuMat = diag(nu,-1);
-size(nuMat)
-size(muMat)
-
 %maak matrix A
 A= alphaMat+nuMat+muMat;
 

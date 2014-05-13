@@ -1,4 +1,4 @@
-function interpolatie_equidistant()
+function equidistant()
 
 x=[-1:.1:1];
 f=1/(1+6*x.^2);

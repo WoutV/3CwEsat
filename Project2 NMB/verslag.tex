@@ -76,28 +76,14 @@ Deze functie berekent de nulpunten van de orthogonale veeltermen gebaseerd op de
 \end{subequations}
 
 \subsection{Evauleren van drietermsrecursiebetrekking}
-\begin{lstlisting}
-	function M = eval_recursion(x, n, alpha, beta, lambda)
-	
-	m = length(x);
-	M=zeros(m,n);
-	for i=1:m %itereer over rijen
-	    M(i,1)=lambda(1);
-	    M(i,2)=lambda(2)*(x(i)-alpha(1))*M(i,1);
-	    for j=3:n %itereer over kolommen
-	        M(i,j)=lambda(j)*(x(i)-alpha(j))*M(i,j-1)-beta(j)*M(i,j-2);
-	    end
-	end
-\end{lstlisting}
+\lstinputlisting{eval_recursion.m}
 Deze functie evalueert de drietermsrecursiebetrekking in de punten gegeven in de vector $x$. Als we deze methode toepassen op de 10 eerste Chebychev veeltermen krijgen we figuur \ref{chebychev}. Deze functie is eenvoudig toe te passen omdat Chebychev veeltermen duidelijk voldoen aan vergelijking \eqref{recursion}. Dit is makkelijk in te zien als men in de recursiebetrekking volgende waarden invult: $\lambda_0=1, \lambda_1=1$ en alle andere $\lambda_k$ gelijk aan 2. $\alpha_k$ is gelijk aan 0, en $\beta_k$ is 1. \\
 
 \begin{figure}[htb]
-	\centering
-	\includegraphics[width=\textwidth]{chebychev.eps}
+	\includegraphics[width=\textwidth]{chebychev.png}
 	\caption{Evaluatie van eerste tien Cheybchev veeltermen op 200 punten in [-1,1]}
 	\label{chebychev}
 \end{figure}
-
 \section{Berekenen van interpolerende veelterm}
 \begin{lstlisting}
 function y = interpolate(x, f, alpha, beta, lambda, t)
@@ -112,5 +98,46 @@ c=M\f;
 values=eval_recursion(t,length(alpha),alpha,beta,lambda);
 res=values*c;
 \end{lstlisting}
-Als we met deze functie een interpolerende veelterm voor de functie $\cos(x)$ berekenen krijgen we figuur \ref{cosinus}. Op de grafiek zijn de interpolaties van graad 3, 5 en 10 weergegeven. De interpolatiefout voor die drie interpolerende functies zijn weergegeven op figuur \ref{abserrorcos}. We zien duidelijk dat een benadering van hogere graad nauwkeuriger is. Dit wordt ook ge\"illustreerd door figuur \ref{maxerrorcosinus}. Hierop is de maximale fout in functie van de graad van de interpolerende veelterm weergegeven. \\
+
+Dit algoritme berekent een interpolerende veelterm door de waarden $f(x)$ en evalueert die veelterm in de punten gegeven in $t$. Als we dit toepassen op respectievelijk $\cos(x)$ en $\frac{1}{1+6x^2}$ krijgen we grafiek \ref{interpolcos} en \ref{interpolexp}. We zien op het eerste zicht niet duidelijk verschil tussen het gebruik van equidistante interpolatiepunten en de nulpunten van de Chebychev-veelterm $T_n$. Bij een verdere analyse van de interpolatiefout blijkt echter dat de nulpunten van de Chebychev veeltermen een veel beter gespreide fout geven. Voor illustratie, zie figuur \ref{errpolcos}. Bij de equidistante punten is er aan de rand van het interval een veel grotere fout aanwezig. Bij benaderingen van lagere graad is de absolute fout wel kleiner bij de equidistante punten.\\
+ Als we de maximale fout in functie van de graad van de benadering uitzetten zien we ook dat bij hogere graad de equidistante punten weer onderdoen. We merken zelfs een stijging in de maximale fout vanaf een bepaald punt. De Chebychev interpolatie daarentegen daalt in het begin ongeveer even snel, maar blijft bij hogere graad constant rond $\epsilon_{mach}$. Dit wordt duidelijk op figuur \ref{maxerrcos}.\\
+
+\begin{figure}[!h]
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{cosEqui.png}
+\subcaption{Equidistant}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=\textwidth]{cosCheb.png}
+\subcaption{Nulpunten van $T_n$}
+\end{subfigure}
+
+\caption{Enkele interpolerende veeltermen van $\cos(x)$}
+\label{interpolcos}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{subfigure}{\textwidth}
+\centering
+\includegraphics[width=\textwidth]{errorCos1.png}
+\subcaption{Equidistant}
+\end{subfigure}
+\begin{subfigure}{\textwidth}
+\centering
+\includegraphics[width=\textwidth]{errorCos2.png}
+\subcaption{Nulpunten van $T_n$}
+\end{subfigure}
+
+\caption{Absolute fout bij het interpoleren van $\cos(x)$}
+\label{errpolcos}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{maxCos.png}
+	\caption{Maximale interpolatiefout voor beide methoden}
+	\label{maxerrcos}
+\end{figure}
 \end{document}
