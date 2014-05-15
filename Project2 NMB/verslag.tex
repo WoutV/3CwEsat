@@ -64,9 +64,9 @@ escapeinside={\%*}{*)} % if you want to add a comment within your code
 
 \newpage
 \section{Benaderen met veeltermen}
-In dit practicum willen we eerst enkele functies benaderen met behulp van veeltermen door interpolatie. We gebruiken hierto nulpunten van orthogonale veeltermen als interpolatiepunten.
+In dit practicum willen we eerst enkele functies benaderen met behulp van veeltermen door interpolatie. We gebruiken hiertoe nulpunten van orthogonale veeltermen als interpolatiepunten.
 \subsection{Berekenen van nulpunten van orthogonale veeltermen}
-\lstinputlisting{poly_zeros.m}
+Zie bijlage \texttt{poly\_zeros.m}\\
 Deze functie berekent de nulpunten van de orthogonale veeltermen gebaseerd op de waarden $\alpha_k, \beta_k$, en $\lambda_k$ uit de recursiebetrekking voor orthogonale veeltermen \eqref{recursion}. Het doet dit door een tridiagonale matrix op te stellen met elementen afgeleid van de co\"efficienten uit die recursiebetrekking. De nulpunten van de veelterm zijn dan gelijk aan de eigenwaarden van die matrix.\\
 \begin{subequations} \label{recursion}
 \begin{align}
@@ -76,7 +76,7 @@ Deze functie berekent de nulpunten van de orthogonale veeltermen gebaseerd op de
 \end{subequations}
 
 \subsection{Evauleren van drietermsrecursiebetrekking}
-\lstinputlisting{eval_recursion.m}
+Zie bijlage \texttt{eval\_recursion.m}\\
 Deze functie evalueert de drietermsrecursiebetrekking in de punten gegeven in de vector $x$. Als we deze methode toepassen op de 10 eerste Chebychev veeltermen krijgen we figuur \ref{chebychev}. Deze functie is eenvoudig toe te passen omdat Chebychev veeltermen duidelijk voldoen aan vergelijking \eqref{recursion}. Dit is makkelijk in te zien als men in de recursiebetrekking volgende waarden invult: $\lambda_0=1, \lambda_1=1$ en alle andere $\lambda_k$ gelijk aan 2. $\alpha_k$ is gelijk aan 0, en $\beta_k$ is 1. \\
 
 \begin{figure}[htb]
@@ -84,8 +84,9 @@ Deze functie evalueert de drietermsrecursiebetrekking in de punten gegeven in de
 	\caption{Evaluatie van eerste tien Cheybchev veeltermen op 200 punten in [-1,1]}
 	\label{chebychev}
 \end{figure}
+
 \section{Berekenen van interpolerende veelterm}
-\lstinputlisting{interpolate.m}
+Zie bijlage \texttt{interpolate.m}\\
 Dit algoritme berekent een interpolerende veelterm door de waarden $f(x)$ en evalueert die veelterm in de punten gegeven in $t$. Als we dit toepassen op respectievelijk $\cos(x)$ en $\frac{1}{1+6x^2}$ krijgen we grafiek \ref{interpolcos} en \ref{interpolexp}. We zien op het eerste zicht niet duidelijk verschil tussen het gebruik van equidistante interpolatiepunten en de nulpunten van de Chebychev-veelterm $T_n$.\\
 \begin{figure}[htb]
 \begin{subfigure}{0.5\textwidth}
@@ -118,60 +119,63 @@ Dit algoritme berekent een interpolerende veelterm door de waarden $f(x)$ en eva
 \caption{Enkele interpolerende veeltermen van $\frac{1}{1+6x^2}$}
 \label{interpolexp}
 \end{figure}
- Bij een verdere analyse van de interpolatiefout blijkt echter dat de nulpunten van de Chebychev veeltermen een veel beter gespreide fout geven. Voor illustratie, zie figuren \ref{errpolcos} en \ref{errpolexp}. Bij de equidistante punten is er aan de rand van het interval een veel grotere fout aanwezig. Bij benaderingen van lagere graad is de absolute fout wel kleiner bij de equidistante punten.\\
- \begin{figure}[htb]
- \begin{subfigure}{0.8\textwidth}
- \centering
- \includegraphics[width=\textwidth]{errorCos1.png}
- \subcaption{Equidistant}
- \end{subfigure}
- \begin{subfigure}{0.8\textwidth}
- \centering
- \includegraphics[width=\textwidth]{errorCos2.png}
- \subcaption{Nulpunten van $T_n$}
- \end{subfigure}
- 
- \caption{Absolute fout bij het interpoleren van $\cos(x)$}
- \label{errpolcos}
- \end{figure}
- 
- \begin{figure}[htb]
- \begin{subfigure}{0.8\textwidth}
- \centering
- \includegraphics[width=\textwidth]{errorExp1.png}
- \subcaption{Equidistant}
- \end{subfigure}
- \begin{subfigure}{0.8\textwidth}
- \centering
- \includegraphics[width=\textwidth]{errorExp2.png}
- \subcaption{Nulpunten van $T_n$}
- \end{subfigure}
- 
- \caption{Absolute fout bij het interpoleren van $\frac{1}{1+6x^2}$}
- \label{errpolexp}
- \end{figure}
- 
- Als we de maximale fout in functie van de graad van de benadering uitzetten zien we ook dat bij hogere graad de equidistante punten weer onderdoen. We merken zelfs een stijging in de maximale fout vanaf een bepaald punt. De Chebychev interpolatie daarentegen daalt in het begin ongeveer even snel, maar blijft bij hogere graad constant rond $\epsilon_{mach}$. Dit wordt duidelijk op figuur \ref{maxerr}\\
-
-
-
-
-
-
-
- \begin{figure}[htb]
+ Bij een verdere analyse van de interpolatiefout blijkt echter dat de nulpunten van de Chebychev veeltermen een veel beter gespreide fout geven, de fout is ongeveer overal even groot. Voor illustratie, zie figuur \ref{errpol}. Bij de equidistante punten is er aan de rand van het interval een veel grotere fout aanwezig. Bij benaderingen van lagere graad is de absolute fout wel kleiner bij de equidistante punten. Het verschil aan de rand van het interpolatie-interval wordt veroorzaakt door de locatie van de interpolatiepunten. Als de nulpunten van $T_n$ worden gebruikt, liggen die veel meer geconcentreerd aan de rand van het interval, waardoor de fout aan de rand ongeveer even groot wordt als in het midden van het interval. Dit zorgt voor een fout die gemiddeld hoger is, maar minder hoge pieken heeft dan bij equidistante interpolatiepunten.\\
+ \begin{figure}
  \begin{subfigure}{0.5\textwidth}
  \centering
- \includegraphics[width=\textwidth]{maxCos.png}
+ \includegraphics[width=\textwidth]{errorCos1.pdf}
+ \subcaption{Equidistant, $\cos(x)$}
+ \end{subfigure}
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{errorCos2.pdf}
+ \subcaption{Nulpunten van $T_n$, $\cos(x)$}
+ \end{subfigure}
+ 
+
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{errorExp1.png}
+ \subcaption{Equidistant, $\frac{1}{1+6x^2}$}
+ \end{subfigure}
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=\textwidth]{errorExp2.pdf}
+ \subcaption{Nulpunten van $T_n$, $\frac{1}{1+6x^2}$}
+ \end{subfigure}
+ 
+ \caption{Absolute fout bij het interpoleren}
+ \label{errpol}
+ \end{figure}
+ 
+ Als we de maximale fout in functie van de graad van de benadering uitzetten zien we ook dat bij hogere graad de equidistante punten weer onderdoen. We merken zelfs een stijging in de maximale fout vanaf een bepaalde punt. De Chebychev interpolatie daarentegen daalt in het begin ongeveer even snel, maar blijft bij hogere graad constant rond $\epsilon_{mach}$. Dit wordt duidelijk op figuur \ref{maxerr}. De stijgende \'staart\' van de grafiek voor equidistante punten wordt veroorzaakt door de zeer slechte benadering aan de rand van het interval. \\
+ 
+ \begin{figure}
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=0.9\textwidth]{maxCos.pdf}
  \subcaption{$\cos{x}$}
  \end{subfigure}
  \begin{subfigure}{0.5\textwidth}
  \centering
- \includegraphics[width=\textwidth]{maxExp.png}
+ \includegraphics[width=0.9\textwidth]{maxExp.pdf}
  \subcaption{$\frac{1}{1+6x^2}$}
  \end{subfigure}
  
  \caption{Maximale interpolatiefout}
  \label{maxerr}
  \end{figure}
+ 
+ Tot slot bestuderen we het conditiegetal van de matrix $M$ die gebruikt wordt in \texttt{eval\_recursion.m}. Als we dit voor beide methodes (equidistant en Chebychev) tonen in functie van de graad van benadering, zien we dat $k(M)$ exponenti\"eel stijgt voor beide methodes, maar minder snel bij equidistante interpolatiepunten. Bij een interpolatie van graad 25 is $k$ al van grootte-orde $10^7$ voor interpolatie in de nulpunten van $T_n$. Dit wil zeggen dat de interpolerende curve zelfs bij benaderingen van relatief lage graad al zeer gevoelig is aan kleine afwijkingen op de opgemeten waarden van $f(x)$. De toename van het conditiegetal wordt ge\"illustreerd in figuur \ref{condition}.
+ 
+ \begin{center}
+ \begin{figure}[!hb]
+ \centering
+  	\includegraphics[width=0.4\textwidth]{condition.pdf}
+  	\caption{Conditiegetal van M}
+  	\label{condition}
+  \end{figure}
+ \end{center}
+ 
+ 
 \end{document}

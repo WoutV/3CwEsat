@@ -1,9 +1,10 @@
-function y = interpolate(x, f, alpha, beta, lambda, t)
+function [y,conditie] = interpolate(x, f, alpha, beta, lambda, t)
 
 b=[];
 n=length(alpha);
 %maak M matrix
 M=eval_recursion(x,length(alpha),alpha,beta,lambda);
+conditie=cond(M);
 
 %bereken de coefficienten van de interpolerende veelterm
 c=M\f;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  13 MAY 2014 21:40
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  15 MAY 2014 16:34
 entering extended mode
 **verslag.tex
 ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.tex"
@@ -455,11 +455,7 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \U@D=\dimen138
 )
 Package babel Info: Making " an active character on input line 132.
-)) ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux"
-
-LaTeX Warning: Label `errpolexp' multiply defined.
-
-)
+)) ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
@@ -474,14 +470,14 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
- (F:\MiKTeX\tex\latex\base\ts1cmr.fd
+
+(F:\MiKTeX\tex\latex\base\ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
-
-(F:\MiKTeX\tex\context\base\supp-pdf.mkii
+ (F:\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
 \scratchdimen=\dimen139
@@ -544,180 +540,154 @@ l.63 \listoffigures
  [2
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
-
-(F:\MiKTeX\tex\latex\psnfss\ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\poly_zeros.m")
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\eval_recursion.m"
-[3]
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 7.
- (F:\MiKTeX\tex\latex\psnfss\ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
-<chebychev.png, id=91, 1446.15282pt x 497.60907pt>
+<chebychev.png, id=59, 1446.15282pt x 497.60907pt>
 File: chebychev.png Graphic file (type png)
  <use chebychev.png>
 Package pdftex.def Info: chebychev.png used on input line 83.
 (pdftex.def)             Requested size: 390.0pt x 134.1968pt.
 
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\interpolate.m" [4 <G:/B
-urgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/chebychev.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 9.
-
-(F:\MiKTeX\tex\latex\psnfss\omspcr.fd
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
-LaTeX Font Info:    Try loading font information for OML+pcr on input line 16.
- (F:\MiKTeX\tex\latex\psnfss\omlpcr.fd
-File: omlpcr.fd 
-)
-LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 16.
-)
-<cosEqui.png, id=116, 711.4078pt x 498.36188pt>
+<cosEqui.png, id=62, 711.4078pt x 498.36188pt>
 File: cosEqui.png Graphic file (type png)
  <use cosEqui.png>
-Package pdftex.def Info: cosEqui.png used on input line 93.
+Package pdftex.def Info: cosEqui.png used on input line 94.
 (pdftex.def)             Requested size: 195.0pt x 136.60507pt.
 
-<cosCheb.png, id=117, 711.4078pt x 486.31688pt>
+<cosCheb.png, id=63, 711.4078pt x 486.31688pt>
 File: cosCheb.png Graphic file (type png)
  <use cosCheb.png>
-Package pdftex.def Info: cosCheb.png used on input line 98.
+Package pdftex.def Info: cosCheb.png used on input line 99.
 (pdftex.def)             Requested size: 195.0pt x 133.30345pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 91--101
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 92--102
 []$[]$ $[]$ 
  []
 
-<expEqui.png, id=118, 711.4078pt x 548.0475pt>
+<expEqui.png, id=64, 711.4078pt x 548.0475pt>
 File: expEqui.png Graphic file (type png)
  <use expEqui.png>
-Package pdftex.def Info: expEqui.png used on input line 109.
+Package pdftex.def Info: expEqui.png used on input line 110.
 (pdftex.def)             Requested size: 195.0pt x 150.22432pt.
 
-<expCheb.png, id=119, 711.4078pt x 551.05875pt>
+<expCheb.png, id=65, 711.4078pt x 551.05875pt>
 File: expCheb.png Graphic file (type png)
  <use expCheb.png>
-Package pdftex.def Info: expCheb.png used on input line 114.
+Package pdftex.def Info: expCheb.png used on input line 115.
 (pdftex.def)             Requested size: 195.0pt x 151.04971pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 107--117
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 108--118
 []$[]$ $[]$ 
  []
 
-<errorCos1.png, id=122, 1446.15282pt x 725.71124pt>
-File: errorCos1.png Graphic file (type png)
- <use errorCos1.png>
-Package pdftex.def Info: errorCos1.png used on input line 125.
-(pdftex.def)             Requested size: 312.00119pt x 156.56747pt.
+<errorCos1.pdf, id=67, 597.23125pt x 845.1575pt>
+File: errorCos1.pdf Graphic file (type pdf)
+ <use errorCos1.pdf>
+Package pdftex.def Info: errorCos1.pdf used on input line 126.
+(pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-<errorCos2.png, id=123, 1446.15282pt x 725.71124pt>
-File: errorCos2.png Graphic file (type png)
- <use errorCos2.png>
-Package pdftex.def Info: errorCos2.png used on input line 130.
-(pdftex.def)             Requested size: 312.00119pt x 156.56747pt.
+<errorCos2.pdf, id=68, 597.23125pt x 845.1575pt>
+File: errorCos2.pdf Graphic file (type pdf)
+ <use errorCos2.pdf>
+Package pdftex.def Info: errorCos2.pdf used on input line 131.
+(pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--133
-[]$[]$
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 124--134
+[]$[]$ $[]$ 
  []
 
-[5 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosEqui.png (PNG copy
-)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosCheb.png (PNG copy
-)>] <errorExp1.png, id=148, 1446.15282pt x 572.89032pt>
+<errorExp1.png, id=69, 597.23125pt x 845.1575pt>
 File: errorExp1.png Graphic file (type png)
  <use errorExp1.png>
-Package pdftex.def Info: errorExp1.png used on input line 141.
-(pdftex.def)             Requested size: 312.00119pt x 123.59735pt.
+Package pdftex.def Info: errorExp1.png used on input line 138.
+(pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-<errorExp2.png, id=149, 1446.15282pt x 575.90157pt>
-File: errorExp2.png Graphic file (type png)
- <use errorExp2.png>
-Package pdftex.def Info: errorExp2.png used on input line 146.
-(pdftex.def)             Requested size: 312.00119pt x 124.24701pt.
+<errorExp2.pdf, id=70, 597.23125pt x 845.1575pt>
+File: errorExp2.pdf Graphic file (type pdf)
+ <use errorExp2.pdf>
+Package pdftex.def Info: errorExp2.pdf used on input line 143.
+(pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--149
-[]$[]$
- []
-
-
-LaTeX Warning: Reference `maxerr' on page 6 undefined on input line 154.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
-
- []
-
-<maxCos.png, id=150, 711.4078pt x 536.75531pt>
-File: maxCos.png Graphic file (type png)
- <use maxCos.png>
-Package pdftex.def Info: maxCos.png used on input line 165.
-(pdftex.def)             Requested size: 195.0pt x 147.12903pt.
-
-<maxExp.png, id=151, 711.4078pt x 554.07pt>
-File: maxExp.png Graphic file (type png)
- <use maxExp.png>
-Package pdftex.def Info: maxExp.png used on input line 170.
-(pdftex.def)             Requested size: 195.0pt x 151.87514pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 163--173
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 136--146
 []$[]$ $[]$ 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
-[6 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expEqui.png (PNG copy
-)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expCheb.png (PNG copy
-)>] [7 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos1.png (PN
-G copy)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos2.png (
-PNG copy)>] [8 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorExp1
-.png (PNG copy)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorEx
-p2.png (PNG copy)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxCo
-s.png (PNG copy)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxExp
-.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+
+LaTeX Warning: Float too large for page by 25.41652pt on input line 149.
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+[4 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/chebychev.png (PNG co
+py)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosEqui.png (PNG co
+py)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosCheb.png (PNG co
+py)>] <maxCos.pdf, id=89, 597.23125pt x 845.1575pt>
+File: maxCos.pdf Graphic file (type pdf)
+ <use maxCos.pdf>
+Package pdftex.def Info: maxCos.pdf used on input line 156.
+(pdftex.def)             Requested size: 175.49881pt x 248.3521pt.
+
+<maxExp.pdf, id=90, 597.23125pt x 845.1575pt>
+File: maxExp.pdf Graphic file (type pdf)
+ <use maxExp.pdf>
+Package pdftex.def Info: maxExp.pdf used on input line 161.
+(pdftex.def)             Requested size: 175.49881pt x 248.3521pt.
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 154--164
+[]$[]$ $[]$ 
+ []
+
+<condition.pdf, id=92, 597.23125pt x 845.1575pt>
+File: condition.pdf Graphic file (type pdf)
+ <use condition.pdf>
+Package pdftex.def Info: condition.pdf used on input line 174.
+(pdftex.def)             Requested size: 155.99762pt x 220.75455pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
+ [5 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expEqui.png (PNG cop
+y)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expCheb.png (PNG cop
+y)>]
+[6 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos1.pdf> <G:/Bu
+rgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos2.pdf> <G:/Burgerlijk 
+Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorExp1.png> <G:/Burgerlijk Ingenieur
+/3 CwsElt/3CwEsat/Project2 NMB/errorExp2.pdf>]
+
+LaTeX Warning: Text page 7 contains only floats.
+
+[7 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxCos.pdf> <G:/Burge
+rlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxExp.pdf> <G:/Burgerlijk Ingeni
+eur/3 CwsElt/3CwEsat/Project2 NMB/condition.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
 
 ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `verslag.out' has not changed.
 (rerunfilecheck)             Checksum: 6D04A2E2EF7B8C1A7DDF57AF3DAFC869;320.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 10871 strings out of 493921
- 156664 string characters out of 3154503
- 338455 words of memory out of 3000000
- 13929 multiletter control sequences out of 15000+200000
- 16196 words of font info for 62 fonts, out of 3000000 for 9000
+ 10123 strings out of 493921
+ 147606 string characters out of 3154503
+ 275455 words of memory out of 3000000
+ 13263 multiletter control sequences out of 15000+200000
+ 15034 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,9n,42p,552b,1714s stack positions out of 5000i,500n,10000p,200000b,50000s
-{F:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<F:/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><F:/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><F:/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><F:/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><F:/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><F:/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><F:/MiKTeX/f
-onts/type1/urw/courier/ucrr8a.pfb>
-Output written on verslag.pdf (9 pages, 379825 bytes).
+ 42i,9n,42p,885b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
+<F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><F:/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><F:/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><F:/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr6.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><F
+:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><F:/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on verslag.pdf (8 pages, 352138 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

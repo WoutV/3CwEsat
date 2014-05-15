@@ -4,11 +4,12 @@ x=[];
 toplot=[];
 xmat=zeros(5,26);
 err=[];
+hurr=[];
 hold on;
 for i=3:25
     t=[-1:0.001:1]; 
     for j=1:length(t)
-       derp(j)=1/(1+6*t(j)^2);
+       derp(j)=cos(t(j));
     end
     alpha = zeros(i,1);
     lambda=2*ones(i,1);
@@ -18,9 +19,10 @@ for i=3:25
     beta=ones(i,1);
         x=[-1:2/i:1]';
         for j=1:length(x)
-            f(j)=1/(1+6*x(j)^2)
+            f(j)=cos(x(j));
         end 
-    y=interpolate(x,f',alpha,beta,lambda,x);
+    [y,conditie]=interpolate(x,f',alpha,beta,lambda,x);
+    hurr=[hurr conditie];
     benaderd=interpolate(x,f',alpha,beta,lambda,t);
     fout=abs(derp'-benaderd);
    if(mod(i,5)==0)
@@ -37,9 +39,9 @@ for i=3:25
   mval=max(fout);
   err=[err mval];
     end
-plotWout(xmat',toplot');
+%plotWout(xmat',toplot');
 %plotWout(t,toplot')
-%plot(err);
+plot(hurr);
 %xmat(xmat==0)=NaN;
 %toplot(toplot==0)=NaN;
 %error

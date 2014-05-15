@@ -6,11 +6,12 @@ x=[];
 toplot=[];
 xmat=[];
 err=[];
+hurr=[];
 hold on;
 for i=3:25
     t=[-1:0.001:1]; 
         for j=1:length(t)
-            derp(j)=1/(1+6*t(j)^2);
+            derp(j)=cos(t(j));
         end
     alpha = zeros(i,1);
     lambda=2*ones(i,1);
@@ -21,9 +22,10 @@ for i=3:25
         x=poly_zeros(i,alpha,beta,lambda);
         x=sort(x)
         for j=1:length(x)
-            f(j)=1/(1+6*x(j)^2)
+            f(j)=cos(x(j));
         end 
-    y=interpolate(x,f',alpha,beta,lambda,x);
+    [y,conditie]=interpolate(x,f',alpha,beta,lambda,x);
+    hurr=[hurr conditie];
  %   if(i<10)
  %       for j=1:length(x)
   %          xmat(i,j)=x(j);
@@ -47,8 +49,8 @@ for i=3:25
   mval=max(fout);
   err=[err mval];
 end
-plotWout(xmat',toplot');
-%plot(err);
+%plotWout(xmat',toplot');
+plot(hurr);
 %plotWout(t,toplot')
 %xmat(xmat==0)=NaN;
 %toplot(toplot==0)=NaN;
