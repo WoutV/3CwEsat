@@ -3,3 +3,6 @@
 \contentsline {subsection}{Berekenen van nulpunten van orthogonale veeltermen}{3}{section*.4}
 \contentsline {subsection}{Evauleren van drietermsrecursiebetrekking}{3}{section*.5}
 \contentsline {section}{Berekenen van interpolerende veelterm}{3}{section*.7}
+\contentsline {section}{Benaderen met trigonometrische veeltermen}{5}{section*.13}
+\contentsline {subsection}{function y = periotrig(x,K,M)}{5}{section*.14}
+\contentsline {subsection}{Invloed van de parameter K op de benadering.}{5}{section*.15}

@@ -1,21 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  15 MAY 2014 16:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.5)  21 MAY 2014 00:18
 entering extended mode
 **verslag.tex
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.tex"
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\verslag.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
 ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
  lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(F:\MiKTeX\tex\latex\base\report.cls
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(F:\MiKTeX\tex\latex\base\size12.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -31,31 +31,31 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(F:\MiKTeX\tex\latex\graphics\graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(F:\MiKTeX\tex\latex\graphics\keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(F:\MiKTeX\tex\latex\graphics\graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(F:\MiKTeX\tex\latex\graphics\trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(F:\MiKTeX\tex\latex\00miktex\graphics.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(F:\MiKTeX\tex\latex\pdftex-def\pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(F:\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(F:\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -63,13 +63,13 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(F:\MiKTeX\tex\latex\caption\subcaption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 
-(F:\MiKTeX\tex\latex\caption\caption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(F:\MiKTeX\tex\latex\caption\caption3.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen105
@@ -85,10 +85,10 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@subfigure=\count90
 \c@subtable=\count91
 )
-(F:\MiKTeX\tex\latex\algorithms\algorithmic.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 
-(F:\MiKTeX\tex\latex\base\ifthen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@ALC@unique=\count92
@@ -97,23 +97,25 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \c@ALC@depth=\count95
 \ALC@tlm=\skip43
 \algorithmicindent=\skip44
-) (F:\MiKTeX\tex\latex\amsmath\amsmath.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
+
 For additional information on amsmath, use the `?' option.
-(F:\MiKTeX\tex\latex\amsmath\amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(F:\MiKTeX\tex\latex\amsmath\amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen112
 ))
-(F:\MiKTeX\tex\latex\amsmath\amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen113
 )
-(F:\MiKTeX\tex\latex\amsmath\amsopn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count96
@@ -154,17 +156,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(F:\MiKTeX\tex\latex\amsfonts\amssymb.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(F:\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(F:\MiKTeX\tex\latex\base\textcomp.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -178,7 +180,8 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
- (F:\MiKTeX\tex\latex\base\ts1enc.def
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -244,9 +247,10 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
-(F:\MiKTeX\tex\latex\mh\mathtools.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\mh\mathtools.sty"
 Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
- (F:\MiKTeX\tex\latex\tools\calc.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count108
 \calc@Bcount=\count109
@@ -259,7 +263,7 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count110
 \calc@Cskip=\skip50
 )
-(F:\MiKTeX\tex\latex\mh\mhsetup.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\mh\mhsetup.sty"
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
@@ -274,13 +278,14 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen128
 \l_MT_below_shortintertext_sep=\dimen129
 )
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\mcode.sty"
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\mcode.sty"
 -- Package: `mcode' 2.5 <2014/03/06> --
 Package: mcode 2014/03/06 2.5
  - settings optimized for display (colour formating)
-(F:\MiKTeX\tex\latex\xcolor\xcolor.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
- (F:\MiKTeX\tex\latex\00miktex\color.cfg
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -293,7 +298,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-) (F:\MiKTeX\tex\latex\listings\listings.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count112
 \lst@gtempboxa=\box28
 \lst@token=\toks20
@@ -307,25 +313,25 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 \lst@lineno=\count117
 \lst@maxwidth=\dimen133
 
-(F:\MiKTeX\tex\latex\listings\lstmisc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count118
 \lst@skipnumbers=\count119
 \lst@framebox=\box29
 )
-(F:\MiKTeX\tex\latex\listings\listings.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
 )
-(F:\MiKTeX\tex\latex\hyperref\hyperref.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(F:\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(F:\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -366,25 +372,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(F:\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(F:\MiKTeX\tex\latex\oberdiek\auxhook.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(F:\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen134
 \Hy@linkcounter=\count120
 \Hy@pagecounter=\count121
 
-(F:\MiKTeX\tex\latex\hyperref\pd1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count122
 
-(F:\MiKTeX\tex\latex\00miktex\hyperref.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -396,9 +402,9 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count123
 
-(F:\MiKTeX\tex\latex\ltxmisc\url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen135
@@ -421,12 +427,12 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(F:\MiKTeX\tex\latex\hyperref\hpdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count128
 \c@bookmark@seq@number=\count129
 
-(F:\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -435,27 +441,29 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `false' on input line 14.
 
-(F:\MiKTeX\tex\latex\listings\lstlang1.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(F:\MiKTeX\tex\generic\babel\babel.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(F:\MiKTeX\tex\latex\00miktex\bblopts.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-(F:\MiKTeX\tex\generic\babel\dutch.ldf
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\dutch.ldf"
 Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
- (F:\MiKTeX\tex\generic\babel\babel.def
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count130
 \U@D=\dimen138
 )
 Package babel Info: Making " an active character on input line 132.
-)) ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
+))
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\verslag.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
@@ -471,13 +479,14 @@ LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
 
-(F:\MiKTeX\tex\latex\base\ts1cmr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
- (F:\MiKTeX\tex\context\base\supp-pdf.mkii
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
 \scratchdimen=\dimen139
@@ -498,10 +507,10 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count137
 \AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring OFF on input line 49.
- (F:\MiKTeX\tex\latex\hyperref\nameref.sty
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(F:\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count138
@@ -510,22 +519,22 @@ LaTeX Info: Redefining \ref on input line 49.
 LaTeX Info: Redefining \pageref on input line 49.
 LaTeX Info: Redefining \nameref on input line 49.
 
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.out")
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.out")
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\verslag.out")
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\verslag.out")
 \@outlinefile=\write3
 LaTeX Font Info:    Try loading font information for U+msa on input line 57.
 
-(F:\MiKTeX\tex\latex\amsfonts\umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 57.
- (F:\MiKTeX\tex\latex\amsfonts\umsb.fd
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-[1
+) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.toc")
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\verslag.toc")
 \tf@toc=\write4
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -535,7 +544,7 @@ l.63 \listoffigures
                     [1
 
 ]
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.lof")
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\verslag.lof")
 \tf@lof=\write5
  [2
 
@@ -544,19 +553,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
-<chebychev.png, id=59, 1446.15282pt x 497.60907pt>
+<chebychev.png, id=74, 1446.15282pt x 497.60907pt>
 File: chebychev.png Graphic file (type png)
  <use chebychev.png>
 Package pdftex.def Info: chebychev.png used on input line 83.
 (pdftex.def)             Requested size: 390.0pt x 134.1968pt.
 
-<cosEqui.png, id=62, 711.4078pt x 498.36188pt>
+<cosEqui.png, id=77, 711.4078pt x 498.36188pt>
 File: cosEqui.png Graphic file (type png)
  <use cosEqui.png>
 Package pdftex.def Info: cosEqui.png used on input line 94.
 (pdftex.def)             Requested size: 195.0pt x 136.60507pt.
 
-<cosCheb.png, id=63, 711.4078pt x 486.31688pt>
+<cosCheb.png, id=78, 711.4078pt x 486.31688pt>
 File: cosCheb.png Graphic file (type png)
  <use cosCheb.png>
 Package pdftex.def Info: cosCheb.png used on input line 99.
@@ -566,13 +575,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 92--102
 []$[]$ $[]$ 
  []
 
-<expEqui.png, id=64, 711.4078pt x 548.0475pt>
+<expEqui.png, id=79, 711.4078pt x 548.0475pt>
 File: expEqui.png Graphic file (type png)
  <use expEqui.png>
 Package pdftex.def Info: expEqui.png used on input line 110.
 (pdftex.def)             Requested size: 195.0pt x 150.22432pt.
 
-<expCheb.png, id=65, 711.4078pt x 551.05875pt>
+<expCheb.png, id=80, 711.4078pt x 551.05875pt>
 File: expCheb.png Graphic file (type png)
  <use expCheb.png>
 Package pdftex.def Info: expCheb.png used on input line 115.
@@ -582,13 +591,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 108--118
 []$[]$ $[]$ 
  []
 
-<errorCos1.pdf, id=67, 597.23125pt x 845.1575pt>
+<errorCos1.pdf, id=82, 597.23125pt x 845.1575pt>
 File: errorCos1.pdf Graphic file (type pdf)
  <use errorCos1.pdf>
 Package pdftex.def Info: errorCos1.pdf used on input line 126.
 (pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-<errorCos2.pdf, id=68, 597.23125pt x 845.1575pt>
+<errorCos2.pdf, id=83, 597.23125pt x 845.1575pt>
 File: errorCos2.pdf Graphic file (type pdf)
  <use errorCos2.pdf>
 Package pdftex.def Info: errorCos2.pdf used on input line 131.
@@ -598,13 +607,13 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 124--134
 []$[]$ $[]$ 
  []
 
-<errorExp1.png, id=69, 597.23125pt x 845.1575pt>
+<errorExp1.png, id=84, 597.23125pt x 845.1575pt>
 File: errorExp1.png Graphic file (type png)
  <use errorExp1.png>
 Package pdftex.def Info: errorExp1.png used on input line 138.
 (pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-<errorExp2.pdf, id=70, 597.23125pt x 845.1575pt>
+<errorExp2.pdf, id=85, 597.23125pt x 845.1575pt>
 File: errorExp2.pdf Graphic file (type pdf)
  <use errorExp2.pdf>
 Package pdftex.def Info: errorExp2.pdf used on input line 143.
@@ -622,16 +631,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[4 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/chebychev.png (PNG co
-py)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosEqui.png (PNG co
-py)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosCheb.png (PNG co
-py)>] <maxCos.pdf, id=89, 597.23125pt x 845.1575pt>
+[4 <C:/Users/Peter/Documents/GitHub/3CwEsat/Project2 NMB/chebychev.png (PNG cop
+y)> <C:/Users/Peter/Documents/GitHub/3CwEsat/Project2 NMB/cosEqui.png (PNG copy
+)> <C:/Users/Peter/Documents/GitHub/3CwEsat/Project2 NMB/cosCheb.png (PNG copy)
+>] <maxCos.pdf, id=104, 597.23125pt x 845.1575pt>
 File: maxCos.pdf Graphic file (type pdf)
  <use maxCos.pdf>
 Package pdftex.def Info: maxCos.pdf used on input line 156.
 (pdftex.def)             Requested size: 175.49881pt x 248.3521pt.
 
-<maxExp.pdf, id=90, 597.23125pt x 845.1575pt>
+<maxExp.pdf, id=105, 597.23125pt x 845.1575pt>
 File: maxExp.pdf Graphic file (type pdf)
  <use maxExp.pdf>
 Package pdftex.def Info: maxExp.pdf used on input line 161.
@@ -641,53 +650,96 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 154--164
 []$[]$ $[]$ 
  []
 
-<condition.pdf, id=92, 597.23125pt x 845.1575pt>
+<condition.pdf, id=107, 597.23125pt x 845.1575pt>
 File: condition.pdf Graphic file (type pdf)
  <use condition.pdf>
 Package pdftex.def Info: condition.pdf used on input line 174.
 (pdftex.def)             Requested size: 155.99762pt x 220.75455pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
- [5 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expEqui.png (PNG cop
-y)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expCheb.png (PNG cop
-y)>]
-[6 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos1.pdf> <G:/Bu
-rgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos2.pdf> <G:/Burgerlijk 
-Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorExp1.png> <G:/Burgerlijk Ingenieur
-/3 CwsElt/3CwEsat/Project2 NMB/errorExp2.pdf>]
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.184 Als te benaderende functie nemen we e^
+                                            (-x^4). Deze functie wordt benad...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.185 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (181.13457pt too wide) in paragraph at lines 184--185
+\OT1/cmr/m/n/12 Als te be-na-de-rende func-tie ne-men we e$[] \OMS/cmsy/m/n/12 
+  \OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :Dezefunctiewordtbenade
+rddoortrigoniometrischefuncties:DeK \OMS/cmsy/m/n/12  $
+ []
+
+
+Overfull \hbox (139.50166pt too wide) in paragraph at lines 184--185
+$\OML/cmm/m/it/12 waardegeeftdeindexwaardevandelaatsteXk \OMS/cmsy/m/n/12   \OM
+L/cmm/m/it/12 coefficientdiebehoudenwordtopgegeven:HoelagerdeK \OMS/cmsy/m/n/12
+  $
+ []
+
+
+Overfull \hbox (1191.17935pt too wide) in paragraph at lines 184--185
+$\OML/cmm/m/it/12 waarde; hoemindertermenerindebenaderingaanwezigzijn:Eenhogere
+K \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 waardezalduseenbeterebenaderingopleveren:
+Ditisooktezienopdefiguren:Deeerstefiguurtoontdefunctieendeverschillendebenaderi
+ngen:Detweedefiguurgeeftdenormvandefoutweervanelkebenadering:Hierisookteziendat
+bijeenK \OMS/cmsy/m/n/12  $
+ []
+
+[5 <C:/Users/Peter/Documents/GitHub/3CwEsat/Project2 NMB/expEqui.png (PNG copy)
+> <C:/Users/Peter/Documents/GitHub/3CwEsat/Project2 NMB/expCheb.png (PNG copy)>
+] [6 <C:/Users/Peter/Documents/GitHub/3CwEsat/Project2 NMB/errorCos1.pdf> <C:/U
+sers/Peter/Documents/GitHub/3CwEsat/Project2 NMB/errorCos2.pdf> <C:/Users/Peter
+/Documents/GitHub/3CwEsat/Project2 NMB/errorExp1.png> <C:/Users/Peter/Documents
+/GitHub/3CwEsat/Project2 NMB/errorExp2.pdf>]
 
 LaTeX Warning: Text page 7 contains only floats.
 
-[7 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxCos.pdf> <G:/Burge
-rlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxExp.pdf> <G:/Burgerlijk Ingeni
-eur/3 CwsElt/3CwEsat/Project2 NMB/condition.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+[7 <C:/Users/Peter/Documents/GitHub/3CwEsat/Project2 NMB/maxCos.pdf> <C:/Users/
+Peter/Documents/GitHub/3CwEsat/Project2 NMB/maxExp.pdf> <C:/Users/Peter/Documen
+ts/GitHub/3CwEsat/Project2 NMB/condition.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
 
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+("C:\Users\Peter\Documents\GitHub\3CwEsat\Project2 NMB\verslag.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `verslag.out' has not changed.
-(rerunfilecheck)             Checksum: 6D04A2E2EF7B8C1A7DDF57AF3DAFC869;320.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
+(rerunfilecheck)             Checksum: 810B6F4AF24ED4CAAF5402B777617063;572.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
  ) 
 Here is how much of TeX's memory you used:
- 10123 strings out of 493921
- 147606 string characters out of 3154503
- 275455 words of memory out of 3000000
- 13263 multiletter control sequences out of 15000+200000
+ 10129 strings out of 493921
+ 149877 string characters out of 3147283
+ 275457 words of memory out of 3000000
+ 13265 multiletter control sequences out of 15000+200000
  15034 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,9n,42p,885b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
-<F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><F:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><F:/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><F:/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr6.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><F
-:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><F:/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag.pdf (8 pages, 352138 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on verslag.pdf (9 pages, 364681 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
