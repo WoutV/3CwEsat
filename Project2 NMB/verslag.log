@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  21 MAY 2014 10:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  21 MAY 2014 15:08
 entering extended mode
 **verslag.tex
 ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.tex"
@@ -666,15 +666,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
-
-
-Package rerunfilecheck Warning: File `verslag.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `verslag.out':
-(rerunfilecheck)             Before: 54F7F96B7D44E1144C0691B156F3DAB9;654
-(rerunfilecheck)             After:  1B05F605E8C9F03D9A4E366D1BBB3BCD;653.
+Package rerunfilecheck Info: File `verslag.out' has not changed.
+(rerunfilecheck)             Checksum: 1B05F605E8C9F03D9A4E366D1BBB3BCD;653.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
@@ -693,7 +686,7 @@ b><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><F:/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmr6.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><F
 :/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><F:/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag.pdf (9 pages, 359692 bytes).
+Output written on verslag.pdf (9 pages, 359943 bytes).
 PDF statistics:
  203 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
