@@ -181,10 +181,85 @@ Dit algoritme berekent een interpolerende veelterm door de waarden $f(x)$ en eva
 \subsection{function y = periotrig(x,K,M)}
 todo code plakken
 \subsection{Invloed van de parameter K op de benadering}
-Als te benaderende functie nemen we $e^{-x^4}$. Deze functie wordt benaderd door trigoniometrische functies. De K-waarde geeft de indexwaarde van de laatste $X_k$-co\"efficient die behouden wordt opgegeven. Hoe lager de K-waarde, hoe minder termen er in de benadering aanwezig zijn. Een hogere K-waarde zal dus een betere benadering opleveren. Dit is ook te zien op de figuren. De eerste figuur toont de functie en de verschillende benaderingen. De tweede figuur geeft de norm van de fout weer van elke benadering. Hier is ook te zien dat bij een K-waarde van 64 de norm van de fout schommelt rond $10^{-16}$. De fout ligt dus heel dicht bij de machinenauwkeurigheid.
+Als te benaderende functie nemen we $\sin(t) + \cos(2t) + \sin(4t) + \cos(8t) + \sin(16t) + \cos(32t)$. Deze functie wordt benaderd door trigoniometrische functies. De K-waarde geeft de indexwaarde van de laatste $X_k$-co\"efficient die behouden wordt opgegeven. Hoe lager de K-waarde, hoe minder termen er in de benadering aanwezig zijn. Een hogere K-waarde zal dus een betere benadering opleveren. Dit is ook te zien op de figuren. De eerste figuren tonen de functie en de verschillende benaderingen. De andere figuren geven de norm van de fout weer van elke benadering. Hier is ook te zien dat bij een K-waarde van 64 de norm van de fout schommelt rond $10^{-16}$. De fout ligt dus heel dicht bij de machinenauwkeurigheid. Er is dan ook geen verschil meer te zien op de figuren waar de functie benadert wordt voor een K-waarde van 64.
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{K2K4.png}
+  \caption{K-waarden 2 en 4}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{K8K16.png}
+  \caption{K-waarden 8 en 16}
+  \label{fig:sub2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{K32K64.png}
+  \caption{K-waarden 32 en 64}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{De benaderingen}
+\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{errorK2K4.png}
+  \caption{K-waarden 2 en 4}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{errorK8K16.png}
+  \caption{K-waarden 8 en 16}
+  \label{fig:sub2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{errorK32K64.png}
+  \caption{K-waarden 32 en 64}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{De norm van de fout}
+\label{fig:test}
+\end{figure}
 
 \subsection{Benaderen van een gesloten kromme}
-De click-functie geeft als output 2 vectoren. Een vector met X-waarden en een vector met Y-waarden. Deze 2 vectoren kunnen gebruikt worden als input van de periotrig functie. In de figuren is te zien dat het uitvoeren van de periotrig functie met een hogere K hier een slechtere benadering geeft voor het symbool. Dit komt omdat de benadering nauwkeuriger is en een fout punt een grotere invloed heeft op de rest van de kromme. Indien de punten wel goed liggen geeft een benadering met een hoge K-waarde echter nog wel een goede benadering.
+De click-functie geeft als output 2 vectoren. Een vector met X-waarden en een vector met Y-waarden. Deze 2 vectoren kunnen gebruikt worden als input van de periotrig functie. In de figuren is te zien dat het uitvoeren van de periotrig functie met een hogere K hier een slechtere benadering geeft voor het symbool.De hoofdreden hiervoor is dat de punten handmatig worden ingegeven en niet nauwkeurig zijn. Een hogere orde benadering zal nauwkeuriger door de punten gaan waardoor de bekomen figuur minder goed op een oneindig-symbool lijkt als waneer de benadering met een lagere orde gebeurt. Indien de punten wel goed liggen geeft een benadering met een hoge K-waarde echter nog wel een goed beeld als benadering van het oneindig-symbool.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{infsymbolK4.png}
+  \caption{K-waarden 2 en 4}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{infsymbolK8.png}
+  \caption{K-waarden 8 en 16}
+  \label{fig:sub2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{infsymbolK16.png}
+  \caption{K-waarden 32 en 64}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Benaderingen voor het oneindig-symbool}
+\label{fig:test}
+\end{figure}
+
+
 
 
  
