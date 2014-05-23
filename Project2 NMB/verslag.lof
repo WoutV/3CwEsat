@@ -1,7 +1,10 @@
 \select@language {dutch}
-\contentsline {figure}{\numberline {1}{\ignorespaces Evaluatie van eerste tien Cheybchev veeltermen op 200 punten in [-1,1]\relax }}{4}{figure.caption.6}
-\contentsline {figure}{\numberline {2}{\ignorespaces Enkele interpolerende veeltermen van $\qopname \relax o{cos}(x)$\relax }}{4}{figure.caption.8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Enkele interpolerende veeltermen van $\frac {1}{1+6x^2}$\relax }}{5}{figure.caption.9}
-\contentsline {figure}{\numberline {4}{\ignorespaces Absolute fout bij het interpoleren\relax }}{6}{figure.caption.10}
-\contentsline {figure}{\numberline {5}{\ignorespaces Maximale interpolatiefout\relax }}{7}{figure.caption.11}
-\contentsline {figure}{\numberline {6}{\ignorespaces Conditiegetal van M\relax }}{7}{figure.caption.12}
+\contentsline {figure}{\numberline {1}{\ignorespaces Evaluatie van eerste tien Cheybchev veeltermen op 200 punten in [-1,1]\relax }}{3}{figure.caption.5}
+\contentsline {figure}{\numberline {2}{\ignorespaces Enkele interpolerende veeltermen van $\qopname \relax o{cos}(x)$\relax }}{3}{figure.caption.7}
+\contentsline {figure}{\numberline {3}{\ignorespaces Enkele interpolerende veeltermen van $\frac {1}{1+6x^2}$\relax }}{4}{figure.caption.8}
+\contentsline {figure}{\numberline {4}{\ignorespaces Absolute fout bij het interpoleren\relax }}{5}{figure.caption.9}
+\contentsline {figure}{\numberline {5}{\ignorespaces Maximale interpolatiefout\relax }}{6}{figure.caption.10}
+\contentsline {figure}{\numberline {6}{\ignorespaces Conditiegetal van M\relax }}{6}{figure.caption.11}
+\contentsline {figure}{\numberline {7}{\ignorespaces De benaderingen\relax }}{7}{figure.caption.14}
+\contentsline {figure}{\numberline {8}{\ignorespaces De norm van de fout\relax }}{8}{figure.caption.15}
+\contentsline {figure}{\numberline {9}{\ignorespaces Benaderingen voor het oneindig-symbool\relax }}{8}{figure.caption.17}
