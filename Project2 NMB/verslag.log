@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  23 MAY 2014 09:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  23 MAY 2014 11:46
 entering extended mode
 **verslag.tex
 ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.tex"
@@ -744,9 +744,21 @@ File: omlpcr.fd
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 17.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\periotrig.m"
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 12.
 
-[10]
+(F:\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 12.
+ (F:\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Missing character: There is no ë in font pcrr7t!
+
+[10])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+ [11]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
  ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
@@ -756,11 +768,11 @@ Package rerunfilecheck Info: File `verslag.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
  ) 
 Here is how much of TeX's memory you used:
- 10956 strings out of 493921
- 157813 string characters out of 3154503
- 400455 words of memory out of 3000000
- 13997 multiletter control sequences out of 15000+200000
- 16058 words of font info for 62 fonts, out of 3000000 for 9000
+ 11070 strings out of 493921
+ 159423 string characters out of 3154503
+ 416455 words of memory out of 3000000
+ 14056 multiletter control sequences out of 15000+200000
+ 17957 words of font info for 65 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,9n,42p,885b,1718s stack positions out of 5000i,500n,10000p,200000b,50000s
 {F:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<F:/MiKTeX/fonts/type1/public/amsf
@@ -772,10 +784,10 @@ onts/cm/cmr12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><F:/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><F:/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmtt12.pfb><F:/MiKTeX/fonts/type1/urw/courier/ucr
-r8a.pfb>
-Output written on verslag.pdf (11 pages, 512771 bytes).
+r8a.pfb><F:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on verslag.pdf (12 pages, 525831 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
