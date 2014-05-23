@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  21 MAY 2014 15:08
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.7)  23 MAY 2014 09:33
 entering extended mode
 **verslag.tex
 ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.tex"
@@ -525,170 +525,257 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.toc")
-\tf@toc=\write4
+("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.lof")
+\tf@lof=\write4
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 \listoffigures
-                    [1
+l.64 \newpage
+              [1
 
 ]
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.lof")
-\tf@lof=\write5
- [2
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
-<chebychev.png, id=79, 1446.15282pt x 497.60907pt>
+<chebychev.png, id=72, 1446.15282pt x 497.60907pt>
 File: chebychev.png Graphic file (type png)
  <use chebychev.png>
-Package pdftex.def Info: chebychev.png used on input line 83.
+Package pdftex.def Info: chebychev.png used on input line 82.
 (pdftex.def)             Requested size: 390.0pt x 134.1968pt.
 
-<cosEqui.png, id=82, 711.4078pt x 498.36188pt>
+<cosEqui.png, id=75, 711.4078pt x 498.36188pt>
 File: cosEqui.png Graphic file (type png)
  <use cosEqui.png>
-Package pdftex.def Info: cosEqui.png used on input line 94.
+Package pdftex.def Info: cosEqui.png used on input line 93.
 (pdftex.def)             Requested size: 195.0pt x 136.60507pt.
 
-<cosCheb.png, id=83, 711.4078pt x 486.31688pt>
+<cosCheb.png, id=76, 711.4078pt x 486.31688pt>
 File: cosCheb.png Graphic file (type png)
  <use cosCheb.png>
-Package pdftex.def Info: cosCheb.png used on input line 99.
+Package pdftex.def Info: cosCheb.png used on input line 98.
 (pdftex.def)             Requested size: 195.0pt x 133.30345pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 92--102
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 91--101
 []$[]$ $[]$ 
  []
 
-<expEqui.png, id=84, 711.4078pt x 548.0475pt>
+<expEqui.png, id=77, 711.4078pt x 548.0475pt>
 File: expEqui.png Graphic file (type png)
  <use expEqui.png>
-Package pdftex.def Info: expEqui.png used on input line 110.
+Package pdftex.def Info: expEqui.png used on input line 109.
 (pdftex.def)             Requested size: 195.0pt x 150.22432pt.
 
-<expCheb.png, id=85, 711.4078pt x 551.05875pt>
+<expCheb.png, id=78, 711.4078pt x 551.05875pt>
 File: expCheb.png Graphic file (type png)
  <use expCheb.png>
-Package pdftex.def Info: expCheb.png used on input line 115.
+Package pdftex.def Info: expCheb.png used on input line 114.
 (pdftex.def)             Requested size: 195.0pt x 151.04971pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 108--118
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 107--117
 []$[]$ $[]$ 
  []
 
-<errorCos1.pdf, id=87, 597.23125pt x 845.1575pt>
+<errorCos1.pdf, id=80, 597.23125pt x 845.1575pt>
 File: errorCos1.pdf Graphic file (type pdf)
  <use errorCos1.pdf>
-Package pdftex.def Info: errorCos1.pdf used on input line 126.
+Package pdftex.def Info: errorCos1.pdf used on input line 125.
 (pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-<errorCos2.pdf, id=88, 597.23125pt x 845.1575pt>
+<errorCos2.pdf, id=81, 597.23125pt x 845.1575pt>
 File: errorCos2.pdf Graphic file (type pdf)
  <use errorCos2.pdf>
-Package pdftex.def Info: errorCos2.pdf used on input line 131.
+Package pdftex.def Info: errorCos2.pdf used on input line 130.
 (pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 124--134
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 123--133
 []$[]$ $[]$ 
  []
 
-<errorExp1.png, id=89, 597.23125pt x 845.1575pt>
+<errorExp1.png, id=82, 597.23125pt x 845.1575pt>
 File: errorExp1.png Graphic file (type png)
  <use errorExp1.png>
-Package pdftex.def Info: errorExp1.png used on input line 138.
+Package pdftex.def Info: errorExp1.png used on input line 137.
 (pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-<errorExp2.pdf, id=90, 597.23125pt x 845.1575pt>
+<errorExp2.pdf, id=83, 597.23125pt x 845.1575pt>
 File: errorExp2.pdf Graphic file (type pdf)
  <use errorExp2.pdf>
-Package pdftex.def Info: errorExp2.pdf used on input line 143.
+Package pdftex.def Info: errorExp2.pdf used on input line 142.
 (pdftex.def)             Requested size: 195.0pt x 275.94965pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 136--146
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 135--145
 []$[]$ $[]$ 
  []
 
 
-LaTeX Warning: Float too large for page by 25.41652pt on input line 149.
+LaTeX Warning: Float too large for page by 25.41652pt on input line 148.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-[4 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/chebychev.png (PNG co
+[3 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/chebychev.png (PNG co
 py)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosEqui.png (PNG co
 py)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/cosCheb.png (PNG co
-py)>] <maxCos.pdf, id=109, 597.23125pt x 845.1575pt>
+py)>] <maxCos.pdf, id=102, 597.23125pt x 845.1575pt>
 File: maxCos.pdf Graphic file (type pdf)
  <use maxCos.pdf>
-Package pdftex.def Info: maxCos.pdf used on input line 156.
+Package pdftex.def Info: maxCos.pdf used on input line 155.
 (pdftex.def)             Requested size: 175.49881pt x 248.3521pt.
 
-<maxExp.pdf, id=110, 597.23125pt x 845.1575pt>
+<maxExp.pdf, id=103, 597.23125pt x 845.1575pt>
 File: maxExp.pdf Graphic file (type pdf)
  <use maxExp.pdf>
-Package pdftex.def Info: maxExp.pdf used on input line 161.
+Package pdftex.def Info: maxExp.pdf used on input line 160.
 (pdftex.def)             Requested size: 175.49881pt x 248.3521pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 154--164
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 153--163
 []$[]$ $[]$ 
  []
 
-<condition.pdf, id=112, 597.23125pt x 845.1575pt>
+<condition.pdf, id=105, 597.23125pt x 845.1575pt>
 File: condition.pdf Graphic file (type pdf)
  <use condition.pdf>
-Package pdftex.def Info: condition.pdf used on input line 174.
+Package pdftex.def Info: condition.pdf used on input line 173.
 (pdftex.def)             Requested size: 155.99762pt x 220.75455pt.
- [5 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expEqui.png (PNG cop
+ [4 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expEqui.png (PNG cop
 y)> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/expCheb.png (PNG cop
 y)>]
-[6 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos1.pdf> <G:/Bu
+[5 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos1.pdf> <G:/Bu
 rgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorCos2.pdf> <G:/Burgerlijk 
 Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/errorExp1.png> <G:/Burgerlijk Ingenieur
 /3 CwsElt/3CwEsat/Project2 NMB/errorExp2.pdf>]
 
-LaTeX Warning: Text page 7 contains only floats.
+LaTeX Warning: Text page 6 contains only floats.
 
-[7 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxCos.pdf> <G:/Burge
+[6 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxCos.pdf> <G:/Burge
 rlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/maxExp.pdf> <G:/Burgerlijk Ingeni
 eur/3 CwsElt/3CwEsat/Project2 NMB/condition.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
+<K2K4.png, id=148, 824.32968pt x 423.08063pt>
+File: K2K4.png Graphic file (type png)
+ <use K2K4.png>
+Package pdftex.def Info: K2K4.png used on input line 189.
+(pdftex.def)             Requested size: 195.0pt x 100.08243pt.
 
-("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
+<K8K16.png, id=149, 818.30719pt x 428.35031pt>
+File: K8K16.png Graphic file (type png)
+ <use K8K16.png>
+Package pdftex.def Info: K8K16.png used on input line 195.
+(pdftex.def)             Requested size: 195.0pt x 102.07413pt.
+
+<K32K64.png, id=150, 822.82407pt x 429.10312pt>
+File: K32K64.png Graphic file (type png)
+ <use K32K64.png>
+Package pdftex.def Info: K32K64.png used on input line 201.
+(pdftex.def)             Requested size: 195.0pt x 101.69043pt.
+
+<errorK2K4.png, id=151, 843.90282pt x 432.86719pt>
+File: errorK2K4.png Graphic file (type png)
+ <use errorK2K4.png>
+Package pdftex.def Info: errorK2K4.png used on input line 213.
+(pdftex.def)             Requested size: 195.0pt x 100.0197pt.
+
+<errorK8K16.png, id=152, 839.38594pt x 429.85594pt>
+File: errorK8K16.png Graphic file (type png)
+ <use errorK8K16.png>
+Package pdftex.def Info: errorK8K16.png used on input line 219.
+(pdftex.def)             Requested size: 195.0pt x 99.86176pt.
+
+<errorK32K64.png, id=153, 838.63312pt x 428.35031pt>
+File: errorK32K64.png Graphic file (type png)
+ <use errorK32K64.png>
+Package pdftex.def Info: errorK32K64.png used on input line 225.
+(pdftex.def)             Requested size: 195.0pt x 99.59694pt.
+
+<infsymbK4.png, id=154, 830.35219pt x 422.32782pt>
+File: infsymbK4.png Graphic file (type png)
+ <use infsymbK4.png>
+Package pdftex.def Info: infsymbK4.png used on input line 240.
+(pdftex.def)             Requested size: 195.0pt x 99.17616pt.
+
+<infsymbK8.png, id=155, 827.34094pt x 425.33907pt>
+File: infsymbK8.png Graphic file (type png)
+ <use infsymbK8.png>
+Package pdftex.def Info: infsymbK8.png used on input line 246.
+(pdftex.def)             Requested size: 195.0pt x 100.24673pt.
+
+<infsymbK16.png, id=156, 819.8128pt x 422.32782pt>
+File: infsymbK16.png Graphic file (type png)
+ <use infsymbK16.png>
+Package pdftex.def Info: infsymbK16.png used on input line 252.
+(pdftex.def)             Requested size: 195.0pt x 100.4521pt.
+
+[7 <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/K2K4.png> <G:/Burgerl
+ijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/K8K16.png> <G:/Burgerlijk Ingenieur
+/3 CwsElt/3CwEsat/Project2 NMB/K32K64.png>] [8 <G:/Burgerlijk Ingenieur/3 CwsEl
+t/3CwEsat/Project2 NMB/errorK2K4.png> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat
+/Project2 NMB/errorK8K16.png> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project
+2 NMB/errorK32K64.png> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/i
+nfsymbK4.png> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/infsymbK8.
+png> <G:/Burgerlijk Ingenieur/3 CwsElt/3CwEsat/Project2 NMB/infsymbK16.png>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 261.
+
+
+(F:\MiKTeX\tex\latex\psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\poly_zeros.m")
+("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\eval_recursion.m"
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 7.
+
+(F:\MiKTeX\tex\latex\psnfss\ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+))
+("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\interpolate.m" [9]
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 10.
+
+(F:\MiKTeX\tex\latex\psnfss\omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+LaTeX Font Info:    Try loading font information for OML+pcr on input line 17.
+ (F:\MiKTeX\tex\latex\psnfss\omlpcr.fd
+File: omlpcr.fd 
+)
+LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 17.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+
+[10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+ ("G:\Burgerlijk Ingenieur\3 CwsElt\3CwEsat\Project2 NMB\verslag.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
 Package rerunfilecheck Info: File `verslag.out' has not changed.
-(rerunfilecheck)             Checksum: 1B05F605E8C9F03D9A4E366D1BBB3BCD;653.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
+(rerunfilecheck)             Checksum: B7C2E0F204EAA85C5AD83E226C242FB5;619.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
  ) 
 Here is how much of TeX's memory you used:
- 10132 strings out of 493921
- 147708 string characters out of 3154503
- 275455 words of memory out of 3000000
- 13267 multiletter control sequences out of 15000+200000
- 15034 words of font info for 58 fonts, out of 3000000 for 9000
+ 10956 strings out of 493921
+ 157813 string characters out of 3154503
+ 400455 words of memory out of 3000000
+ 13997 multiletter control sequences out of 15000+200000
+ 16058 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,9n,42p,885b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
-<F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><F:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><F:/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><F:/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr6.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><F
-:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><F:/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on verslag.pdf (9 pages, 359943 bytes).
+ 42i,9n,42p,885b,1718s stack positions out of 5000i,500n,10000p,200000b,50000s
+{F:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<F:/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><F:/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><F:/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><F:/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><F:/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><F:/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><F:/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><F:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><F:/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmtt12.pfb><F:/MiKTeX/fonts/type1/urw/courier/ucr
+r8a.pfb>
+Output written on verslag.pdf (11 pages, 512771 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 295 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
